@@ -1,4 +1,4 @@
 node_modules
 dist
-content/_gen
+_content_gen
 .DS_Store

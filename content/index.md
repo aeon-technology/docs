@@ -1,3 +1,9 @@
+---
+title: Home
+---
+
+# Welcome to Direct Force Field
+
 Direct Force Field (DFF) is an all-in-one software suite for professional force field development and applications. More than just fitting software, DFF guides you through the process of automated force field parameterization step by step. DFF's core functionalities include guided force field selection, atom typing rules, training set preparation, quantum mechanic data calculation, experimental data collection, fit parameterization, result parameter integration, and parameter export for use in simulation engines. DFF uniquely uses database technology to achieve unprecedented force field accuracy and coverage. Each database contains multiple tables, and each table is an independent force field developed toward a specific purpose. Extended coverage is achieved by cross-selecting parameters from multiple force fields while built-in database management maintains accuracy.
 
 TEAMFF, a comprehensive force field database, was developed using DFF and is included as part of the DFF software suite. TEAMFF contains force fields in many common force field types including AMBER, CHARMM, CFF, OPLS and DREIDING. In addition, it utilizes native TEAM-type force fields. TEAM and AMBER force fields are currently the most rigorously parameterized, with coverage including common organic molecules, polymers, drug-like molecules, zeolites, ionic liquids and metal oxides. TEAMFF is a living database that is being continually expanded and improved.
