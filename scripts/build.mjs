@@ -3,10 +3,11 @@ import fse from "fs-extra";
 import { mkdir, readdir, readFile, writeFile } from "fs/promises";
 import { shiftHeading } from "hast-util-shift-heading";
 import yaml from "js-yaml";
-import { basename, dirname, join, relative, resolve } from "path";
+import { basename, dirname, extname, join, relative, resolve } from "path";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
+import rehypeUrls from "rehype-urls";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -22,8 +23,8 @@ const DIR = {
   src: resolve(__dirname, "../src"),
   dist: resolve(__dirname, "../dist"),
   content: resolve(__dirname, "../content"),
-  contentOut: resolve(__dirname, "../_content_gen"),
   public: resolve(__dirname, "../public"),
+  media: resolve(__dirname, "../content/media"),
 };
 
 const buildMd = unified()
@@ -39,6 +40,12 @@ const buildMd = unified()
     }
   })
   .use(remarkRehype)
+  .use(rehypeUrls, (url) => {
+    if (!console.log(url.host)) {
+      const rebase = url.href.indexOf("/media");
+      return url.href.slice(rebase + 1);
+    }
+  })
   .use(() => (ast) => shiftHeading(ast, 1))
   .use(rehypeSlug)
   .use(rehypeAutolinkHeadings, {
@@ -75,7 +82,9 @@ async function main() {
 }
 
 async function buildMdPages() {
-  const markdownPaths = await getFiles(DIR.content, ".md");
+  const markdownPaths = (await getFiles(DIR.content)).filter((filePath) =>
+    [".md"].includes(extname(filePath))
+  );
 
   const pages = await Promise.all(
     markdownPaths.map(async (markdownPath) => {
@@ -127,7 +136,8 @@ async function buildJs() {
 }
 
 async function copyAssets() {
-  return fse.copy(DIR.public, join(DIR.dist));
+  await fse.copy(DIR.public, join(DIR.dist));
+  await fse.copy(DIR.media, join(DIR.dist, "media"));
 }
 
 function renderPageHtml(page) {
@@ -138,7 +148,7 @@ async function ensureDir(dir) {
   return mkdir(dirname(dir), { recursive: true });
 }
 
-async function getFiles(dir, ext = []) {
+async function getFiles(dir) {
   const dirents = await readdir(dir, { withFileTypes: true });
   const files = await Promise.all(
     dirents.map((dirent) => {
