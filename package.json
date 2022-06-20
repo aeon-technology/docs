@@ -3,11 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "npm run build",
-    "build": "node scripts/build-markdown.mjs"
+    "dev": "nodemon --watch src --watch content --ext md,js,css,html scripts/build.mjs --dev",
+    "build": "node scripts/build.mjs"
   },
   "devDependencies": {
+    "esbuild": "^0.14.46",
+    "hast-util-shift-heading": "^3.0.0",
     "js-yaml": "^4.1.0",
+    "nodemon": "^2.0.16",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.0.1",
     "rehype-stringify": "^9.0.3",
     "remark-frontmatter": "^4.0.1",
     "remark-parse": "^10.0.1",
