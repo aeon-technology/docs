@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "esbuild": "^0.14.46",
+    "fs-extra": "^10.1.0",
     "hast-util-shift-heading": "^3.0.0",
     "hastscript": "^7.0.2",
     "js-yaml": "^4.1.0",
@@ -16,6 +17,7 @@
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1",
     "rehype-stringify": "^9.0.3",
+    "remark-embed-images": "^3.1.0",
     "remark-frontmatter": "^4.0.1",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",

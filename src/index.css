@@ -18,14 +18,22 @@ nav ul {
   list-style: none;
 }
 
-:where(h2, h3) a {
+nav a[data-tag="H3"] {
+  padding-left: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+:where(h2, h3, h4) a {
   color: inherit;
   text-decoration: none;
 }
-:where(h2, h3) a:hover {
+:where(h2, h3, h4) a:hover {
   text-decoration: underline;
 }
-:where(h2, h3) a:hover::after {
+:where(h2, h3, h4) a:hover::after {
   content: " #";
 }
 

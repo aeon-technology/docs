@@ -7,3 +7,5 @@ If new parameters are required, the simplest thing to do is to report the missin
 The internal simulation capacity can be used for simply simulation tasks, such as calculate densities and cohesive energies. These functions are mainly used for validation or parameterization. For advanced simulation tasks, DFF provide direct interface to GROMACS, LAMMPS and TOWHEE. In addition, DFF exports topological and parameters files to AMBER, CHARMM, NAMD, DISCOVER.
 
 The following screenshot shows a protein with ligands and assigned force field parameters in DFF interface.
+
+![DFF modules diagram](media/product-architecture-diagram.jpg)

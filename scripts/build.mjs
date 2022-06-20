@@ -1,4 +1,5 @@
 import esbuild from "esbuild";
+import fse from "fs-extra";
 import { mkdir, readdir, readFile, writeFile } from "fs/promises";
 import { shiftHeading } from "hast-util-shift-heading";
 import yaml from "js-yaml";
@@ -22,10 +23,12 @@ const DIR = {
   dist: resolve(__dirname, "../dist"),
   content: resolve(__dirname, "../content"),
   contentOut: resolve(__dirname, "../_content_gen"),
+  public: resolve(__dirname, "../public"),
 };
 
 const buildMd = unified()
   .use(remarkParse)
+  // .use(remarkEmbedImages)
   .use(remarkFrontmatter, ["yaml"])
   .use(() => (ast, file) => {
     // inject frontmatter to the vfile
@@ -49,6 +52,7 @@ async function main() {
   const mdPages = await buildMdPages();
   const js = await buildJs();
   const css = await buildCss();
+  await copyAssets();
 
   const indexTemplate = await readFile(join(DIR.src, "index.html"), "utf-8");
   const indexHtml = indexTemplate
@@ -71,7 +75,7 @@ async function main() {
 }
 
 async function buildMdPages() {
-  const markdownPaths = await getFiles(DIR.content);
+  const markdownPaths = await getFiles(DIR.content, ".md");
 
   const pages = await Promise.all(
     markdownPaths.map(async (markdownPath) => {
@@ -122,6 +126,10 @@ async function buildJs() {
     .catch(() => process.exit(1));
 }
 
+async function copyAssets() {
+  return fse.copy(DIR.public, join(DIR.dist));
+}
+
 function renderPageHtml(page) {
   return `<article>${page.html}</article>`;
 }
@@ -130,7 +138,7 @@ async function ensureDir(dir) {
   return mkdir(dirname(dir), { recursive: true });
 }
 
-async function getFiles(dir) {
+async function getFiles(dir, ext = []) {
   const dirents = await readdir(dir, { withFileTypes: true });
   const files = await Promise.all(
     dirents.map((dirent) => {
