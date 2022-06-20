@@ -3,7 +3,7 @@ import fse from "fs-extra";
 import { mkdir, readdir, readFile, writeFile } from "fs/promises";
 import { shiftHeading } from "hast-util-shift-heading";
 import yaml from "js-yaml";
-import { basename, dirname, extname, join, relative, resolve } from "path";
+import { dirname, extname, join, relative, resolve } from "path";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
@@ -11,7 +11,6 @@ import rehypeUrls from "rehype-urls";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
-import slugify from "slugify";
 import { unified } from "unified";
 import { fileURLToPath } from "url";
 
@@ -29,20 +28,22 @@ const DIR = {
 
 const buildMd = unified()
   .use(remarkParse)
-  // .use(remarkEmbedImages)
   .use(remarkFrontmatter, ["yaml"])
   .use(() => (ast, file) => {
     // inject frontmatter to the vfile
     const node = ast.children.find((n) => n.type === "yaml");
     if (node) {
-      const metadata = yaml.load(node.value);
-      file.frontmatter = metadata;
+      const meta = yaml.load(node.value);
+      file.meta = meta;
     }
   })
   .use(remarkRehype)
-  .use(rehypeUrls, (url) => {
-    if (!console.log(url.host)) {
-      const rebase = url.href.indexOf("/media");
+  .use(rehypeUrls, (url, node) => {
+    // rebase media urls relative to the index.html
+    const rebase = url.href.indexOf("/media");
+    if (rebase > -1) {
+      // lazy load img
+      node.properties.loading = "lazy";
       return url.href.slice(rebase + 1);
     }
   })
@@ -91,14 +92,12 @@ async function buildMdPages() {
       const mdString = await readFile(markdownPath, "utf-8");
       const htmlFile = await buildMd.process(mdString);
       const path = relative(DIR.content, markdownPath);
-      const slug = slugify(basename(path)).replace(".md", "");
 
       const page = {
         html: String(htmlFile),
         meta: {
+          ...htmlFile.meta,
           path,
-          slug,
-          ...htmlFile.frontmatter,
         },
       };
 
