@@ -3,10 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "build-markdown": "node scripts/build-markdown.mjs"
+    "dev": "npm run build",
+    "build": "node scripts/build-markdown.mjs"
   },
   "devDependencies": {
     "js-yaml": "^4.1.0",
