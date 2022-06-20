@@ -1,6 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  padding: 20px;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #333;
+}
+
+nav ul {
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+:where(h2, h3) a {
+  color: inherit;
+  text-decoration: none;
+}
+:where(h2, h3) a:hover {
+  text-decoration: underline;
+}
+:where(h2, h3) a:hover::after {
+  content: " #";
+}
+
+.c-app-layout {
+  max-width: 64rem;
+  margin: 0 32px;
+}
+
+@media screen and (min-width: 64rem) {
+  .c-app-layout {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+  }
+
+  .c-app-header {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 0 32px;
+    background-color: #eee;
+  }
 }

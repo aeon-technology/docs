@@ -15,8 +15,6 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-let currentMeta;
-
 const isDevelopement = process.argv.includes("--dev");
 
 const DIR = {
@@ -29,16 +27,20 @@ const DIR = {
 const buildMd = unified()
   .use(remarkParse)
   .use(remarkFrontmatter, ["yaml"])
-  .use(() => (ast) => {
+  .use(() => (ast, file) => {
+    // inject frontmatter to the vfile
     const node = ast.children.find((n) => n.type === "yaml");
-    const metadata = yaml.load(node.value);
-    currentMeta = metadata;
-    // TODO write to file.data
+    if (node) {
+      const metadata = yaml.load(node.value);
+      file.frontmatter = metadata;
+    }
   })
   .use(remarkRehype)
-  .use(() => (tree) => shiftHeading(tree, 1))
+  .use(() => (ast) => shiftHeading(ast, 1))
   .use(rehypeSlug)
-  .use(rehypeAutolinkHeadings)
+  .use(rehypeAutolinkHeadings, {
+    behavior: "wrap",
+  })
   .use(rehypeStringify);
 
 main();
@@ -53,7 +55,7 @@ async function main() {
     .replace(
       "{{ pages }}",
       mdPages
-        .sort((a, b) => b.meta.path.localeCompare(a.meta.path))
+        .sort((a, b) => a.meta.path.localeCompare(b.meta.path))
         .map(renderPageHtml)
         .join("\n")
     )
@@ -83,7 +85,7 @@ async function buildMdPages() {
         meta: {
           path,
           slug,
-          ...currentMeta,
+          ...htmlFile.frontmatter,
         },
       };
 

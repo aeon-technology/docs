@@ -1,7 +1,3 @@
----
-title: How it works
----
-
 # How it works
 
 The basic function of DFF is to use the TEAM-FF force fields to assign atom types and parameters for a molecular system. DFF can be used to build simple liquid models. For complex models (polymers, proteins, interfaces), you can import structure files in common data formats such as MOL2. DFF assigns atom types, search TEAM-FF for parameters, and prepares structure and parameter files for simulation. TEAM-FF has unprecedented coverage and the coverage is rapidly expanding due to sound parameterization strategy and robust parameterization tools. In most cases, you do not need to do any parameterization.

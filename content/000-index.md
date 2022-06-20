@@ -1,7 +1,3 @@
----
-title: Home
----
-
 # Welcome to Direct Force Field
 
 Direct Force Field (DFF) is an all-in-one software suite for professional force field development and applications. More than just fitting software, DFF guides you through the process of automated force field parameterization step by step. DFF's core functionalities include guided force field selection, atom typing rules, training set preparation, quantum mechanic data calculation, experimental data collection, fit parameterization, result parameter integration, and parameter export for use in simulation engines. DFF uniquely uses database technology to achieve unprecedented force field accuracy and coverage. Each database contains multiple tables, and each table is an independent force field developed toward a specific purpose. Extended coverage is achieved by cross-selecting parameters from multiple force fields while built-in database management maintains accuracy.

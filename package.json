@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "nodemon --watch src --watch content --ext md,js,css,html scripts/build.mjs --dev",
-    "build": "node scripts/build.mjs"
+    "dev": "npm run clean && nodemon --watch src --watch scripts --watch content --ext md,js,mjs,css,html scripts/build.mjs --dev",
+    "build": "npm run clean && node scripts/build.mjs",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "esbuild": "^0.14.46",
     "hast-util-shift-heading": "^3.0.0",
+    "hastscript": "^7.0.2",
     "js-yaml": "^4.1.0",
     "nodemon": "^2.0.16",
     "rehype-autolink-headings": "^6.1.1",
