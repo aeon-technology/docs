@@ -1,4 +1,4 @@
-# Latest Release
+# Latest Release (v7.2)
 
 Direct Force Field (DFF) 7 is an expert system for making and using atomistic force fields. At its core is the TEAM-FF database which contains multiple force fields. The database is surrounded by three major functions:
 
