@@ -8,4 +8,4 @@ Direct Force Field (DFF) 7 is an expert system for making and using atomistic fo
 
 Two versions, Standard and Professional are available in DFF 7. The Standard version has components 1) and 3) above, the Professional version has additionally component 2).
 
-![Product screenshot](../media/latest-release-screenshot.jpg)
+![Product screenshot](./media/latest-release-screenshot.jpg)

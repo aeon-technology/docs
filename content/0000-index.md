@@ -7,3 +7,5 @@ TEAMFF, a comprehensive force field database, was developed using DFF and is inc
 DFF output force fields support the popular simulation engines GROMACS, LAMMPS, CHARMM and AMBER. DFF is shipped with an intuitive graphical user interface, but can be run from command line prompts as well. Both Windows and Linux operating systems are supported. DFF is available in two editions, Standard and Professional. DFF Standard Edition is designed to facilitate application of TEAMFF force fields, while the Professional edition supports force field development as well as application.
 
 DFF is developed and distributed by Aeon Technology Inc., founded and headquartered in San Diego, California since 2000.
+
+[subpage](./1000-docs/1200-how-it-works.md)

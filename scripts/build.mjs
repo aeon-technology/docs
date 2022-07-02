@@ -1,5 +1,4 @@
 import esbuild from "esbuild";
-import fse from "fs-extra";
 import fs from "fs/promises";
 import { shiftHeading } from "hast-util-shift-heading";
 import yaml from "js-yaml";
@@ -39,12 +38,8 @@ const buildMd = unified()
   })
   .use(remarkRehype)
   .use(rehypeUrls, (url, node) => {
-    // rebase media urls relative to the index.html
-    const rebase = url.href.indexOf("/media");
-    if (rebase > -1) {
-      // lazy load img
-      node.properties.loading = "lazy";
-      return url.href.slice(rebase + 1);
+    if (path.extname(url.pathname) === ".md") {
+      return replaceExtension(url.pathname, ".html");
     }
   })
   .use(() => (ast) => shiftHeading(ast, 1))
@@ -145,8 +140,24 @@ async function buildJs() {
 }
 
 async function copyAssets() {
-  await fse.copy(DIR.public, path.join(DIR.dist));
-  await fse.copy(DIR.media, path.join(DIR.dist, "media"));
+  const publicFiles = await getFiles(DIR.public);
+  const contentFiles = await getFiles(DIR.content);
+  const nonMdContentFiles = contentFiles.filter(
+    (file) => path.extname(file) !== ".md"
+  );
+
+  const copyTasks = [
+    ...publicFiles.map((file) => [file, rebase(file, DIR.public, DIR.dist)]),
+    ...nonMdContentFiles.map((file) => [
+      file,
+      rebase(file, DIR.content, DIR.dist),
+    ]),
+  ].map(async ([from, to]) => {
+    await ensureDir(to);
+    await fs.copyFile(from, to);
+  });
+
+  return Promise.all(copyTasks);
 }
 
 function renderPageHtml(page) {
@@ -161,6 +172,10 @@ function replaceExtension(srcPath, toExt) {
   });
 }
 
+function rebase(srcPath, srcBase, targetBase) {
+  return path.join(targetBase, path.relative(srcBase, srcPath));
+}
+
 async function ensureDir(dir) {
   return fs.mkdir(path.dirname(dir), { recursive: true });
 }
@@ -169,7 +184,7 @@ async function getFiles(dir) {
   const dirents = await fs.readdir(dir, { withFileTypes: true });
   const files = await Promise.all(
     dirents.map((dirent) => {
-      const res = path.resolve(dir, dirent.name);
+      const res = path.join(dir, dirent.name);
       return dirent.isDirectory() ? getFiles(res) : res;
     })
   );
