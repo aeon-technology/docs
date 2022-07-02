@@ -106,7 +106,7 @@ async function buildMdPages() {
         },
       };
 
-      console.log(`[build-md] ${path}`);
+      console.log(`[build-md] ${markdownPath}`);
       return page;
     })
   );
@@ -155,6 +155,7 @@ async function copyAssets() {
   ].map(async ([from, to]) => {
     await ensureDir(to);
     await fs.copyFile(from, to);
+    console.log(`[copy-assets] ${to}`);
   });
 
   return Promise.all(copyTasks);
