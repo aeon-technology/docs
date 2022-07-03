@@ -25,30 +25,6 @@ const DIR = {
   media: path.resolve(__dirname, "../content/media"),
 };
 
-const buildMd = unified()
-  .use(remarkParse)
-  .use(remarkFrontmatter, ["yaml"])
-  .use(() => (ast, file) => {
-    // inject frontmatter to the vfile
-    const node = ast.children.find((n) => n.type === "yaml");
-    if (node) {
-      const meta = yaml.load(node.value);
-      file.meta = meta;
-    }
-  })
-  .use(remarkRehype)
-  .use(rehypeUrls, (url, node) => {
-    if (path.extname(url.pathname) === ".md") {
-      return replaceExtension(url.pathname, ".html");
-    }
-  })
-  .use(() => (ast) => shiftHeading(ast, 1))
-  .use(rehypeSlug)
-  .use(rehypeAutolinkHeadings, {
-    behavior: "wrap",
-  })
-  .use(rehypeStringify);
-
 main();
 
 async function main() {
@@ -113,6 +89,30 @@ async function buildMdPages() {
 
   return pages;
 }
+
+const buildMd = unified()
+  .use(remarkParse)
+  .use(remarkFrontmatter, ["yaml"])
+  .use(() => (ast, file) => {
+    // inject frontmatter to the vfile
+    const node = ast.children.find((n) => n.type === "yaml");
+    if (node) {
+      const meta = yaml.load(node.value);
+      file.meta = meta;
+    }
+  })
+  .use(remarkRehype)
+  .use(rehypeUrls, (url, node) => {
+    if (path.extname(url.pathname) === ".md") {
+      return replaceExtension(url.pathname, ".html");
+    }
+  })
+  .use(() => (ast) => shiftHeading(ast, 1))
+  .use(rehypeSlug)
+  .use(rehypeAutolinkHeadings, {
+    behavior: "wrap",
+  })
+  .use(rehypeStringify);
 
 async function buildCss() {
   return esbuild
