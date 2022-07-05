@@ -11,15 +11,9 @@ body {
   color: #333;
 }
 
-nav ul {
-  padding: 0;
-  display: grid;
-  gap: 0.5rem;
-  list-style: none;
-}
-
-nav a[data-tag="H3"] {
-  padding-left: 1rem;
+nav a:where(.active) {
+  background: #333;
+  color: #fff;
 }
 
 img {

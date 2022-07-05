@@ -38,10 +38,20 @@ async function main() {
     "utf-8"
   );
 
+  const getToc = async (mdString, srcRelativePath) => {
+    const srcPageDir = path.dirname(path.join(DIR.content, srcRelativePath));
+    const distPageDir = rebase(srcPageDir, DIR.content, DIR.dist);
+    const tocBuilder = getTocBuilder(distPageDir);
+    return tocBuilder.process(mdString);
+  };
+
+  const tocMd = await fs.readFile(path.join(DIR.content, "_toc.md"));
+
   const tasks = mdPages
-    .map((mdPage) => ({
+    .map(async (mdPage) => ({
       html: indexTemplate
         .replace("{{ main }}", renderPageHtml(mdPage))
+        .replace("{{ nav }}", await getToc(tocMd, mdPage.meta.srcRelativePath))
         .replace(
           "{{ beforeHeadEnd }}",
           `<style>${css.outputFiles[0].text}</style>`
@@ -55,7 +65,8 @@ async function main() {
         replaceExtension(mdPage.meta.srcRelativePath, ".html")
       ),
     }))
-    .map(async (task) => {
+    .map(async (asyncTask) => {
+      const task = await asyncTask;
       await ensureDir(task.outPath);
       await fs.writeFile(task.outPath, task.html);
     });
@@ -64,8 +75,10 @@ async function main() {
 }
 
 async function buildMdPages() {
-  const markdownPaths = (await getFiles(DIR.content)).filter((filePath) =>
-    [".md"].includes(path.extname(filePath))
+  const markdownPaths = (await getFiles(DIR.content)).filter(
+    (filePath) =>
+      [".md"].includes(path.extname(filePath)) &&
+      !path.basename(filePath).startsWith("_")
   );
 
   const pages = await Promise.all(
@@ -113,6 +126,19 @@ const buildMd = unified()
     behavior: "wrap",
   })
   .use(rehypeStringify);
+
+const getTocBuilder = (pageDir) =>
+  unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeUrls, (url, node) => {
+      if (path.extname(url.pathname) === ".md") {
+        const absoluteLink = path.join(DIR.dist, url.pathname);
+        const relativeLink = path.relative(pageDir, absoluteLink);
+        return replaceExtension(relativeLink, ".html");
+      }
+    })
+    .use(rehypeStringify);
 
 async function buildCss() {
   return esbuild

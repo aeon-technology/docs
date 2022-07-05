@@ -8,4 +8,4 @@ The internal simulation capacity can be used for simply simulation tasks, such a
 
 The following screenshot shows a protein with ligands and assigned force field parameters in DFF interface.
 
-![DFF modules diagram](../media/product-modules-diagram.jpg)
+![DFF modules diagram](./product-modules-diagram.jpg)
