@@ -1,8 +1,0 @@
-- Generate navigation per file
-  - Static left nav rendering (replace dynamic js)
-- Write up markdown CLI manual
-- Investigate md features:
-  - Footnote
-  - Formula
-  - Table
-- Prototype docx to md conversion

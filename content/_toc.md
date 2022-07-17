@@ -1,4 +1,9 @@
 - [Home](./index.md)
+- Chapter 0 - Temporary Examples
+  - [Basic syntax](./ch00/01-basic-syntax.md)
+  - [Footnote](./ch00/02-footnote.md)
+  - [Table](./ch00/03-table.md)
+  - [Math expression](./ch00/04-math-expression.md)
 - Chapter 1 - Introduction
   - [Overview](./ch01/01-overview.md)
   - [Feature List](./ch01/02-feature-list.md)
@@ -8,4 +13,3 @@
   - Essential Functionality
     - [Building a Model of Molecule](./ch02/01-building-molecule.md)
     - [Working with a liquid model](./ch02/02-working-with-liquid-model.md)
-- Dev notes

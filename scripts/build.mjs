@@ -4,11 +4,13 @@ import { shiftHeading } from "hast-util-shift-heading";
 import yaml from "js-yaml";
 import path from "path";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeMathjax from "rehype-mathjax";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import rehypeUrls from "rehype-urls";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
@@ -106,6 +108,7 @@ async function buildMdPages() {
 
 const buildMd = unified()
   .use(remarkParse)
+  .use(remarkMath)
   .use(remarkGfm)
   .use(remarkFrontmatter, ["yaml"])
   .use(() => (ast, file) => {
@@ -117,6 +120,7 @@ const buildMd = unified()
     }
   })
   .use(remarkRehype)
+  .use(rehypeMathjax)
   .use(rehypeUrls, (url, node) => {
     try {
       if (path.extname(url.pathname) === ".md") {

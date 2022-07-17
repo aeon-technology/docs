@@ -20,6 +20,10 @@ img {
   width: 100%;
 }
 
+code {
+  font-weight: 600;
+}
+
 pre {
   background: #444;
   color: white;
@@ -29,8 +33,11 @@ pre code {
   background-color: inherit;
 }
 
-code {
-  font-weight: 600;
+table {
+  border-collapse: collapse;
+}
+table :where(th, td) {
+  border: 1px solid #666;
 }
 
 :where(h2, h3, h4) a {
