@@ -1,8 +1,11 @@
 - [Home](./index.md)
 - Chapter 1 - Introduction
-  - [Overview](./ch01/01-intro.md)
-  - [Latest release](./ch01/02-latest-release.md)
-- Chapter 2 - Features
-  - [How it works](./ch02/01-how-it-works.md)
-  - [Team FF](./ch02/02-teamff.md)
-- References
+  - [Overview](./ch01/01-overview.md)
+  - [Feature List](./ch01/02-feature-list.md)
+  - [Typical Use Cases](./ch01/03-typical-use-cases.md)
+  - [Getting Started](./ch01/04-getting-started.md)
+- Chapter 2 - Tutorials
+  - Essential Functionality
+    - [Building a Model of Molecule](./ch02/01-building-molecule.md)
+    - [Working with a liquid model](./ch02/02-working-with-liquid-model.md)
+- Dev notes

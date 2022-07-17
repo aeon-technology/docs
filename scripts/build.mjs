@@ -8,6 +8,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import rehypeUrls from "rehype-urls";
 import remarkFrontmatter from "remark-frontmatter";
+import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
@@ -105,6 +106,7 @@ async function buildMdPages() {
 
 const buildMd = unified()
   .use(remarkParse)
+  .use(remarkGfm)
   .use(remarkFrontmatter, ["yaml"])
   .use(() => (ast, file) => {
     // inject frontmatter to the vfile
@@ -116,9 +118,11 @@ const buildMd = unified()
   })
   .use(remarkRehype)
   .use(rehypeUrls, (url, node) => {
-    if (path.extname(url.pathname) === ".md") {
-      return replaceExtension(url.pathname, ".html");
-    }
+    try {
+      if (path.extname(url.pathname) === ".md") {
+        return replaceExtension(url.pathname, ".html");
+      }
+    } catch {}
   })
   .use(() => (ast) => shiftHeading(ast, 1))
   .use(rehypeSlug)
