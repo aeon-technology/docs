@@ -3,7 +3,7 @@
 ## Prerequisite
 
 - Operation System: Linux (recommended). Windows should work but is not tested.
-- [Node.js](<(https://nodejs.org/),>) runtime: v18 is recommended
+- [Node.js](https://nodejs.org) runtime: v18 is recommended
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 - A GitHub account for publishing your changes
 
