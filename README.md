@@ -55,4 +55,4 @@
 2. [DFF-specific syntax reference](./docs/dff-markdown-reference.md)
 
 [visual studio code]: https://code.visualstudio.com/docs/languages/markdown
-[intellij idea]: (https://www.jetbrains.com/help/idea/markdown.html)
+[intellij idea]: https://www.jetbrains.com/help/idea/markdown.html
