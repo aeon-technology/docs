@@ -43,8 +43,8 @@
 ## Simulation
 
 - Energy calculation, normal mode analysis, structure optimization and molecular dynamics simulation for validation of force fields
-- Export force field files to external simulation engines: _GROMACS, LAMMPS, AMBER_, _CHARMM_, _DISCOVER_ and _MOE_
-- Integrated simulation environments with _GROMACS_ and LAMMPS
+- Export force field files to external simulation engines: [GROMACS], [LAMMPS], [AMBER], [CHARMM], DISCOVER and [MOE]
+- Integrated simulation environments with [GROMACS] and [LAMMPS]
 
 ## Force Field Development\*
 
@@ -76,3 +76,9 @@
 - Local and floating licensing
 - &quot;Instant Help&quot; for guidance of software usage.
 - User guide document, tutorials and test cases for quick start.
+
+[gromacs]: https://www.gromacs.org/
+[lammps]: https://www.lammps.org/
+[amber]: https://ambermd.org/
+[charmm]: https://www.charmm.org/
+[moe]: https://www.chemcomp.com/Products.htm

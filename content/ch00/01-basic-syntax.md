@@ -13,7 +13,9 @@ Second line
 
 ## Links
 
-Hello, [this is a link to external URL](https://wikipedia.org). And [this is link to internal page](./02-footnote.md).
+- [External URL](https://wikipedia.org)
+- [Internal page](./02-footnote.md)
+- [External Reference Style Link]
 
 ## Bold, Italic
 
@@ -57,3 +59,5 @@ OpenJDK 64-Bit Server VM (build 25.201-b09, mixed mode)
 ## Media
 
 ![This is an image](./media/sample-01.png)
+
+[external reference style link]: https://wikipedia.org

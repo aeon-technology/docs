@@ -6,6 +6,9 @@
 - [Node.js](https://nodejs.org) runtime: v18 is recommended
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 - A GitHub account for publishing your changes
+- A text editor that support markdown syntax highlight and html preview
+  - [Visual Studio Code]
+  - [IntelliJ IDEA]
 
 ## First build
 
@@ -50,3 +53,6 @@
 
 1. [Learn basic markdown syntax](https://www.markdownguide.org/basic-syntax/)
 2. [DFF-specific syntax reference](./docs/dff-markdown-reference.md)
+
+[visual studio code]: https://code.visualstudio.com/docs/languages/markdown
+[intellij idea]: (https://www.jetbrains.com/help/idea/markdown.html)

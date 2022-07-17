@@ -10,20 +10,21 @@ This document contains markdown features that are specific to DFF and may not be
 ## Live examples
 
 You can find examples in `content/ch00`. In addition, the examples are live at
+https://aeon-technology.github.io/docs
 
 ## Style Guide
 
 - Folder, Filename, File path should use be surrounded by backtick
   - e.g. `dfflsv.exe`, `<dff root>/license`
-- Command line input should be surrounded by backtick and prefixed by `$ `
+- Command line input should be surrounded by backtick and prefixed by `$ ` (note the space after $)
   - e.g. `$ java -version`
 - Parameters, values should be surrounded by backtick
   - e.g. port `3850`
 - OS name: Linux, Windows, Do not stylize, but do capitalize the first letter
 - Parts of UI should be Bold, and match the spelling as seen in the actual UI
   - e.g. **Tool bar**, **Command menu**
-- Other software names should be italicized
-  - e.g. _GAUSSIAN_, _GROMACS_
+- Other software names should not be stylized, and should be linked to their project page
+  - e.g. [GROMACS](https://www.gromacs.org/)
 
 ## Features
 
