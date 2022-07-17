@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFF</title>
+    <style>*,*:before,*:after{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;color:#333}nav a:where(.active){background:#333;color:#fff}img{width:100%}code{font-weight:600}pre{background:#444;color:#fff;padding:1ch}pre code{background-color:inherit}table{border-collapse:collapse}table :where(th,td){border:1px solid #666}:where(h2,h3,h4) a{color:inherit;text-decoration:none}:where(h2,h3,h4) a:hover{text-decoration:underline}:where(h2,h3,h4) a:hover:after{content:" #"}.c-app-layout{display:grid;margin:0 auto;grid-template-columns:auto 1fr;gap:32px}.c-app-menu{top:0;position:sticky;overflow-y:scroll;padding:0 32px;background-color:#eee;height:100vh}
+</style>
+  </head>
+  <body class="c-app-layout">
+    <aside class="c-app-menu">
+      <nav class="u-reset"><ul>
+<li><a href="../index.html">Home</a></li>
+<li>Chapter 0 - Temporary Examples
+<ul>
+<li><a href="../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../ch00/03-table.html">Table</a></li>
+<li><a href="../ch00/04-math-expression.html">Math expression</a></li>
+</ul>
+</li>
+<li>Chapter 1 - Introduction
+<ul>
+<li><a href="01-overview.html">Overview</a></li>
+<li><a href="02-feature-list.html">Feature List</a></li>
+<li><a href="03-typical-use-cases.html">Typical Use Cases</a></li>
+<li><a href="04-getting-started.html">Getting Started</a></li>
+</ul>
+</li>
+<li>Chapter 2 - Tutorials
+<ul>
+<li>Essential Functionality
+<ul>
+<li><a href="../ch02/01-building-molecule.html">Building a Model of Molecule</a></li>
+<li><a href="../ch02/02-working-with-liquid-model.html">Working with a liquid model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav>
+    </aside>
+    <main id="main"><article><h2 id="feature-list"><a href="#feature-list">Feature List</a></h2>
+<p>(* indicates functions of the Professional version)</p>
+<h3 id="model-builder"><a href="#model-builder">Model Builder</a></h3>
+<ul>
+<li>Sketch, edit and modify molecular structures</li>
+<li>Supports all elements on the periodic table</li>
+<li>Automatically edit molecular topologies</li>
+<li>Group atoms by charges or by connectivity</li>
+<li>Pack and unpack periodic simulation boxes</li>
+<li>Edit simulation cell parameters</li>
+<li>Build liquid and interface models</li>
+<li>Reads popular molecular structure data files - MOL, MOL2, PDB, CAR</li>
+<li>Supports solid and surface structures</li>
+<li>Build super cells from 3-D or 2-D structures</li>
+</ul>
+<h3 id="visualization"><a href="#visualization">Visualization</a></h3>
+<ul>
+<li>Project Navigator allows easy access</li>
+<li>Portable, self-contained project files facilitates sharing of results with colleagues</li>
+<li>Mouse and short-cut key operations for convenience.</li>
+<li>Display atomic and molecular properties</li>
+<li>Measure molecular properties</li>
+<li>Customize Look-and-Feel, including adjustable font sizes.</li>
+</ul>
+<h3 id="direct-force-field-database-a"><a href="#direct-force-field-database-a">Direct Force Field Database (A)</a></h3>
+<ul>
+<li>Integration of different independent force fields in one database</li>
+<li>Supports common force field functionals - TEAM, AMBER, CHARMM, CFF, DREIDING, provide parameters in each force field functional as the base for continue development</li>
+<li>Provides high quality parameters with great coverage in common organic molecules, synthetic polymers, solid state materials, transition metal complexes and drug-like compounds in TEAM and AMBER force field functionals</li>
+<li>Graphic interface for managing and using database, automatically assign atom types using multiple force fields, with options to handle missing parameters.</li>
+</ul>
+<h3 id="force-field-database-b"><a href="#force-field-database-b">Force Field Database (B)*</a></h3>
+<ul>
+<li>Full functionality for managing the database contents</li>
+<li>Create customized force fields to be used with the provided force fields</li>
+<li>Check out original atom types and parameters for examination and extended development</li>
+<li>Check in new parameters, automatically set version numbers</li>
+<li>Functionality for importing common force fields in to database</li>
+<li>Advanced handling of missing parameters, automatically build molecular fragments for parameterization</li>
+</ul>
+<h3 id="simulation"><a href="#simulation">Simulation</a></h3>
+<ul>
+<li>Energy calculation, normal mode analysis, structure optimization and molecular dynamics simulation for validation of force fields</li>
+<li>Export force field files to external simulation engines: <em>GROMACS, LAMMPS, AMBER</em>, <em>CHARMM</em>, <em>DISCOVER</em> and <em>MOE</em></li>
+<li>Integrated simulation environments with <em>GROMACS</em> and LAMMPS</li>
+</ul>
+<h3 id="force-field-development"><a href="#force-field-development">Force Field Development*</a></h3>
+<ul>
+<li>Preset force field functionals TEAM, AMBER, CHARMM, CFF, DREIDING</li>
+<li>Customized force field functional using common functional forms</li>
+<li>Spreadsheet force field editor</li>
+<li>Support preset and customized atom-typing rules</li>
+<li>Automated (default) typing rules for most general purposes</li>
+<li>Interactive editor of making customized atom-typing rules</li>
+<li>Automatic valence and nonbond parameters derived using atomic properties</li>
+<li>Automatic charge parameters using the charge equilibrium (QEQ) method</li>
+<li>Automatic generation of fragment molecules suitable for parameterization from target molecules.</li>
+<li>Automatic generation of conformers or cluster configurations for sampling potential energy surfaces</li>
+<li>Integration with Gaussian® for generating quantum mechanics (QM) data for parameterization.</li>
+<li>Making equivalent table to adjust the number of adjustable parameters</li>
+<li>Fit valence and charge parameters against QM data</li>
+<li>Fit nonbond parameters against simulation data of molecular liquids</li>
+<li>Fit bonbon parameters against QM data of molecular cluster</li>
+<li>Artificial intelligence implemented in parameterization workflow.</li>
+<li>Customized options to tune fitting quality</li>
+</ul>
+<h3 id="user-friendly-features"><a href="#user-friendly-features">User-Friendly Features</a></h3>
+<ul>
+<li>Toolbars for quick and easy access to common commands</li>
+<li>Project Navigator for convenient organization</li>
+<li>Integrated project and disk file management</li>
+<li>Online documentation and tutorials</li>
+<li>Supports <em>Windows</em> and <em>Linux</em> platforms</li>
+<li>Local and floating licensing</li>
+<li>"Instant Help" for guidance of software usage.</li>
+<li>User guide document, tutorials and test cases for quick start.</li>
+</ul></article></main>
+    <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
+</script>
+  </body>
+</html>

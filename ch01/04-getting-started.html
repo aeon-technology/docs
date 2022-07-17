@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFF</title>
+    <style>*,*:before,*:after{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;color:#333}nav a:where(.active){background:#333;color:#fff}img{width:100%}code{font-weight:600}pre{background:#444;color:#fff;padding:1ch}pre code{background-color:inherit}table{border-collapse:collapse}table :where(th,td){border:1px solid #666}:where(h2,h3,h4) a{color:inherit;text-decoration:none}:where(h2,h3,h4) a:hover{text-decoration:underline}:where(h2,h3,h4) a:hover:after{content:" #"}.c-app-layout{display:grid;margin:0 auto;grid-template-columns:auto 1fr;gap:32px}.c-app-menu{top:0;position:sticky;overflow-y:scroll;padding:0 32px;background-color:#eee;height:100vh}
+</style>
+  </head>
+  <body class="c-app-layout">
+    <aside class="c-app-menu">
+      <nav class="u-reset"><ul>
+<li><a href="../index.html">Home</a></li>
+<li>Chapter 0 - Temporary Examples
+<ul>
+<li><a href="../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../ch00/03-table.html">Table</a></li>
+<li><a href="../ch00/04-math-expression.html">Math expression</a></li>
+</ul>
+</li>
+<li>Chapter 1 - Introduction
+<ul>
+<li><a href="01-overview.html">Overview</a></li>
+<li><a href="02-feature-list.html">Feature List</a></li>
+<li><a href="03-typical-use-cases.html">Typical Use Cases</a></li>
+<li><a href="04-getting-started.html">Getting Started</a></li>
+</ul>
+</li>
+<li>Chapter 2 - Tutorials
+<ul>
+<li>Essential Functionality
+<ul>
+<li><a href="../ch02/01-building-molecule.html">Building a Model of Molecule</a></li>
+<li><a href="../ch02/02-working-with-liquid-model.html">Working with a liquid model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav>
+    </aside>
+    <main id="main"><article><h2 id="getting-started"><a href="#getting-started">Getting Started</a></h2>
+<h3 id="system-requirements"><a href="#system-requirements">System Requirements</a></h3>
+<p>Linux or Windows operating systems with at least 1 GB of free disk space and 2 GB of memory are required.</p>
+<ol>
+<li>Windows – versions after XP are supported.</li>
+<li>Linux - kernel version 2.6.9 and above are supported.</li>
+</ol>
+<h3 id="installation"><a href="#installation">Installation</a></h3>
+<p>DFF requires <em>Java Runtime Environment (JRE)</em>. The DFF installation package for <em>Windows</em> includes <em>JRE</em>, which will not replace any <em>JRE</em> installed on your computer. On <em>Linux</em> platform, ensure that <em>JRE</em> has been installed. This can be verified by using "java -version" in command line. For example:</p>
+<pre><code class="language-sh">$ java -version
+openjdk version "1.8.0_201";
+OpenJDK Runtime Environment (build 1.8.0_201-b09)
+OpenJDK 64-Bit Server VM (build 25.201-b09, mixed mode)
+</code></pre>
+<p>On Windows, run the installer executable such as <code>dff7205-WinJre.exe</code> to start the installation process and follow the instructions of the installer. You must have a written permission to the installation directory, which is referred as <code>&#x3C;dff root></code> in this document.</p>
+<p>On <em>Linux</em>, unzip the release package:</p>
+<pre><code class="language-sh">$ tar zxvf dff7.tar.gz
+</code></pre>
+<p>A subdirectory named <code>DFF7</code> should be placed in current directory. It contains several subdirectories such as: <code>bin64x</code>, <code>data</code>, <code>database</code>, <code>forcefields</code>, <code>images</code>, <code>jar</code> and a shell script: <code>dff7.sh</code>.</p>
+<p><em>Linux</em> may not support all languages. Restricting the language to English for any non-English versions of <em>Linux</em> is recommended. From the command shell running DFF, execute the following command to set the language to English only.
+<em>If you are using B shell:</em></p>
+<pre><code class="language-sh">$ export LC_ALL =
+</code></pre>
+<p>If you are using C shell:</p>
+<pre><code class="language-sh">$ setenv LC
+</code></pre>
+<h3 id="uninstalling"><a href="#uninstalling">Uninstalling</a></h3>
+<p>To uninstall DFFfrom Windows system, run "Unistall.exe" which is located in the <code>&#x3C;dff root></code> directory. On Linux platform, delete the DFF installation directory.</p>
+<h3 id="starting"><a href="#starting">Starting</a></h3>
+<p>To start the software, double click on the DFF icon on Windows. On <em>Linux</em>, DFF can be started by running the shell script <code>dff7.sh</code>:</p>
+<pre><code class="language-sh">$ sh dff7.sh
+</code></pre>
+<p>The DFF user interface is divided into three areas. At the top are the <em>Command Menu</em> and <em>Tool Bar</em>, at the left is the <em>Project Navigator</em> which lists files and sub folders in current project, and in the center of the window are <em>Main Panels</em> for displaying molecular models</p>
+<p>TODO: An UI illustration is missing here</p>
+<h3 id="licensing"><a href="#licensing">Licensing</a></h3>
+<p>Two types of license modes, local or floating, can be used with DFF. In both cases the license is node-locked to a specific computer. The local mode allows usage of DFF on the same computer that is licensed. The floating mode allows usage of DFF on any computer (client) that can access a licensed computer (server). The license period (either termed or perpetual), as well as the number of concurrent usages of DFF, are specified by a license file.</p>
+<p>The license related files, <code>License.txt</code> and <code>License.ini</code> are saved in <code>&#x3C;dff root>/License</code> folder. <code>License.txt</code> is the license file which specifies the license products, number of license and license terms. <code>License.ini</code> is a configuration file specifying the IP address and port number of a license server. To use the local license mode or on a license server, a valid <code>License.txt</code> is required, <code>License.ini</code> is ignored. To use a floating license, only <code>License.ini</code> is required.</p>
+<h4 id="installation-and-configuration"><a href="#installation-and-configuration">Installation and Configuration</a></h4>
+<p>Install and start DFF. If the license is not installed, an error message will appear, close the error message, the <strong>License Manager</strong> dialog will appear:</p>
+<p>TODO add image</p>
+<p>This dialog can also be opened by using <strong>Help</strong> → <strong>License</strong> command from DFF user interface. There are four command buttons on this dialog.</p>
+<p><strong>Request</strong> is used to generate a license request file. Click this button and follow the instructions to generate a license request form; send this form to your DFF distributer to obtain a license file.</p>
+<p><strong>Install</strong> is used to install the license file. Click this button to allocate the license file and install it. The license file is copied to <code>&#x3C;dff root>/License/License.txt</code>. The license file must be issued for the same computer.</p>
+<p><strong>Configure</strong> is used to set up a floating license. The default values are <code>localhost</code> and <code>null</code> as space holders. To use a floating license set the IP address and port number of the licensed server. For example:</p>
+<p>TODO add image</p>
+<p>Which assumes a DFF license server has been set up running on a computer identified by the IP address and accessible through the port numbered as <code>3583</code>.</p>
+<h4 id="license-server"><a href="#license-server">License Server</a></h4>
+<p>License server is an executable code named as <code>dfflsv.exe</code>. It is not necessary to install entire DFF package, but only the server code, <code>dfflsv.exe</code> and the license file, <code>License.txt</code>. The file structure should look like this (e.g. on Linux):</p>
+<pre><code>&#x3C;dff root>/bin64x/dfflsv.exe
+&#x3C;dff root>/License/License.txt
+</code></pre>
+<p>To see how to use this command, type</p>
+<pre><code class="language-sh">$ ./dfflsv.exe help
+</code></pre>
+<p>To start the license server:</p>
+<pre><code class="language-sh">$ ./dfflsv.exe start
+</code></pre>
+<p>which sets the license server using default port number <code>3583</code> in background. To use a different port, such as <code>3580</code>:</p>
+<pre><code class="language-sh">$ ./dfflsv.exe start 3580
+</code></pre>
+<p>The status of license server can be checked by:</p>
+<pre><code class="language-sh">$ ./dfflsv.exe status
+</code></pre>
+<p>To stop the license server:</p>
+<pre><code class="language-sh">$ ./dfflsv.exe quit
+</code></pre>
+<p>To restart the server:</p>
+<pre><code class="language-sh">$ ./dfflsv.exe reset
+</code></pre>
+<p>This command can be also used to generate a license request from command line</p>
+<pre><code class="language-sh">$ ./dfflsv.exe request
+</code></pre>
+<p>To put the server in background on Linux you can simply put <code>&#x26;</code> in the end of above commands. You can also set <code>dfflsv.exe</code> to run as a server that automatically starts on Linux or Windows. On Windows, this can be done by using Windows Task Schedule, which is also the way to have <code>dfflsv.exe</code> running on background.</p>
+<h3 id="install-external-software"><a href="#install-external-software">Install External Software</a></h3>
+<p>The user interface of DFF directly integrates with the quantum mechanics software suites <em>GAUSSIAN</em>. This software package must be installed and configured on the same computer, and the environment variables must be properly set. Please refer to the documentation of Gaussian packages for more information. Once the software is installed and configured, it can be started directly from DFF interface.</p>
+<p>The DFF installation package includes software packages of <em>GROMACS</em><sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup> and <em>LAMMPS</em><sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref aria-describedby="footnote-label">2</a></sup>, which can be called directly from DFF interface.</p>
+<section data-footnotes class="footnotes"><h3 id="footnote-label" class="sr-only"><a href="#footnote-label">Footnotes</a></h3>
+<ol>
+<li id="user-content-fn-1">
+<p>GROMACS available under the GNU Lesser General Public License (LGPL), version 2.1. <a href="http://www.gromacs.org/">http://www.gromacs.org/</a>. <a href="#user-content-fnref-1" data-footnote-backref class="data-footnote-backref" aria-label="Back to content">↩</a></p>
+</li>
+<li id="user-content-fn-2">
+<p>LAMMPS distributed as an open source code under the terms of the GPL, distributed by Sandia National Laboratories, a US Department of Energy laboratory. <a href="http://lammps.sandia.gov/">http://lammps.sandia.gov</a>. <a href="#user-content-fnref-2" data-footnote-backref class="data-footnote-backref" aria-label="Back to content">↩</a></p>
+</li>
+</ol>
+</section></article></main>
+    <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
+</script>
+  </body>
+</html>
