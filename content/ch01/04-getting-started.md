@@ -138,7 +138,7 @@ To put the server in background on Linux you can simply put `&` in the end of ab
 
 The user interface of DFF directly integrates with the quantum mechanics software suites _GAUSSIAN_. This software package must be installed and configured on the same computer, and the environment variables must be properly set. Please refer to the documentation of Gaussian packages for more information. Once the software is installed and configured, it can be started directly from DFF interface.
 
-The DFF installation package includes software packages of [GROMACS][^1] and [LAMMPS][^2], which can be called directly from DFF interface.
+The DFF installation package includes software packages of GROMACS[^1] and LAMMPS[^2], which can be called directly from DFF interface.
 
 [^1]: [GROMACS] available under the GNU Lesser General Public License (LGPL), version 2.1.
 [^2]: [LAMMPS] distributed as an open source code under the terms of the GPL, distributed by Sandia National Laboratories, a US Department of Energy laboratory.
