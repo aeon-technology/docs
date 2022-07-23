@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm run clean && nodemon --watch src --watch scripts --watch content --ext md,js,mjs,css,html scripts/build.mjs --dev",
     "build": "npm run clean && node scripts/build.mjs",
-    "clean": "rm -rf dist"
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "esbuild": "^0.14.46",
@@ -23,6 +23,7 @@
     "remark-math": "^5.1.1",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
+    "rimraf": "^3.0.2",
     "slugify": "^1.6.5",
     "unified": "^10.1.2"
   }
