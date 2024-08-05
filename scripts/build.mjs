@@ -36,10 +36,7 @@ async function main() {
   const css = await buildCss();
   await copyAssets();
 
-  const indexTemplate = await fs.readFile(
-    path.join(DIR.src, "index.html"),
-    "utf-8"
-  );
+  const indexTemplate = await fs.readFile(path.join(DIR.src, "index.html"), "utf-8");
 
   const getToc = async (mdString, srcRelativePath) => {
     const srcPageDir = path.dirname(path.join(DIR.content, srcRelativePath));
@@ -55,18 +52,9 @@ async function main() {
       html: indexTemplate
         .replace("{{ main }}", renderPageHtml(mdPage))
         .replace("{{ nav }}", await getToc(tocMd, mdPage.meta.srcRelativePath))
-        .replace(
-          "{{ beforeHeadEnd }}",
-          `<style>${css.outputFiles[0].text}</style>`
-        )
-        .replace(
-          "{{ beforeBodyEnd }}",
-          `<script type="module">${js.outputFiles[0].text}</script>`
-        ),
-      outPath: path.join(
-        "dist",
-        replaceExtension(mdPage.meta.srcRelativePath, ".html")
-      ),
+        .replace("{{ beforeHeadEnd }}", `<style>${css.outputFiles[0].text}</style>`)
+        .replace("{{ beforeBodyEnd }}", `<script type="module">${js.outputFiles[0].text}</script>`),
+      outPath: path.join("dist", replaceRelativePathFileExtension(mdPage.meta.srcRelativePath, ".md", ".html")),
     }))
     .map(async (asyncTask) => {
       const task = await asyncTask;
@@ -79,9 +67,7 @@ async function main() {
 
 async function buildMdPages() {
   const markdownPaths = (await getFiles(DIR.content)).filter(
-    (filePath) =>
-      [".md"].includes(path.extname(filePath)) &&
-      !path.basename(filePath).startsWith("_")
+    (filePath) => [".md"].includes(path.extname(filePath)) && !path.basename(filePath).startsWith("_")
   );
 
   const pages = await Promise.all(
@@ -124,7 +110,7 @@ const buildMd = unified()
   .use(rehypeUrls, (url, node) => {
     try {
       if (path.extname(url.pathname) === ".md") {
-        return replaceExtension(url.pathname, ".html");
+        return replaceRelativePathFileExtension(url.pathname, ".md", ".html");
       }
     } catch {}
   })
@@ -143,7 +129,7 @@ const getTocBuilder = (pageDir) =>
       if (path.extname(url.pathname) === ".md") {
         const absoluteLink = path.join(DIR.dist, url.pathname);
         const relativeLink = path.relative(pageDir, absoluteLink);
-        return replaceExtension(relativeLink, ".html");
+        return replaceRelativePathFileExtension(relativeLink, ".md", ".html");
       }
     })
     .use(rehypeStringify);
@@ -176,16 +162,11 @@ async function buildJs() {
 async function copyAssets() {
   const publicFiles = await getFiles(DIR.public);
   const contentFiles = await getFiles(DIR.content);
-  const nonMdContentFiles = contentFiles.filter(
-    (file) => path.extname(file) !== ".md"
-  );
+  const nonMdContentFiles = contentFiles.filter((file) => path.extname(file) !== ".md");
 
   const copyTasks = [
     ...publicFiles.map((file) => [file, rebase(file, DIR.public, DIR.dist)]),
-    ...nonMdContentFiles.map((file) => [
-      file,
-      rebase(file, DIR.content, DIR.dist),
-    ]),
+    ...nonMdContentFiles.map((file) => [file, rebase(file, DIR.content, DIR.dist)]),
   ].map(async ([from, to]) => {
     await ensureDir(to);
     await fs.copyFile(from, to);
@@ -199,12 +180,9 @@ function renderPageHtml(page) {
   return `<article>${page.html}</article>`;
 }
 
-function replaceExtension(srcPath, toExt) {
-  return path.format({
-    ...path.parse(srcPath),
-    base: "",
-    ext: toExt,
-  });
+function replaceRelativePathFileExtension(srcPath, fromExt, toExt) {
+  const fromPattern = new RegExp(`${fromExt}$`);
+  return srcPath.replace(fromPattern, toExt);
 }
 
 function rebase(srcPath, srcBase, targetBase) {
