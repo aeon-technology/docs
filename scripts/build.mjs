@@ -110,7 +110,8 @@ const buildMd = unified()
   .use(rehypeUrls, (url, node) => {
     try {
       if (path.extname(url.pathname) === ".md") {
-        return replaceRelativePathFileExtension(url.pathname, ".md", ".html");
+        const updatedPath = replaceRelativePathFileExtension(url.pathname, ".md", ".html");
+        return url.hash ? `${updatedPath}${url.hash}` : updatedPath;
       }
     } catch {}
   })
