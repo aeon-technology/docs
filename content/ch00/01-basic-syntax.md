@@ -16,7 +16,6 @@ Second line
 - [External URL](https://wikipedia.org)
 - [Internal page](./02-footnote.md)
 - [Section on the same page](#media)
-- [Section on another internal page](./02-footnote.md#this-is-a-reference-style-link)
 - [Section on another internal page](../ch01/02-feature-list.md#user-friendly-features)
 - [External Reference Style Link]
 
