@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFF</title>
+    <style>*,*:before,*:after{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;color:#333}nav a:where(.active){background:#333;color:#fff}img{display:block;max-width:100%}code{font-weight:600}pre{background:#444;color:#fff;padding:1ch}pre code{background-color:inherit}table{border-collapse:collapse}table :where(th,td){border:1px solid #666}:where(h2,h3,h4) a{color:inherit;text-decoration:none}:where(h2,h3,h4) a:hover{text-decoration:underline}:where(h2,h3,h4) a:hover:after{content:" #"}.c-app-layout{display:grid;margin:0 auto;grid-template-columns:auto 1fr;gap:32px}.c-app-menu{top:0;position:sticky;overflow-y:scroll;padding:0 32px;background-color:#eee;height:100vh}
+</style>
+  </head>
+  <body class="c-app-layout">
+    <aside class="c-app-menu">
+      <nav class="u-reset"><p>User Guide DFF 8.0</p>
+<ul>
+<li><a href="../index.html">Introduction</a></li>
+</ul>
+<p>Online Use</p>
+<ul>
+<li><a href="../online/registration.html">Registration</a></li>
+<li><a href="../online/tutorial.html">Tutorial</a></li>
+<li><a href="../online/support.html">Support</a></li>
+</ul>
+<p>Offline Use</p>
+<ul>
+<li><a href="../offline/get-started.html">Get Started</a></li>
+<li><a href="../offline/tutorialA.html">Tutorials A - Essential Functionality</a>
+<ul>
+<li><a href="../offline/tutorialsA-builder.html">Tutorial A1 - Building a Model of Molecule</a></li>
+<li><a href="../offline/tutorialsA-liquid.html">Tutorial A2 - Working With a Liquid Model</a></li>
+<li><a href="../offline/tutorialsA-polymer.html">Tutorial A3 - Working with Polymers</a></li>
+<li><a href="../offline/tutorialsA-protein.html">Tutorial A4 - Working with Proteins</a></li>
+<li><a href="../offline/tutorialsA-mixforcefields.html">Tutorial A5 - Mixing Force fields</a></li>
+</ul>
+</li>
+<li><a href="../offline/tutorialB.html">Tutorials B - Parameterization Methods</a>
+<ul>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial B1 - Prepare QM Data</a></li>
+<li><a href="../offline/tutorialsB-fitmolecule.html">Tutorial B2 - Fit QM Data of Molecule</a></li>
+<li><a href="../offline/tutorialsB-fitdimer.html">Tutorial B3 - Fit QM Data of Molecular Dimer</a></li>
+<li><a href="../offline/tutorialsB-fitliquid.html">Tutorial B4 - Fit Liquid Data</a></li>
+</ul>
+</li>
+<li><a href="../offline/tutorialC.html">Tutorials C - Database Methods</a>
+<ul>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial C1 - Augment TEAMFF</a></li>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial C2 - Use QMDFF</a></li>
+</ul>
+</li>
+</ul>
+<p>Concepts, Methods and Algorithms</p>
+<ul>
+<li>
+<p><a href="forcefield-types.html">Force Field Types</a></p>
+<ul>
+<li><a href="forcefield-types.html">AMBER Type</a></li>
+<li><a href="forcefield-types.html">TEAM Type</a></li>
+</ul>
+</li>
+<li>
+<p><a href="atom-types.html">Atom Types</a></p>
+<ul>
+<li><a href="atom-types-properties.html">Molecular and Atomic Properties</a></li>
+<li><a href="atom-types-typingrules.html">Typing Rules</a></li>
+<li><a href="atom-types-extensible.html">Extensible Definitions</a></li>
+<li><a href="atom-types-hypervalence.html">Hyper-valence</a></li>
+<li><a href="atom-types-equivalence.html">Equivalent Types</a></li>
+<li><a href="atom-types-integrated.html">Integrated Types</a></li>
+</ul>
+</li>
+<li>
+<p><a href="parametrization.html">Parametrization</a></p>
+<ul>
+<li><a href="parametrization-trainingset.html">Training Set</a></li>
+<li><a href="parametrization-general.html">General Procedure</a></li>
+<li><a href="parametrization-autoPar.html">Automatic Parameters</a></li>
+<li><a href="parametrization-qmd.html">Quantum Mechanics Data </a></li>
+<li><a href="parametrization-fitqmd.html">Fit Quantum Mechanics Data </a></li>
+<li><a href="parametrization-fitdimer.html">Fit Molecular Dimer</a></li>
+<li><a href="parametrization-fitliquid.html">Fit Liquid Data</a></li>
+</ul>
+</li>
+<li>
+<p><a href="teamff-database.html">TEAMFF Database</a></p>
+<ul>
+<li><a href="teamff-forcefields.html">Included Force Fields</a></li>
+<li><a href="teamff-extensibility.html">Extensibility of TEAMFF</a></li>
+</ul>
+</li>
+<li>
+<p><a href="qmdff-database.html">QMDFF Database</a></p>
+</li>
+<li>
+<p><a href="molecular-simulations.html">Molecular Simulations</a></p>
+</li>
+</ul>
+<p>References of GUI Commands</p>
+<ul>
+<li><a href="../gui-commands/overview.html">Manage Projects</a>
+<ul>
+<li><a href="../gui-commands/project-tree.html">Project Tree</a></li>
+<li><a href="../gui-commands/toolbar-commnads.html">Toolbar Commands</a></li>
+<li><a href="../gui-commands/mouse-function.html">Mouse Functions</a></li>
+</ul>
+</li>
+<li><a href="../gui-commands/file-menu.html">File Menu</a></li>
+<li><a href="../gui-commands/build-menu.html">Build Menu</a></li>
+<li><a href="../gui-commands/view-menu.html">View Menu</a></li>
+<li><a href="../gui-commands/teamff-menu.html">TEAMFF Menu</a></li>
+<li><a href="../gui-commands/simulation-menu.html">Simulation Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">QMDFF Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">Force Field Menu</a></li>
+<li><a href="../gui-commands/parameter-menu.html">Parameter Menu</a></li>
+<li><a href="../gui-commands/qmd-menu.html">QMD Menu</a></li>
+<li><a href="../gui-commands/help-menu.html">Help Menu</a></li>
+</ul>
+<p>References of Executable Commands</p>
+<ul>
+<li><a href="../exe-commands/model-com.html">Model Commands</a></li>
+<li><a href="../exe-commands/forcefield-com.html">ForceField Commands</a></li>
+<li><a href="../exe-commands/export-com.html">Export Commands</a></li>
+<li><a href="../exe-commands/database-com.html">TEAMFF Commands</a></li>
+<li><a href="../exe-commands/fit-com.html">Fit Commands</a></li>
+<li><a href="../exe-commands/mm-com.html">Molecular Mechanics Commands</a></li>
+<li><a href="../exe-commands/qm-com.html">Quantum Mechanics Commands</a></li>
+<li><a href="../exe-commands/qmdff-com.html">QMDFF commands</a></li>
+</ul>
+<p>Appendix</p>
+<ul>
+<li><a href="../appendix/functions.html">Force Field Functions</a></li>
+<li><a href="../exe-commands/firl-formats.html">File Formats</a></li>
+</ul>
+<p>Temporary Examples</p>
+<ul>
+<li><a href="../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../ch00/03-table.html">Table</a></li>
+<li><a href="../ch00/04-math-expression.html">Math expression</a></li>
+</ul></nav>
+    </aside>
+    <main id="main"><article><h2 id="force-fields-in-teamff"><a href="#force-fields-in-teamff">Force Fields in TEAMFF</a></h2>
+<p>TEAMFF comes with multiple force fields in different force field types and coverages. These force fields are classified in three categories: basic, general and special.</p>
+<h3 id="basic-force-fields"><a href="#basic-force-fields">Basic Force Fields</a></h3>
+<p>The purpose of basic force fields is for providing a starting point of further developments and optimizations.</p>
+<p>The basic force fields are listed in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Typing Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEAM-Basic</td>
+<td>TEAM</td>
+<td>DFF2012.def</td>
+</tr>
+<tr>
+<td>AMBER-Basic</td>
+<td>AMBER</td>
+<td>DFF2012.def</td>
+</tr>
+<tr>
+<td>CHARMM-Basic</td>
+<td>CHARMM</td>
+<td>DFF2012.def</td>
+</tr>
+<tr>
+<td>CFF-Basic</td>
+<td>CFF(LJ9-6)</td>
+<td>DFF2012.def</td>
+</tr>
+<tr>
+<td>CFF12-Basic</td>
+<td>CFF(LJ12-6)</td>
+<td>DFF2012.def</td>
+</tr>
+<tr>
+<td>DREIDING-Basic</td>
+<td>DREIDING</td>
+<td>DFF2012.def</td>
+</tr>
+</tbody>
+</table>
+<p>These force field were developed by fitting QM data of molecular fragments representing common organic molecules, drug-like molecules taken from MayBridge database and synthetic polymers taken from PolyInfo database. Quantum mechanics calculations were carried out at the level of B3LYP/6-31G(d,p). Atomic partial charges were derived by fitting the ESP charges. Parameterization was validated by comparing force field predicted data (e.g., vibrational frequencies; conformational energies; structural properties such as bond lengths, angles, dihedral angles, etc) against QM data. The LJ parameters are fixed to default values obtained by survey of literature.</p>
+<h3 id="general-force-fields"><a href="#general-force-fields">General Force Fields</a></h3>
+<p>The general force fields are derived by refining and extending the basic force fields. The refinements include valence, charge and LJ parameters, according to extensive research results. [references] In addition to the molecules covered by the Basic version, the new coverage includes:</p>
+<p>[list of new coverage]</p>
+<p>There are two force fields in this category: TEAM-General and AMBER-General, which service material and life sciences:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Typing Rule</th>
+<th>Industry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEAM-General</td>
+<td>TEAM</td>
+<td>General.ext</td>
+<td>Materials</td>
+</tr>
+<tr>
+<td>AMBER-General</td>
+<td>AMBER</td>
+<td>General.ext</td>
+<td>Life</td>
+</tr>
+</tbody>
+</table>
+<p>Both force fields are developed using the same typing rules, same optimized LJ-12-6 parameters, and similar QM data set.</p>
+<p>The general force fields are continually improved.</p>
+<h3 id="special-force-fields"><a href="#special-force-fields">Special Force Fields</a></h3>
+<p>The special force fields are developed to extend the coverage of general force fields, for specific application scopes, ionic liquids and zeolites.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Typing Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEAM-IonLiq</td>
+<td>TEAM</td>
+<td>IonLiq.ext</td>
+</tr>
+<tr>
+<td>TEAM-Zeolite</td>
+<td>TEAM</td>
+<td>Zeolite.def</td>
+</tr>
+<tr>
+<td>AMBER-IonLiq</td>
+<td>AMBER</td>
+<td>IonLiq.ext</td>
+</tr>
+</tbody>
+</table>
+<p>These force fields, works together with the general force fields to expand the coverage without compromising the quality of parameters. More detail is given in <a href="./teamff-extensibility.html">extensibility of TEAMFF</a>. Depending on the coverage scope, one or both types are developed.</p></article></main>
+    <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
+</script>
+  </body>
+</html>

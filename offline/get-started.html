@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFF</title>
+    <style>*,*:before,*:after{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;color:#333}nav a:where(.active){background:#333;color:#fff}img{display:block;max-width:100%}code{font-weight:600}pre{background:#444;color:#fff;padding:1ch}pre code{background-color:inherit}table{border-collapse:collapse}table :where(th,td){border:1px solid #666}:where(h2,h3,h4) a{color:inherit;text-decoration:none}:where(h2,h3,h4) a:hover{text-decoration:underline}:where(h2,h3,h4) a:hover:after{content:" #"}.c-app-layout{display:grid;margin:0 auto;grid-template-columns:auto 1fr;gap:32px}.c-app-menu{top:0;position:sticky;overflow-y:scroll;padding:0 32px;background-color:#eee;height:100vh}
+</style>
+  </head>
+  <body class="c-app-layout">
+    <aside class="c-app-menu">
+      <nav class="u-reset"><p>User Guide DFF 8.0</p>
+<ul>
+<li><a href="../index.html">Introduction</a></li>
+</ul>
+<p>Online Use</p>
+<ul>
+<li><a href="../online/registration.html">Registration</a></li>
+<li><a href="../online/tutorial.html">Tutorial</a></li>
+<li><a href="../online/support.html">Support</a></li>
+</ul>
+<p>Offline Use</p>
+<ul>
+<li><a href="get-started.html">Get Started</a></li>
+<li><a href="tutorialA.html">Tutorials A - Essential Functionality</a>
+<ul>
+<li><a href="tutorialsA-builder.html">Tutorial A1 - Building a Model of Molecule</a></li>
+<li><a href="tutorialsA-liquid.html">Tutorial A2 - Working With a Liquid Model</a></li>
+<li><a href="tutorialsA-polymer.html">Tutorial A3 - Working with Polymers</a></li>
+<li><a href="tutorialsA-protein.html">Tutorial A4 - Working with Proteins</a></li>
+<li><a href="tutorialsA-mixforcefields.html">Tutorial A5 - Mixing Force fields</a></li>
+</ul>
+</li>
+<li><a href="tutorialB.html">Tutorials B - Parameterization Methods</a>
+<ul>
+<li><a href="tutorialsB-qmdata.html">Tutorial B1 - Prepare QM Data</a></li>
+<li><a href="tutorialsB-fitmolecule.html">Tutorial B2 - Fit QM Data of Molecule</a></li>
+<li><a href="tutorialsB-fitdimer.html">Tutorial B3 - Fit QM Data of Molecular Dimer</a></li>
+<li><a href="tutorialsB-fitliquid.html">Tutorial B4 - Fit Liquid Data</a></li>
+</ul>
+</li>
+<li><a href="tutorialC.html">Tutorials C - Database Methods</a>
+<ul>
+<li><a href="tutorialsB-qmdata.html">Tutorial C1 - Augment TEAMFF</a></li>
+<li><a href="tutorialsB-qmdata.html">Tutorial C2 - Use QMDFF</a></li>
+</ul>
+</li>
+</ul>
+<p>Concepts, Methods and Algorithms</p>
+<ul>
+<li>
+<p><a href="../topics/forcefield-types.html">Force Field Types</a></p>
+<ul>
+<li><a href="../topics/forcefield-types.html">AMBER Type</a></li>
+<li><a href="../topics/forcefield-types.html">TEAM Type</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../topics/atom-types.html">Atom Types</a></p>
+<ul>
+<li><a href="../topics/atom-types-properties.html">Molecular and Atomic Properties</a></li>
+<li><a href="../topics/atom-types-typingrules.html">Typing Rules</a></li>
+<li><a href="../topics/atom-types-extensible.html">Extensible Definitions</a></li>
+<li><a href="../topics/atom-types-hypervalence.html">Hyper-valence</a></li>
+<li><a href="../topics/atom-types-equivalence.html">Equivalent Types</a></li>
+<li><a href="../topics/atom-types-integrated.html">Integrated Types</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../topics/parametrization.html">Parametrization</a></p>
+<ul>
+<li><a href="../topics/parametrization-trainingset.html">Training Set</a></li>
+<li><a href="../topics/parametrization-general.html">General Procedure</a></li>
+<li><a href="../topics/parametrization-autoPar.html">Automatic Parameters</a></li>
+<li><a href="../topics/parametrization-qmd.html">Quantum Mechanics Data </a></li>
+<li><a href="../topics/parametrization-fitqmd.html">Fit Quantum Mechanics Data </a></li>
+<li><a href="../topics/parametrization-fitdimer.html">Fit Molecular Dimer</a></li>
+<li><a href="../topics/parametrization-fitliquid.html">Fit Liquid Data</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../topics/teamff-database.html">TEAMFF Database</a></p>
+<ul>
+<li><a href="../topics/teamff-forcefields.html">Included Force Fields</a></li>
+<li><a href="../topics/teamff-extensibility.html">Extensibility of TEAMFF</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../topics/qmdff-database.html">QMDFF Database</a></p>
+</li>
+<li>
+<p><a href="../topics/molecular-simulations.html">Molecular Simulations</a></p>
+</li>
+</ul>
+<p>References of GUI Commands</p>
+<ul>
+<li><a href="../gui-commands/overview.html">Manage Projects</a>
+<ul>
+<li><a href="../gui-commands/project-tree.html">Project Tree</a></li>
+<li><a href="../gui-commands/toolbar-commnads.html">Toolbar Commands</a></li>
+<li><a href="../gui-commands/mouse-function.html">Mouse Functions</a></li>
+</ul>
+</li>
+<li><a href="../gui-commands/file-menu.html">File Menu</a></li>
+<li><a href="../gui-commands/build-menu.html">Build Menu</a></li>
+<li><a href="../gui-commands/view-menu.html">View Menu</a></li>
+<li><a href="../gui-commands/teamff-menu.html">TEAMFF Menu</a></li>
+<li><a href="../gui-commands/simulation-menu.html">Simulation Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">QMDFF Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">Force Field Menu</a></li>
+<li><a href="../gui-commands/parameter-menu.html">Parameter Menu</a></li>
+<li><a href="../gui-commands/qmd-menu.html">QMD Menu</a></li>
+<li><a href="../gui-commands/help-menu.html">Help Menu</a></li>
+</ul>
+<p>References of Executable Commands</p>
+<ul>
+<li><a href="../exe-commands/model-com.html">Model Commands</a></li>
+<li><a href="../exe-commands/forcefield-com.html">ForceField Commands</a></li>
+<li><a href="../exe-commands/export-com.html">Export Commands</a></li>
+<li><a href="../exe-commands/database-com.html">TEAMFF Commands</a></li>
+<li><a href="../exe-commands/fit-com.html">Fit Commands</a></li>
+<li><a href="../exe-commands/mm-com.html">Molecular Mechanics Commands</a></li>
+<li><a href="../exe-commands/qm-com.html">Quantum Mechanics Commands</a></li>
+<li><a href="../exe-commands/qmdff-com.html">QMDFF commands</a></li>
+</ul>
+<p>Appendix</p>
+<ul>
+<li><a href="../appendix/functions.html">Force Field Functions</a></li>
+<li><a href="../exe-commands/firl-formats.html">File Formats</a></li>
+</ul>
+<p>Temporary Examples</p>
+<ul>
+<li><a href="../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../ch00/03-table.html">Table</a></li>
+<li><a href="../ch00/04-math-expression.html">Math expression</a></li>
+</ul></nav>
+    </aside>
+    <main id="main"><article><h2 id="offline-use"><a href="#offline-use">Offline Use</a></h2>
+<p>To use DFF offline, register an account first, and then download and install the software on your computer.</p>
+<p>Offline use requires a node-locked license. For new users, a 30-days trial license can be obtained free of charge.</p>
+<h3 id="system-requirements"><a href="#system-requirements">System Requirements</a></h3>
+<p>Linux or Windows operating systems with at least 1 GB of free disk space and 1 GB of memory are required.</p>
+<ol>
+<li>Windows – versions after XP are supported.</li>
+<li>Linux - kernel version 2.6.9 and above are supported.</li>
+</ol>
+<p>DFF requires Java Runtime Environment (JRE). The DFF installation package of Windows includes JRE. On Linux platform, make sure that JRE has been installed, which can be verified by using
+
+<code>java -version</code>
+
+from command line.</p>
+<h3 id="installation"><a href="#installation">Installation</a></h3>
+<p>On Windows, run the installer program such as <code>dff8003-WinJre.exe</code> to start the installation process and follow the instructions. You must have written permission to the installation directory.</p>
+<p>On Linux, unpack the release package. For example:
+
+<code>$tar zxvf dff8003.tar.gz</code>
+
+By default the installation directory is under the current directory. You may move it to anywhere on your computer appropriate.</p>
+<p>The installation directory is referred to &#x3C;dff-root> in this document. It contains several subdirectories such as: /bin64x, /data, /database, /force fields, /images, /jar, /License, etc.</p>
+<h3 id="uninstall"><a href="#uninstall">Uninstall</a></h3>
+<p>To uninstall DFF from Windows systems, run <code>uninstall.exe</code> which is in the &#x3C;dff-root> directory. On Linux platform, delete the DFF installation directory.</p>
+<h3 id="starting-and-licensing"><a href="#starting-and-licensing">Starting and Licensing</a></h3>
+<p>To start DFF, double click on the DFF icon on Windows. On Linux, DFF can be started by running the shell script:
+<code>$sh dff8.sh</code></p>
+<p>Unless the license file has been installed, an error message will appear. Close the error message, the "License Manager" dialog will appear for configuring license. There are four command buttons on this dialog.</p>
+<p><strong>Request</strong> is used to generate a license request file. Click this button and follow the instructions to generate a license request form, and send this form to DFF distributor to obtain a license file.</p>
+<p><strong>Install</strong> is used to install the license file. After you have received a license file, click this button to allocate the license file and install it, which copies the license file to &#x3C;dff-root>/License/License.txt.</p>
+<p><strong>Configure</strong> is used to set up a floating license. The default values are "localhost" and "null" which sets the local license. To use advanced license scheme, please refer to DFF User Guide.</p>
+<p><strong>OK</strong> is used to close this dialog.</p>
+<h3 id="common-use-cases"><a href="#common-use-cases">Common Use Cases</a></h3>
+<p>The functionality of DFF includes</p>
+<ol>
+<li>Use TEAMFF (Standard version)</li>
+<li>Augment TEAMFF (Professional version)</li>
+<li>Make specific force fields (Professional version)</li>
+</ol>
+<h4 id="use-teamff"><a href="#use-teamff">Use TEAMFF</a></h4>
+<p>Using TEAMFF is similar with the online version, with additional features of build molecular models, flexibility of handling the parameter assignments.</p>
+<h4 id="augment-teamff"><a href="#augment-teamff">Augment TEAMFF</a></h4>
+<p>Augment TEAMFF database can be done in a couple of ways. To add new parameters to an existing force field is challenging and often problematic because of conflicts. A better practice is to put the new parameters into a new force field table and then use the table together with existing ones.</p>
+<p>To make new force field starts from identifying training set. Given selected force field type and force fields, if TEAMFF is incomplete, molecular fragments that contains the absent parameters will be created and saved, which form the training set.</p>
+<p>Next, execute Gaussian calculations to generate quantum mechanics data (QMD) for the training set. DFF provide automatic methods that efficiently sample the potential energy surface for parametrization.</p>
+<p>Using the QMD files, carry out parameterization using the automated fitting program. The validation of parameterization is automatically conducted at the the of fitting. Default LJ-12-6 parameters, sourced from prior work, are used and fixed. The LJ-12-6 parameters can be optimized with reliable experimental liquid data.</p>
+<p>When the force field is completed, create a new force field table in TEAMFF. The table can be used with other force fields in the same force field type.</p>
+<h4 id="make-specific-force-field-from-qm-data"><a href="#make-specific-force-field-from-qm-data">Make specific force field from QM data</a></h4>
+<p>Traditional force fields consistently face challenges in terms of coverage and accuracy. This stems from poorly defined transferability assumed in force field parametrization, which doesn't always yield optimal results. In essence, any data model derived from regressing a diverse and large dataset, regardless of the regression methodology employed, inherently involves a trade-off between coverage and accuracy.</p>
+<p>From an individual user's perspective, this broad coverage may not always be the ideal solution. Given that it's possible to construct a force field directly from quantum mechanical data, a superior approach involves representing a smaller, specific subspace of interest. This approach ensures the most precise representation of the underlying quantum mechanical description. This is where DFF comes into play, offering the opportunity for such specialization.</p>
+<p>The solution includes a database (QMDFF) that stores QM data of fragments and developed force fields for molecular systems identified by constituent fragments.</p>
+<p>For any target system, DFF parses the structure data and search QMDFF database for force field. If none exists, a new force field will be created using the fragments as training set. Since fragments often shared by different molecules and the QM data of fragments are saved in the database, the requirement of expensive QM computations is minimized. The fitting and validation of force field is the same as explained above. If successful, the result force field is saved in the database for reuse.</p></article></main>
+    <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
+</script>
+  </body>
+</html>

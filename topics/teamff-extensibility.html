@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFF</title>
+    <style>*,*:before,*:after{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;color:#333}nav a:where(.active){background:#333;color:#fff}img{display:block;max-width:100%}code{font-weight:600}pre{background:#444;color:#fff;padding:1ch}pre code{background-color:inherit}table{border-collapse:collapse}table :where(th,td){border:1px solid #666}:where(h2,h3,h4) a{color:inherit;text-decoration:none}:where(h2,h3,h4) a:hover{text-decoration:underline}:where(h2,h3,h4) a:hover:after{content:" #"}.c-app-layout{display:grid;margin:0 auto;grid-template-columns:auto 1fr;gap:32px}.c-app-menu{top:0;position:sticky;overflow-y:scroll;padding:0 32px;background-color:#eee;height:100vh}
+</style>
+  </head>
+  <body class="c-app-layout">
+    <aside class="c-app-menu">
+      <nav class="u-reset"><p>User Guide DFF 8.0</p>
+<ul>
+<li><a href="../index.html">Introduction</a></li>
+</ul>
+<p>Online Use</p>
+<ul>
+<li><a href="../online/registration.html">Registration</a></li>
+<li><a href="../online/tutorial.html">Tutorial</a></li>
+<li><a href="../online/support.html">Support</a></li>
+</ul>
+<p>Offline Use</p>
+<ul>
+<li><a href="../offline/get-started.html">Get Started</a></li>
+<li><a href="../offline/tutorialA.html">Tutorials A - Essential Functionality</a>
+<ul>
+<li><a href="../offline/tutorialsA-builder.html">Tutorial A1 - Building a Model of Molecule</a></li>
+<li><a href="../offline/tutorialsA-liquid.html">Tutorial A2 - Working With a Liquid Model</a></li>
+<li><a href="../offline/tutorialsA-polymer.html">Tutorial A3 - Working with Polymers</a></li>
+<li><a href="../offline/tutorialsA-protein.html">Tutorial A4 - Working with Proteins</a></li>
+<li><a href="../offline/tutorialsA-mixforcefields.html">Tutorial A5 - Mixing Force fields</a></li>
+</ul>
+</li>
+<li><a href="../offline/tutorialB.html">Tutorials B - Parameterization Methods</a>
+<ul>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial B1 - Prepare QM Data</a></li>
+<li><a href="../offline/tutorialsB-fitmolecule.html">Tutorial B2 - Fit QM Data of Molecule</a></li>
+<li><a href="../offline/tutorialsB-fitdimer.html">Tutorial B3 - Fit QM Data of Molecular Dimer</a></li>
+<li><a href="../offline/tutorialsB-fitliquid.html">Tutorial B4 - Fit Liquid Data</a></li>
+</ul>
+</li>
+<li><a href="../offline/tutorialC.html">Tutorials C - Database Methods</a>
+<ul>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial C1 - Augment TEAMFF</a></li>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial C2 - Use QMDFF</a></li>
+</ul>
+</li>
+</ul>
+<p>Concepts, Methods and Algorithms</p>
+<ul>
+<li>
+<p><a href="forcefield-types.html">Force Field Types</a></p>
+<ul>
+<li><a href="forcefield-types.html">AMBER Type</a></li>
+<li><a href="forcefield-types.html">TEAM Type</a></li>
+</ul>
+</li>
+<li>
+<p><a href="atom-types.html">Atom Types</a></p>
+<ul>
+<li><a href="atom-types-properties.html">Molecular and Atomic Properties</a></li>
+<li><a href="atom-types-typingrules.html">Typing Rules</a></li>
+<li><a href="atom-types-extensible.html">Extensible Definitions</a></li>
+<li><a href="atom-types-hypervalence.html">Hyper-valence</a></li>
+<li><a href="atom-types-equivalence.html">Equivalent Types</a></li>
+<li><a href="atom-types-integrated.html">Integrated Types</a></li>
+</ul>
+</li>
+<li>
+<p><a href="parametrization.html">Parametrization</a></p>
+<ul>
+<li><a href="parametrization-trainingset.html">Training Set</a></li>
+<li><a href="parametrization-general.html">General Procedure</a></li>
+<li><a href="parametrization-autoPar.html">Automatic Parameters</a></li>
+<li><a href="parametrization-qmd.html">Quantum Mechanics Data </a></li>
+<li><a href="parametrization-fitqmd.html">Fit Quantum Mechanics Data </a></li>
+<li><a href="parametrization-fitdimer.html">Fit Molecular Dimer</a></li>
+<li><a href="parametrization-fitliquid.html">Fit Liquid Data</a></li>
+</ul>
+</li>
+<li>
+<p><a href="teamff-database.html">TEAMFF Database</a></p>
+<ul>
+<li><a href="teamff-forcefields.html">Included Force Fields</a></li>
+<li><a href="teamff-extensibility.html">Extensibility of TEAMFF</a></li>
+</ul>
+</li>
+<li>
+<p><a href="qmdff-database.html">QMDFF Database</a></p>
+</li>
+<li>
+<p><a href="molecular-simulations.html">Molecular Simulations</a></p>
+</li>
+</ul>
+<p>References of GUI Commands</p>
+<ul>
+<li><a href="../gui-commands/overview.html">Manage Projects</a>
+<ul>
+<li><a href="../gui-commands/project-tree.html">Project Tree</a></li>
+<li><a href="../gui-commands/toolbar-commnads.html">Toolbar Commands</a></li>
+<li><a href="../gui-commands/mouse-function.html">Mouse Functions</a></li>
+</ul>
+</li>
+<li><a href="../gui-commands/file-menu.html">File Menu</a></li>
+<li><a href="../gui-commands/build-menu.html">Build Menu</a></li>
+<li><a href="../gui-commands/view-menu.html">View Menu</a></li>
+<li><a href="../gui-commands/teamff-menu.html">TEAMFF Menu</a></li>
+<li><a href="../gui-commands/simulation-menu.html">Simulation Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">QMDFF Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">Force Field Menu</a></li>
+<li><a href="../gui-commands/parameter-menu.html">Parameter Menu</a></li>
+<li><a href="../gui-commands/qmd-menu.html">QMD Menu</a></li>
+<li><a href="../gui-commands/help-menu.html">Help Menu</a></li>
+</ul>
+<p>References of Executable Commands</p>
+<ul>
+<li><a href="../exe-commands/model-com.html">Model Commands</a></li>
+<li><a href="../exe-commands/forcefield-com.html">ForceField Commands</a></li>
+<li><a href="../exe-commands/export-com.html">Export Commands</a></li>
+<li><a href="../exe-commands/database-com.html">TEAMFF Commands</a></li>
+<li><a href="../exe-commands/fit-com.html">Fit Commands</a></li>
+<li><a href="../exe-commands/mm-com.html">Molecular Mechanics Commands</a></li>
+<li><a href="../exe-commands/qm-com.html">Quantum Mechanics Commands</a></li>
+<li><a href="../exe-commands/qmdff-com.html">QMDFF commands</a></li>
+</ul>
+<p>Appendix</p>
+<ul>
+<li><a href="../appendix/functions.html">Force Field Functions</a></li>
+<li><a href="../exe-commands/firl-formats.html">File Formats</a></li>
+</ul>
+<p>Temporary Examples</p>
+<ul>
+<li><a href="../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../ch00/03-table.html">Table</a></li>
+<li><a href="../ch00/04-math-expression.html">Math expression</a></li>
+</ul></nav>
+    </aside>
+    <main id="main"><article><h2 id="extensibility-of-teamff"><a href="#extensibility-of-teamff">Extensibility of TEAMFF</a></h2>
+<p>The most important advantage of TEAMFF is that multiple force fields can be used together, which offers the possibility of high quality and extensibility.</p>
+<h3 id="combination-of-force-fields"><a href="#combination-of-force-fields">Combination of force fields</a></h3>
+<p>The valence parameters are usually correlated due to redundant coordinates used in classic force fields. Mixing valence parameters can be problematic. However, the mixing of nonbond energy terms is well established. Columbic interactions are described by point charges, not atom types, and the Lennard-Jones (LJ) interaction has well-accepted combining rules such as the Lorentz-Berthelot and Waldman-Hagler rules. In TEAMFF, the combination of force fields is achieved by mixing the nonbond parameters while keeping all valence parameters intact.</p>
+<p>Therefore, any force fields can be combined, as long as the nonbond terms are the same. In practice, the combination is limited to the same force field type for avoiding using different functions in simulation software.</p>
+<p>When several force fields are used for a molecular model, the force fields are applied in the order of the list of force fields. DFF starts from the first, moves to to the next when required parameters for some molecules are incomplete, until parameters of all molecules are found or the end of the list is reached.</p>
+<p>If all required parameters are found, a new set of atom types is created. The new atom types are made by <br>
+<code>force field ID + original atom types</code> <br>
+The combined atom types are long strings. To meet the convention of atom types in simulation software, the combined atom types are 1-1 mapped to a new short strings, such as "C1", "C2", "O1", "Na1", etc.</p>
+<p>The new atom types are assign to atoms of the molecular model. Together, the atomic charges are assigned using the combined atom types. The combined force field parameters are identified by the combined atom types. The valence parameters are the same as that in the original force fields, only the LJ parameters are calculated by using the combination rules. The result model data and force field parameters are ready for simulation jobs.</p>
+<h3 id="augment-teamff"><a href="#augment-teamff">Augment TEAMFF</a></h3>
+<p>To add parameters to a force field is generally error-pron, because of the overlap of atom type definitions and correlations among parameters. If new parameters are in need, the best practice is to take the advantage of TEAMFF architecture, adding a new force field to TEAMFF instead of adding new parameters to a force field.</p>
+<p>DFF can automatically generate required molecular fragments from missing parameters for parameterization. For example, a simulation model contains 10 kinds of molecules (e.g. water, methanol, protein), among them 8 are completely covered by TEAMFF, but 2 kinds of molecule show missing parameters. DFF will generate required fragments for the 2 kind of molecules. If a new force field is made by using these fragments and added to TEAMFF, the model is completely covered.</p>
+<p>The identification of fragments depends on the atom types, so the typing rule must be the same to make sure the new force field includes all required parameters. As a general practice, the force field type should be the same.</p>
+<p>Given the training set, force field type and atom typing rules, a new force field can be made by using the <a href="./parametrization.html">procedure</a> explained previously.</p></article></main>
+    <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
+</script>
+  </body>
+</html>

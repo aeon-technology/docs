@@ -15,9 +15,9 @@
 </ul>
 <p>Online Use</p>
 <ul>
-<li><a href="../online/registration.html">Registration</a></li>
-<li><a href="../online/tutorial.html">Tutorial</a></li>
-<li><a href="../online/support.html">Support</a></li>
+<li><a href="registration.html">Registration</a></li>
+<li><a href="tutorial.html">Tutorial</a></li>
+<li><a href="support.html">Support</a></li>
 </ul>
 <p>Offline Use</p>
 <ul>
@@ -130,29 +130,49 @@
 </ul>
 <p>Temporary Examples</p>
 <ul>
-<li><a href="01-basic-syntax.html">Basic syntax</a></li>
-<li><a href="02-footnote.html">Footnote</a></li>
-<li><a href="03-table.html">Table</a></li>
-<li><a href="04-math-expression.html">Math expression</a></li>
+<li><a href="../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../ch00/03-table.html">Table</a></li>
+<li><a href="../ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><h2 id="footnote"><a href="#footnote">Footnote</a></h2>
-<p>Do not confuse Footnote with reference style link.</p>
+    <main id="main"><article><h2 id="tutorial-of-dff-online-use"><a href="#tutorial-of-dff-online-use">Tutorial of DFF Online Use</a></h2>
+<p>This tutorial covers the online use of DFF standard edition.</p>
+<h3 id="prepare-a-model"><a href="#prepare-a-model">Prepare a model</a></h3>
+<p>To use DFF standard online, you need to prepare an molecular model file, which can be one of the following two formats.</p>
 <ul>
-<li>Footnote materializes the link at the bottom of the HTML output page.</li>
-<li>Reference style link helps author organize the link at the bottom of the source file while hiding the references from the user.</li>
+<li>MOL2</li>
+<li>PDB</li>
 </ul>
-<h3 id="this-is-a-footnote"><a href="#this-is-a-footnote">This is a footnote</a></h3>
-<p>The inversion technique<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup> leads to 10X speed up in model regression. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h3 id="this-is-a-reference-style-link"><a href="#this-is-a-reference-style-link">This is a reference style link</a></h3>
-<p><a href="https://en.wikipedia.org/wiki/Invertible_matrix">The inversion technique</a> leads to 10X speed up in model regression. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<section data-footnotes class="footnotes"><h3 id="footnote-label" class="sr-only"><a href="#footnote-label">Footnotes</a></h3>
+<p>Preferably, the molecular model file is completely, which means hydrogen atoms are included, formal charges are set if necessary, and the structure is reasonably relaxed.</p>
+<p>DFF will automatically complete required data. If the input model is not well prepared, it is recommended to examine the output structure file to make sure that meets your need.</p>
+<h3 id="upload-and-run"><a href="#upload-and-run">Upload and Run</a></h3>
 <ol>
-<li id="user-content-fn-1">
-<p>The Matrix must be <a href="https://en.wikipedia.org/wiki/Invertible_matrix">invertible</a> <a href="#user-content-fnref-1" data-footnote-backref class="data-footnote-backref" aria-label="Back to content">↩</a></p>
+<li>
+<p>In the <strong>"Upload"</strong> cell, browse your computer files and select the  molecular model file to upload.</p>
+</li>
+<li>
+<p>Select one of the designated simulation software packages.</p>
+<ul>
+<li>GROMACS</li>
+<li>LAMMPS
+This selection will determine available force fields in TEAMFF, and the format of output (input files for the simulation package).</li>
+</ul>
+</li>
+<li>
+<p>Select <strong>Force Field</strong> in the pulldown cell. In most case, the general force field is sufficient. You may select other or multiple force fields. If multiple force fields are selected, adjust the order of usage is critical. For more details, refer to the document about <a href="../topics/teamff-database.html">TEAMFF</a>.  <em>The system will start from the top of the selection list, only when required parameters are incomplete the next will be called.</em></p>
+</li>
+<li>
+<p>Optionally, set the <strong>Temperature</strong> of target application. A small correction will be made to the LJ-12-6 parameters so that the predicted thermodynamic properties are more accurate at elevated temperatures. <em>Note that at different temperature, the assigned parameters are different, which cannot be used on different temperatures.</em></p>
+</li>
+<li>
+<p>Click <strong>"Run"</strong> button to start the background jobs. If the model file is large (>10K atoms) the system will take a few seconds to finish the  computation. The results will be shown on the screen.</p>
+</li>
+<li>
+<p>If everything looks good, the <strong>"Download"</strong> button is activated. Click the button to download result files which are the input files for the simulation packaged selected. <em>The computation results will be saved under your account for a period of time (~30 days) for late retrieving.</em></p>
 </li>
 </ol>
-</section></article></main>
+<p>If anything goes wrong, an error message will be prompted. Try to correct the errors according to the error message. If need an help, click <strong>"Support</strong> button to send messages.</p></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>

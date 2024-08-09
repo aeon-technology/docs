@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFF</title>
+    <style>*,*:before,*:after{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;color:#333}nav a:where(.active){background:#333;color:#fff}img{display:block;max-width:100%}code{font-weight:600}pre{background:#444;color:#fff;padding:1ch}pre code{background-color:inherit}table{border-collapse:collapse}table :where(th,td){border:1px solid #666}:where(h2,h3,h4) a{color:inherit;text-decoration:none}:where(h2,h3,h4) a:hover{text-decoration:underline}:where(h2,h3,h4) a:hover:after{content:" #"}.c-app-layout{display:grid;margin:0 auto;grid-template-columns:auto 1fr;gap:32px}.c-app-menu{top:0;position:sticky;overflow-y:scroll;padding:0 32px;background-color:#eee;height:100vh}
+</style>
+  </head>
+  <body class="c-app-layout">
+    <aside class="c-app-menu">
+      <nav class="u-reset"><p>User Guide DFF 8.0</p>
+<ul>
+<li><a href="../index.html">Introduction</a></li>
+</ul>
+<p>Online Use</p>
+<ul>
+<li><a href="../online/registration.html">Registration</a></li>
+<li><a href="../online/tutorial.html">Tutorial</a></li>
+<li><a href="../online/support.html">Support</a></li>
+</ul>
+<p>Offline Use</p>
+<ul>
+<li><a href="../offline/get-started.html">Get Started</a></li>
+<li><a href="../offline/tutorialA.html">Tutorials A - Essential Functionality</a>
+<ul>
+<li><a href="../offline/tutorialsA-builder.html">Tutorial A1 - Building a Model of Molecule</a></li>
+<li><a href="../offline/tutorialsA-liquid.html">Tutorial A2 - Working With a Liquid Model</a></li>
+<li><a href="../offline/tutorialsA-polymer.html">Tutorial A3 - Working with Polymers</a></li>
+<li><a href="../offline/tutorialsA-protein.html">Tutorial A4 - Working with Proteins</a></li>
+<li><a href="../offline/tutorialsA-mixforcefields.html">Tutorial A5 - Mixing Force fields</a></li>
+</ul>
+</li>
+<li><a href="../offline/tutorialB.html">Tutorials B - Parameterization Methods</a>
+<ul>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial B1 - Prepare QM Data</a></li>
+<li><a href="../offline/tutorialsB-fitmolecule.html">Tutorial B2 - Fit QM Data of Molecule</a></li>
+<li><a href="../offline/tutorialsB-fitdimer.html">Tutorial B3 - Fit QM Data of Molecular Dimer</a></li>
+<li><a href="../offline/tutorialsB-fitliquid.html">Tutorial B4 - Fit Liquid Data</a></li>
+</ul>
+</li>
+<li><a href="../offline/tutorialC.html">Tutorials C - Database Methods</a>
+<ul>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial C1 - Augment TEAMFF</a></li>
+<li><a href="../offline/tutorialsB-qmdata.html">Tutorial C2 - Use QMDFF</a></li>
+</ul>
+</li>
+</ul>
+<p>Concepts, Methods and Algorithms</p>
+<ul>
+<li>
+<p><a href="forcefield-types.html">Force Field Types</a></p>
+<ul>
+<li><a href="forcefield-types.html">AMBER Type</a></li>
+<li><a href="forcefield-types.html">TEAM Type</a></li>
+</ul>
+</li>
+<li>
+<p><a href="atom-types.html">Atom Types</a></p>
+<ul>
+<li><a href="atom-types-properties.html">Molecular and Atomic Properties</a></li>
+<li><a href="atom-types-typingrules.html">Typing Rules</a></li>
+<li><a href="atom-types-extensible.html">Extensible Definitions</a></li>
+<li><a href="atom-types-hypervalence.html">Hyper-valence</a></li>
+<li><a href="atom-types-equivalence.html">Equivalent Types</a></li>
+<li><a href="atom-types-integrated.html">Integrated Types</a></li>
+</ul>
+</li>
+<li>
+<p><a href="parametrization.html">Parametrization</a></p>
+<ul>
+<li><a href="parametrization-trainingset.html">Training Set</a></li>
+<li><a href="parametrization-general.html">General Procedure</a></li>
+<li><a href="parametrization-autoPar.html">Automatic Parameters</a></li>
+<li><a href="parametrization-qmd.html">Quantum Mechanics Data </a></li>
+<li><a href="parametrization-fitqmd.html">Fit Quantum Mechanics Data </a></li>
+<li><a href="parametrization-fitdimer.html">Fit Molecular Dimer</a></li>
+<li><a href="parametrization-fitliquid.html">Fit Liquid Data</a></li>
+</ul>
+</li>
+<li>
+<p><a href="teamff-database.html">TEAMFF Database</a></p>
+<ul>
+<li><a href="teamff-forcefields.html">Included Force Fields</a></li>
+<li><a href="teamff-extensibility.html">Extensibility of TEAMFF</a></li>
+</ul>
+</li>
+<li>
+<p><a href="qmdff-database.html">QMDFF Database</a></p>
+</li>
+<li>
+<p><a href="molecular-simulations.html">Molecular Simulations</a></p>
+</li>
+</ul>
+<p>References of GUI Commands</p>
+<ul>
+<li><a href="../gui-commands/overview.html">Manage Projects</a>
+<ul>
+<li><a href="../gui-commands/project-tree.html">Project Tree</a></li>
+<li><a href="../gui-commands/toolbar-commnads.html">Toolbar Commands</a></li>
+<li><a href="../gui-commands/mouse-function.html">Mouse Functions</a></li>
+</ul>
+</li>
+<li><a href="../gui-commands/file-menu.html">File Menu</a></li>
+<li><a href="../gui-commands/build-menu.html">Build Menu</a></li>
+<li><a href="../gui-commands/view-menu.html">View Menu</a></li>
+<li><a href="../gui-commands/teamff-menu.html">TEAMFF Menu</a></li>
+<li><a href="../gui-commands/simulation-menu.html">Simulation Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">QMDFF Menu</a></li>
+<li><a href="../gui-commands/qmdff-menu.html">Force Field Menu</a></li>
+<li><a href="../gui-commands/parameter-menu.html">Parameter Menu</a></li>
+<li><a href="../gui-commands/qmd-menu.html">QMD Menu</a></li>
+<li><a href="../gui-commands/help-menu.html">Help Menu</a></li>
+</ul>
+<p>References of Executable Commands</p>
+<ul>
+<li><a href="../exe-commands/model-com.html">Model Commands</a></li>
+<li><a href="../exe-commands/forcefield-com.html">ForceField Commands</a></li>
+<li><a href="../exe-commands/export-com.html">Export Commands</a></li>
+<li><a href="../exe-commands/database-com.html">TEAMFF Commands</a></li>
+<li><a href="../exe-commands/fit-com.html">Fit Commands</a></li>
+<li><a href="../exe-commands/mm-com.html">Molecular Mechanics Commands</a></li>
+<li><a href="../exe-commands/qm-com.html">Quantum Mechanics Commands</a></li>
+<li><a href="../exe-commands/qmdff-com.html">QMDFF commands</a></li>
+</ul>
+<p>Appendix</p>
+<ul>
+<li><a href="../appendix/functions.html">Force Field Functions</a></li>
+<li><a href="../exe-commands/firl-formats.html">File Formats</a></li>
+</ul>
+<p>Temporary Examples</p>
+<ul>
+<li><a href="../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../ch00/03-table.html">Table</a></li>
+<li><a href="../ch00/04-math-expression.html">Math expression</a></li>
+</ul></nav>
+    </aside>
+    <main id="main"><article><h2 id="molecular-and-atomic-properties"><a href="#molecular-and-atomic-properties">Molecular and Atomic Properties</a></h2>
+<h3 id="molecular-structure"><a href="#molecular-structure">Molecular Structure</a></h3>
+<p>Atom environments are determined by descriptions of molecular structures in terms of connectivity, which describes how each atom is bonded with others.</p>
+<h4 id="hydrogen-atoms"><a href="#hydrogen-atoms">Hydrogen Atoms</a></h4>
+<p>The hydrogen atoms must be explicitly given in order to assign atom types. In some model files such as PDB the hydrogen atoms may be omitted (implicit). You may use DFF to add hydrogen atoms automatically. The algorithm uses the most common number of hydrogen atoms of an atom, minus the number of existing bonds and formal charge assigned to the atom.</p>
+<h4 id="formal-charges"><a href="#formal-charges">Formal Charges</a></h4>
+<p>Formal charges are used for distinguishing ions from neutral molecules. An example is acetic acid and acetate ion: if the hydrogen atom is not explicitly given, DFF will treat it as acetic acid. In order to treat it as acetate ion, the formal charge must be assigned to the oxygen atom.</p>
+<p>In ring molecules, formal charges are counted towards calculating the aromaticity, the formal charges must be assigned correctly. The formal charges are also used to calculate distributed atomic charges. Typical examples are aromatic rings such as imidazolium (IM), pyridinium (Py), ammonium (NH4+), tetrafluoroborate (BF4+) hexafluorophosphate (PF6-).</p>
+<p>The formal charges can be assigned or edited by using DFF offline version. An automatic program is implemented to enable quick assignments. In this program, a hard-coded procedure is implemented to assign the formal charges using bonding information including number of bonds, ring sizes, atoms in the ring, directly attached elements and numbers to assign the formal charges for special cases. For atoms that are not defined by the program, the number of bond electrons (depending on bond orders) and valence electrons are used to calculate the formal charges.</p>
+<p>If a model has been assigned formal charges, the program can preserve the values unless instructed to reset all values. A command can be used to remove all formal charges. These functions provide convenience for editing the formal charges by users.</p>
+<h4 id="atomic-properties"><a href="#atomic-properties">Atomic Properties</a></h4>
+<p>Given all atom coordinates, the connectivity can be established automatically using atom-atom distances. The algorithm is straightforward: for any pair of atoms, if the distance between the two atoms is shorter than a threshold value defined as the sum of the tabulated valence radii39 saved in Element.dat file, and a tolerance value (fixed as ±0.2 Å), the atom pair is considered to be bonded. Clearly, reasonably accurate coordinates of atoms is prerequisites.</p>
+<p>From the connectivity indexes, essential atom property such as coordination number and ring sizes are calculated via a complete search algorithm that finds neighboring atoms, rings and ring sizes of each atom. If an atom bridges two rings (e.g., in a fused ring), the smallest ring size is assigned to the atom. The bond orders are estimated based on the octet rule of classical valence bond theory. The algorithm uses the number of available valence electrons of each atom, which is calculated as the total number of valence electrons, including formal charge, minus the number of bonding electrons. Each bond is initially assigned as a single bond, if the number of available valence electrons is not zero, the atom is marked as a potential bonding acceptor. The bond order of two adjacent acceptors is then increased by one. This process is repeated until the above condition fails. Note that the octet rule may not be always valid, and the bond orders are calculated for the most common scenarios. With the ring sizes and bond orders, the aromaticity of atoms is calculated by the 4N+2 rule.</p>
+<p>Note that the formal charge assignment is designed for the most probable (often the most stable) cases, which may not be appropriate for your purposes. Examine the formal charges carefully and edit the DefaultFormalCharge.dat file to customize the assignments.</p></article></main>
+    <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
+</script>
+  </body>
+</html>
