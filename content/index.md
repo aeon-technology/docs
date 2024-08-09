@@ -1,8 +1,12 @@
-# User Guide for Direct Force Field
+DFF User Guide Rev. 2024.08.08
 
-Rev. 2022.07.17
+# Introduction
 
-Copyright 2000-2022 © Aeon Technology, Inc.
-Usage of the Direct Force Field software including this documentation is restricted to purposes in accordance with the Direct Force Field license agreement. Direct Force Field is a trademark of Aeon Technology, Inc.
-GROMACS is software licensed under the GNU General Public License. The main distribution site is at https://www.gromacs.org.
-LAMMPS is distributed as an open source code under the terms of the GPL. LAMMPS is distributed by Sandia National Laboratories, a US Department of Energy laboratory, at http://lammps.sandia.gov.
+Direct Force field (DFF) is a software package for development and deployment of molecular force fields. It comes in two versions: Standard and Professional. The Standard version is for deployment, while the Professional version offers additional functionalities for development.
+
+DFF provides multiple force fields in popular functional forms collectively called TEAM force fields (TEAMFF). TEAMFF is managed by using computer database technology to maximize coverage while maintain high accuracy. To use TEAMFF is straightforward: load a molecular model, set a few options, and run DFF to assign atom types and force field parameters. The results are saved in files that can be used for designated simulation software packages such as LAMMPS and  GROMACS. 
+
+The professional version offers additional functionalities of making new force fields, either to augment the TEAMFF database or to make specific force fields for target systems. 
+
+DFFWeb is a website providing online version of the standard version. To use DFF offline, download and install DFF software. Depending on license configuration, you may use the standard version or professional version. The offline version of DFF includes a graphic user interface.
+
