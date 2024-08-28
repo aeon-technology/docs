@@ -31,7 +31,7 @@ The installation directory is referred to \<dff-root\> in this document. It cont
 ## Uninstall 
 To uninstall DFF from Windows systems, run `uninstall.exe` which is in the \<dff-root\> directory. On Linux platform, delete the DFF installation directory.
 
-## Starting and Licensing
+## Licensing
 To start DFF, double click on the DFF icon on Windows. On Linux, DFF can be started by running the shell script: 
         `$sh dff8.sh`
 

@@ -7,23 +7,31 @@ Online Use
   - [Support](./online/support.md)
 
 Offline Use
-  - [Get Started](./offline/get-started.md)  
-  - [Tutorials A - Essential Functionality](./offline/tutorialA.md)  
-    - [Tutorial A1 - Building a Model of Molecule](./offline/tutorialsA-builder.md)	
-    - [Tutorial A2 - Working With a Liquid Model](./offline/tutorialsA-liquid.md)	
-    - [Tutorial A3 - Working with Polymers](./offline/tutorialsA-polymer.md)	
-    - [Tutorial A4 - Working with Proteins](./offline/tutorialsA-protein.md)	
-    - [Tutorial A5 - Mixing Force fields](./offline/tutorialsA-mixforcefields.md)	
-  - [Tutorials B - Parameterization Methods](./offline/tutorialB.md)      
-    - [Tutorial B1 - Prepare QM Data](./offline/tutorialsB-qmdata.md)	
-    - [Tutorial B2 - Fit QM Data of Molecule](./offline/tutorialsB-fitmolecule.md)	
-    - [Tutorial B3 - Fit QM Data of Molecular Dimer](./offline/tutorialsB-fitdimer.md)	
-    - [Tutorial B4 - Fit Liquid Data](./offline/tutorialsB-fitliquid.md)	
-  - [Tutorials C - Database Methods](./offline/tutorialC.md)      
-    - [Tutorial C1 - Augment TEAMFF](./offline/tutorialsB-qmdata.md)	
-    - [Tutorial C2 - Use QMDFF](./offline/tutorialsB-qmdata.md)	
+  - [Get Started](./offline/get-started.md)
+    - [System Requirement](./offline/get-started.md#system-requirements)
+    - [Installation](./offline/get-started.md#installation)
+    - [Licensing](./offline/get-started.md#licensing)
+    - [Common Use Cases](./offline/get-started.md#common-use-cases)
+      
+  - [Tutorials](./offline/tutorials.md)  
+    - [Project and Models](./offline/tutorials-project/lecture.md)
+    
+    - [Use TEAMFF for Liquids](./offline/tutorials-liquid.md)	
+
+
+    - [Use TEAMFF for Macromolecules](./offline/tutorials-polymer.md)
+
+
+    - [Use Multiple Force Fields of TEAMFF](./offline/tutorials-mixforcefields.md)	
+    
+    - [Prepare QM Data for Parameterization](./offline/tutorialsB-qmdata.md)	
+    - [Fit QM Data of Molecules](./offline/tutorialsB-fitmolecule.md)	
+    - [Optimize LJ parameters](./offline/tutorialsB-fitliquid.md)	
+    - [Extend TEAMFF by Adding New Force Fields](./offline/tutorials-addteamff.md)	
+    - [Use QMDFF for Specific Force Fields](./offline/tutorials-useqmdff.md)	
 
 Concepts, Methods and Algorithms
+  - [Introduction](./topics/introduction.md) 
   - [Force Field Types](./topics/forcefield-types.md)
     - [AMBER Type](./topics/forcefield-types.md#amber-force-field-type) 
     - [TEAM Type](./topics/forcefield-types.md#team-force-field-type) 
