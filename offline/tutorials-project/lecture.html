@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFF</title>
+    <style>*,*:before,*:after{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;color:#333}nav a:where(.active){background:#333;color:#fff}img{display:block;max-width:100%}code{font-weight:600}pre{background:#444;color:#fff;padding:1ch}pre code{background-color:inherit}table{border-collapse:collapse}table :where(th,td){border:1px solid #666}:where(h2,h3,h4) a{color:inherit;text-decoration:none}:where(h2,h3,h4) a:hover{text-decoration:underline}:where(h2,h3,h4) a:hover:after{content:" #"}.c-app-layout{display:grid;margin:0 auto;grid-template-columns:auto 1fr;gap:32px}.c-app-menu{top:0;position:sticky;overflow-y:scroll;padding:0 32px;background-color:#eee;height:100vh}
+</style>
+  </head>
+  <body class="c-app-layout">
+    <aside class="c-app-menu">
+      <nav class="u-reset"><p>User Guide DFF 8.0</p>
+<ul>
+<li><a href="../../index.html">Introduction</a></li>
+</ul>
+<p>Online Use</p>
+<ul>
+<li><a href="../../online/registration.html">Registration</a></li>
+<li><a href="../../online/tutorial.html">Tutorial</a></li>
+<li><a href="../../online/support.html">Support</a></li>
+</ul>
+<p>Offline Use</p>
+<ul>
+<li><a href="../get-started.html">Get Started</a>
+<ul>
+<li><a href="../get-started.html">System Requirement</a></li>
+<li><a href="../get-started.html">Installation</a></li>
+<li><a href="../get-started.html">Licensing</a></li>
+<li><a href="../get-started.html">Common Use Cases</a></li>
+</ul>
+</li>
+<li><a href="../tutorials.html">Tutorials</a>
+<ul>
+<li>
+<p><a href="lecture.html">Project and Models</a></p>
+</li>
+<li>
+<p><a href="../tutorials-liquid.html">Use TEAMFF for Liquids</a></p>
+</li>
+<li>
+<p><a href="../tutorials-polymer.html">Use TEAMFF for Macromolecules</a></p>
+</li>
+<li>
+<p><a href="../tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></p>
+</li>
+<li>
+<p><a href="../tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></p>
+</li>
+<li>
+<p><a href="../tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></p>
+</li>
+<li>
+<p><a href="../tutorialsB-fitliquid.html">Optimize LJ parameters</a></p>
+</li>
+<li>
+<p><a href="../tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></p>
+</li>
+<li>
+<p><a href="../tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Concepts, Methods and Algorithms</p>
+<ul>
+<li>
+<p><a href="../../topics/introduction.html">Introduction</a></p>
+</li>
+<li>
+<p><a href="../../topics/forcefield-types.html">Force Field Types</a></p>
+<ul>
+<li><a href="../../topics/forcefield-types.html">AMBER Type</a></li>
+<li><a href="../../topics/forcefield-types.html">TEAM Type</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../../topics/atom-types.html">Atom Types</a></p>
+<ul>
+<li><a href="../../topics/atom-types-properties.html">Molecular and Atomic Properties</a></li>
+<li><a href="../../topics/atom-types-typingrules.html">Typing Rules</a></li>
+<li><a href="../../topics/atom-types-extensible.html">Extensible Definitions</a></li>
+<li><a href="../../topics/atom-types-hypervalence.html">Hyper-valence</a></li>
+<li><a href="../../topics/atom-types-equivalence.html">Equivalent Types</a></li>
+<li><a href="../../topics/atom-types-integrated.html">Integrated Types</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../../topics/parametrization.html">Parametrization</a></p>
+<ul>
+<li><a href="../../topics/parametrization-trainingset.html">Training Set</a></li>
+<li><a href="../../topics/parametrization-general.html">General Procedure</a></li>
+<li><a href="../../topics/parametrization-autoPar.html">Automatic Parameters</a></li>
+<li><a href="../../topics/parametrization-qmd.html">Quantum Mechanics Data </a></li>
+<li><a href="../../topics/parametrization-fitqmd.html">Fit Quantum Mechanics Data </a></li>
+<li><a href="../../topics/parametrization-fitdimer.html">Fit Molecular Dimer</a></li>
+<li><a href="../../topics/parametrization-fitliquid.html">Fit Liquid Data</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../../topics/teamff-database.html">TEAMFF Database</a></p>
+<ul>
+<li><a href="../../topics/teamff-forcefields.html">Included Force Fields</a></li>
+<li><a href="../../topics/teamff-extensibility.html">Extensibility of TEAMFF</a></li>
+</ul>
+</li>
+<li>
+<p><a href="../../topics/qmdff-database.html">QMDFF Database</a></p>
+</li>
+<li>
+<p><a href="../../topics/molecular-simulations.html">Molecular Simulations</a></p>
+</li>
+</ul>
+<p>References of GUI Commands</p>
+<ul>
+<li><a href="../../gui-commands/overview.html">Manage Projects</a>
+<ul>
+<li><a href="../../gui-commands/project-tree.html">Project Tree</a></li>
+<li><a href="../../gui-commands/toolbar-commnads.html">Toolbar Commands</a></li>
+<li><a href="../../gui-commands/mouse-function.html">Mouse Functions</a></li>
+</ul>
+</li>
+<li><a href="../../gui-commands/file-menu.html">File Menu</a></li>
+<li><a href="../../gui-commands/build-menu.html">Build Menu</a></li>
+<li><a href="../../gui-commands/view-menu.html">View Menu</a></li>
+<li><a href="../../gui-commands/teamff-menu.html">TEAMFF Menu</a></li>
+<li><a href="../../gui-commands/simulation-menu.html">Simulation Menu</a></li>
+<li><a href="../../gui-commands/qmdff-menu.html">QMDFF Menu</a></li>
+<li><a href="../../gui-commands/qmdff-menu.html">Force Field Menu</a></li>
+<li><a href="../../gui-commands/parameter-menu.html">Parameter Menu</a></li>
+<li><a href="../../gui-commands/qmd-menu.html">QMD Menu</a></li>
+<li><a href="../../gui-commands/help-menu.html">Help Menu</a></li>
+</ul>
+<p>References of Executable Commands</p>
+<ul>
+<li><a href="../../exe-commands/model-com.html">Model Commands</a></li>
+<li><a href="../../exe-commands/forcefield-com.html">ForceField Commands</a></li>
+<li><a href="../../exe-commands/export-com.html">Export Commands</a></li>
+<li><a href="../../exe-commands/database-com.html">TEAMFF Commands</a></li>
+<li><a href="../../exe-commands/fit-com.html">Fit Commands</a></li>
+<li><a href="../../exe-commands/mm-com.html">Molecular Mechanics Commands</a></li>
+<li><a href="../../exe-commands/qm-com.html">Quantum Mechanics Commands</a></li>
+<li><a href="../../exe-commands/qmdff-com.html">QMDFF commands</a></li>
+</ul>
+<p>Appendix</p>
+<ul>
+<li><a href="../../appendix/functions.html">Force Field Functions</a></li>
+<li><a href="../../exe-commands/firl-formats.html">File Formats</a></li>
+</ul>
+<p>Temporary Examples</p>
+<ul>
+<li><a href="../../ch00/01-basic-syntax.html">Basic syntax</a></li>
+<li><a href="../../ch00/02-footnote.html">Footnote</a></li>
+<li><a href="../../ch00/03-table.html">Table</a></li>
+<li><a href="../../ch00/04-math-expression.html">Math expression</a></li>
+</ul></nav>
+    </aside>
+    <main id="main"><article><h2 id="project-and-models"><a href="#project-and-models">Project and Models</a></h2>
+<p>In this lesson, we will show some of the basic operations of DFF:</p>
+<ul>
+<li>
+<p>Create and manage a project</p>
+</li>
+<li>
+<p>Create a model from scratch</p>
+</li>
+<li>
+<p>Mouse functions for editing and viewing</p>
+</li>
+</ul>
+<h3 id="project"><a href="#project">Project</a></h3>
+<p>In DFF, a project is a folder that contains files and sub-folders of a work. A file named as ".dpf", which saves the data of current project is saved in the folder. You can create a project from scratch or open a existing folder as project.</p>
+<h4 id="open-a-project"><a href="#open-a-project">Open a Project</a></h4>
+<ul>
+<li>
+<p>To open a folder as project, start DFF and  <strong>File/Open Project</strong> command. A "Open" dialog lets you browse and select the folder to be opened. If the folder has not been set as project before, an information window will pop up. If you agree, the folder will be set as a project and a new file .dpf will be created and saved.</p>
+</li>
+<li>
+<p>Point to the new project folder, right-click mouse button, a pulldown command list shows several commands can be applied to the project folder. Click <strong>Refresh</strong> to upload and register DFF project relevant files.</p>
+</li>
+</ul>
+<h4 id="adjust-font-sizes"><a href="#adjust-font-sizes">Adjust Font Sizes</a></h4>
+<ul>
+<li>To adjust the font size of the Project Navigator, Point to the project file node in the Project Navigator and right-click the mouse, a pop-up options of “Larger Font” and “Smaller Font”, which can be used to change the font size.</li>
+</ul>
+<h4 id="create-an-empty-project"><a href="#create-an-empty-project">Create an Empty Project</a></h4>
+<ul>
+<li>
+<p>Start DFF and click <strong>File</strong> / <strong>New Project</strong> command. A dialog named "Create Project" lets you browse a folder on your computer, select a folder and append a new folder name to create a new project folder.</p>
+</li>
+<li>
+<p>To make a subfolder, - Hover over the new project node and right-click, a pulldown menu will pop up. Select <strong>New/Folder</strong> command, enter a name for the subfolder, and execute the command. A subfolder will be added and listed in the Project Navigator. You can see the project folders and files by using the <strong>Open in Explore</strong> command in the pulldown menu.</p>
+</li>
+</ul>
+<h4 id="save-close-and-open-project"><a href="#save-close-and-open-project">Save Close and Open Project</a></h4>
+<p>At any time, you can save the project by using File → Save Project command, you can also save the project into different name by using File → Save Project As command. To close the project, use File → Close Project command. DFF will prompt you to save before close. The saved project can be reloaded by using File → Open Project command.
+Note: The same model is provided in the Tutorial project. In the following section, we will use the Tutorial project, which has files saved for convenience. The same operations explained can be applied to the project you have just created.</p>
+<h3 id="create-a-new-model"><a href="#create-a-new-model">Create a New Model</a></h3>
+<p>A model is a molecular system which can be one molecule or a collection of molecules.</p>
+<p>In this tutorial, we will show DFF toolkit that can be used to make a new model of aspirin molecule as shown below.</p>
+<p><img src="aspirin.png" alt="aspirin"></p>
+<p>The editing commands are provided in the Toolbar for easy access. We will show how to use the commands in Toolbar to draw a molecule in this tutorial.</p>
+<ol>
+<li>
+<p>Add a new model in Project Navigator can be done by right-clicking on the project folder, select <strong>New/Model</strong> command, and enter a name for the model.</p>
+</li>
+<li>
+<p>Select an element as “C” in the element pulldown <img src="image-6.png" alt="element"> and then click the <strong>Add Atom</strong> button (<img src="image-5.png" alt="add atom">) to activate it. Now move your mouse to the main screen, left-click to add an atom. Move the mouse away from the first atom and click again to make another atom. The single bond between them is automatically added.</p>
+</li>
+<li>
+<p>Repeat until a six-member ring of carbons is formed. To close the ring, click on the starting atom.</p>
+<p><em>Note: A single click on an existing atom toggles connectivity. A yellow dot indicates connectivity is on. When connectivity is on, any atom added will be bonded to the selected atom. If you make a mistake, use the undo or redo button (<img src="image-11.png" alt="undo redo">) to alter the operations.</em></p>
+</li>
+<li>
+<p>Continue drawing until the entire skeleton (carbon atoms and connectivity) is sketched out. At this stage, don't worry about the hydrogen atoms, elements and bond orders.  You should have a structure that looks like this:</p>
+</li>
+</ol>
+<p><img src="image.png" alt="all carbon skeleton"></p>
+<ol start="5">
+<li>Select "O" in the pull-down element menu of the toolbar. Click the replace-atom button (<img src="image-7.png" alt="replace atom">) in the Toolbar. Replace carbon with oxygen as needed by clicking on the atom to be replaced.  You should end up with the following structure:</li>
+</ol>
+<p><img src="image-1.png" alt="all atom skeleton"></p>
+<ol start="6">
+<li>Select the double-bond button (<img src="image-8.png" alt="double bond">). Click on a bond to change the bond order as needed.  When you are done with this step, the model should look like this:</li>
+</ol>
+<p><img src="image-2.png" alt="with bond order"></p>
+<ol start="7">
+<li>Click the add hydrogen button (<img src="image-9.png" alt="add hydrogen"> ) to add hydrogen atoms automatically.  Hydrogen atoms are added to match the available and existing valence numbers for each atom. Make sure the bond orders are correctly set before clicking the add hydrogen button.</li>
+</ol>
+<p><img src="image-3.png" alt="final structure"></p>
+<ol start="8">
+<li>
+<p>Clean the structure by clicking the refine structure button (<img src="image-4.png" alt="clean structure">).</p>
+</li>
+<li>
+<p>The coordinates are adjusted from the points clicked on the screen. For convenience in viewing and operation, recenter the molecule by clicking the <strong>Edit/Reset COM</strong> command. The molecule will be put in the center of the screen. Select the rotate button in the command bar panel (<img src="image-10.png" alt="command bar">), and then hold the right mouse-button and drag to see how the model can be viewed from different angles. Other commands are translation, zoom in/out and recenter (not changing COM).</p>
+</li>
+<li>
+<p>Click on the Save button to save the model. DFF uses the “.msd” (Model Structure Data) extension to identify model files.</p>
+</li>
+</ol>
+<h3 id="mouse-and-short-cut-key-operations"><a href="#mouse-and-short-cut-key-operations">Mouse and Short-cut Key Operations</a></h3>
+<p>This is a good point to practice some mouse and keyboard editing functions.</p>
+<ol>
+<li>
+<p>Click the selection (arrow) button in the command bar panel (   ) to activate the mouse selection function. Once it is activated, click on an atom will pick up the atom. You can also press the left button and drag the mouse to select multiple atoms. You can cut, copy, and paste the selected atoms, to the same model but different location (where the mouse point is) and to a different model.</p>
+</li>
+<li>
+<p>The common short-cut keys are supported, the combination keys Ctrl + C, Ctrl +X and Ctrl + V are used for cutting, copy and paste respectively. In addition, Ctrl + V and Ctrl + Y are used for undo and redo, which are the same as the undo and redo buttons in the toolbar.</p>
+</li>
+</ol></article></main>
+    <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
+</script>
+  </body>
+</html>

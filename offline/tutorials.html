@@ -15,48 +15,48 @@
 </ul>
 <p>Online Use</p>
 <ul>
-<li><a href="registration.html">Registration</a></li>
-<li><a href="tutorial.html">Tutorial</a></li>
-<li><a href="support.html">Support</a></li>
+<li><a href="../online/registration.html">Registration</a></li>
+<li><a href="../online/tutorial.html">Tutorial</a></li>
+<li><a href="../online/support.html">Support</a></li>
 </ul>
 <p>Offline Use</p>
 <ul>
-<li><a href="../offline/get-started.html">Get Started</a>
+<li><a href="get-started.html">Get Started</a>
 <ul>
-<li><a href="../offline/get-started.html">System Requirement</a></li>
-<li><a href="../offline/get-started.html">Installation</a></li>
-<li><a href="../offline/get-started.html">Licensing</a></li>
-<li><a href="../offline/get-started.html">Common Use Cases</a></li>
+<li><a href="get-started.html">System Requirement</a></li>
+<li><a href="get-started.html">Installation</a></li>
+<li><a href="get-started.html">Licensing</a></li>
+<li><a href="get-started.html">Common Use Cases</a></li>
 </ul>
 </li>
-<li><a href="../offline/tutorials.html">Tutorials</a>
+<li><a href="tutorials.html">Tutorials</a>
 <ul>
 <li>
-<p><a href="../offline/tutorials-project/lecture.html">Project and Models</a></p>
+<p><a href="tutorials-project/lecture.html">Project and Models</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorials-liquid.html">Use TEAMFF for Liquids</a></p>
+<p><a href="tutorials-liquid.html">Use TEAMFF for Liquids</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorials-polymer.html">Use TEAMFF for Macromolecules</a></p>
+<p><a href="tutorials-polymer.html">Use TEAMFF for Macromolecules</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></p>
+<p><a href="tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></p>
+<p><a href="tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></p>
+<p><a href="tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorialsB-fitliquid.html">Optimize LJ parameters</a></p>
+<p><a href="tutorialsB-fitliquid.html">Optimize LJ parameters</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></p>
+<p><a href="tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></p>
 </li>
 <li>
-<p><a href="../offline/tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></p>
+<p><a href="tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></p>
 </li>
 </ul>
 </li>
@@ -154,43 +154,11 @@
 <li><a href="../ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><h2 id="tutorial-of-dff-online-use"><a href="#tutorial-of-dff-online-use">Tutorial of DFF Online Use</a></h2>
-<p>This tutorial covers the online use of DFF standard edition.</p>
-<h3 id="prepare-a-model"><a href="#prepare-a-model">Prepare a model</a></h3>
-<p>To use DFF standard online, you need to prepare an molecular model file, which can be one of the following two formats.</p>
-<ul>
-<li>MOL2</li>
-<li>PDB</li>
-</ul>
-<p>Preferably, the molecular model file is completely, which means hydrogen atoms are included, formal charges are set if necessary, and the structure is reasonably relaxed.</p>
-<p>DFF will automatically complete required data. If the input model is not well prepared, it is recommended to examine the output structure file to make sure that meets your need.</p>
-<h3 id="upload-and-run"><a href="#upload-and-run">Upload and Run</a></h3>
-<ol>
-<li>
-<p>In the <strong>"Upload"</strong> cell, browse your computer files and select the  molecular model file to upload.</p>
-</li>
-<li>
-<p>Select one of the designated simulation software packages.</p>
-<ul>
-<li>GROMACS</li>
-<li>LAMMPS
-This selection will determine available force fields in TEAMFF, and the format of output (input files for the simulation package).</li>
-</ul>
-</li>
-<li>
-<p>Select <strong>Force Field</strong> in the pulldown cell. In most case, the general force field is sufficient. You may select other or multiple force fields. If multiple force fields are selected, adjust the order of usage is critical. For more details, refer to the document about <a href="../topics/teamff-database.html">TEAMFF</a>.  <em>The system will start from the top of the selection list, only when required parameters are incomplete the next will be called.</em></p>
-</li>
-<li>
-<p>Optionally, set the <strong>Temperature</strong> of target application. A small correction will be made to the LJ-12-6 parameters so that the predicted thermodynamic properties are more accurate at elevated temperatures. <em>Note that at different temperature, the assigned parameters are different, which cannot be used on different temperatures.</em></p>
-</li>
-<li>
-<p>Click <strong>"Run"</strong> button to start the background jobs. If the model file is large (>10K atoms) the system will take a few seconds to finish the  computation. The results will be shown on the screen.</p>
-</li>
-<li>
-<p>If everything looks good, the <strong>"Download"</strong> button is activated. Click the button to download result files which are the input files for the simulation packaged selected. <em>The computation results will be saved under your account for a period of time (~30 days) for late retrieving.</em></p>
-</li>
-</ol>
-<p>If anything goes wrong, an error message will be prompted. Try to correct the errors according to the error message. If need an help, click <strong>"Support</strong> button to send messages.</p></article></main>
+    <main id="main"><article><h2 id="tutorials"><a href="#tutorials">Tutorials</a></h2>
+<p>The first part (lessons 1 to 3) covers essential functions of DFF. We focus on how to create or import molecular models, and how to use TEAMFF force fields.
+The second part (lessons 4 to 6) is about parameterization. The topics are quantum mechanics data (QMD) generation, fit QMD to get charge and valence parameters, and fit liquid data to optimize LJ parameters.
+The last part (lessons 7 and 8) shows how to use the database functionalities. To increase coverage of TEAMFF by adding new force fields, and to make specific force field from QMD directly.</p>
+<p>The tutorials illustrate how to use the software. More background information can be found in <a href="../topics/introduction.html">Concepts, Methods and Algorithms</a>. Commands are explained in <a href="../gui-commands/introduction.html">Reference of GUI Commands</a> and <a href="../exe-commands/introduction.html">Reference of Executable Commands</a>.</p></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>
