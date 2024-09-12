@@ -39,32 +39,32 @@
 <p>III. Tutorials</p>
 <ul>
 <li>[Overview] (./offline/tutorials.md)</li>
-<li><a href="tutorials-project/lecture.html">Project and Models</a></li>
-<li><a href="tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
-<li><a href="tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
-<li><a href="tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
-<li><a href="tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
-<li><a href="tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
-<li><a href="tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
-<li><a href="tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
-<li><a href="tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
+<li><a href="../offline/tutorials-project/lecture.html">Project and Models</a></li>
+<li><a href="../offline/tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
+<li><a href="../offline/tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
+<li><a href="../offline/tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
+<li><a href="../offline/tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
+<li><a href="../offline/tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
+<li><a href="../offline/tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
+<li><a href="../offline/tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
+<li><a href="../offline/tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
 </ul>
 <p>IV References of Commands</p>
 <ul>
-<li><a href="../WinCommands/ProjectNav.html">Project Navigator</a></li>
-<li><a href="../WinCommands/Toolbar.html">Toolbar</a></li>
-<li><a href="../WinCommands/Mouse.html">Mouse Functions</a></li>
-<li><a href="../WinCommands/File.html">File Menu</a></li>
-<li><a href="../WinCommands/Edit.html">Edit Menu</a></li>
-<li><a href="../WinCommands/Build.html">Build Menu</a></li>
-<li><a href="../WinCommands/View.html">View Menu</a></li>
-<li><a href="../WinCommands/TEAMFF.html">TEAMFF Menu</a></li>
-<li><a href="../WinCommands/Simulation.html">Simulation Menu</a></li>
-<li><a href="../WinCommands/QMDFF.html">QMDFF Menu</a></li>
-<li><a href="../WinCommands/Forcefield.html">ForceField Menu</a></li>
-<li><a href="../WinCommands/Parameter.html">Parameter Menu</a></li>
-<li><a href="../WinCommands/QMD.html">QMD Menu</a></li>
-<li><a href="../WinCommands/Help.html">Help Menu</a></li>
+<li><a href="ProjectNav.html">Project Navigator</a></li>
+<li><a href="Toolbar.html">Toolbar</a></li>
+<li><a href="Mouse.html">Mouse Functions</a></li>
+<li><a href="File.html">File Menu</a></li>
+<li><a href="Edit.html">Edit Menu</a></li>
+<li><a href="Build.html">Build Menu</a></li>
+<li><a href="View.html">View Menu</a></li>
+<li><a href="TEAMFF.html">TEAMFF Menu</a></li>
+<li><a href="Simulation.html">Simulation Menu</a></li>
+<li><a href="QMDFF.html">QMDFF Menu</a></li>
+<li><a href="Forcefield.html">ForceField Menu</a></li>
+<li><a href="Parameter.html">Parameter Menu</a></li>
+<li><a href="QMD.html">QMD Menu</a></li>
+<li><a href="Help.html">Help Menu</a></li>
 </ul>
 <p>V. References of Executable Commands</p>
 <ul>
@@ -145,9 +145,47 @@
 <li><a href="../ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><h2 id="offline-use"><a href="#offline-use">Offline Use</a></h2>
-<p>To use DFF offline, register an account first, and then download and install the software on your computer.</p>
-<p>Offline use requires a node-locked license. For new users, a 30-days trial license can be obtained free of charge.</p></article></main>
+    <main id="main"><article><h2 id="project"><a href="#project">PROJECT</a></h2>
+<p>DFF organizes user files by project. A project is a folder (directory) that contains files and sub-folders and displayed in  the <strong>Project Navigator</strong>, on the left side of DFF user interface.
+The project corresponds to disk files but only DFF relevant files are shown. The project has a name which is the same as the folder name, a project file named as ".dpf" saved in the project has information of the project.</p>
+<p>The project is potable, which means you can copy or share a project.</p>
+<h3 id="project-navigator"><a href="#project-navigator">PROJECT NAVIGATOR</a></h3>
+<p>The Project Navigator is an interface between your computer files and DFF. Operations performed on files or folders in the Project Navigator are applied to real files. For example, deleting a file or a folder from the Project Navigator also immediately deletes it from your computer. New files or new folders can be added to the Project Navigator from DFF. Since any sub-folders under the project folder are considered as a part of the project, if a folder or file is added to the project folder or its sub-folders in the operating system, it will be treated as a part of the project.</p>
+<h3 id="file-types"><a href="#file-types">FILE TYPES</a></h3>
+<p>Files used by DFF include molecular structure data (.msd), potential parameters (.ppf), validation result tables (.dft), quantum mechanics data (.qmd), and text files. Each of these files types has a unique icon in the Project Navigator.</p>
+<h3 id="navigator-commands"><a href="#navigator-commands">Navigator Commands</a></h3>
+<p>Commands can be applied to a project by selecting a node and right-clicking mouse. Depends on the type of node or files, different operations can be applied.</p>
+<p>On the root node (.dpf)</p>
+<ul>
+<li><strong>Larger Font</strong> - enlarge the font size of the Navigator</li>
+<li><strong>Smaller Font</strong> - reduce the font size of Navigator</li>
+</ul>
+<p>On any folder or file node, several common commands can be applied, which are self-explaining:</p>
+<ul>
+<li><strong>New</strong> to create a new empty model</li>
+<li><strong>Open</strong> to open a model file from disk</li>
+<li><strong>Copy</strong> to make a copy of the file or folder</li>
+<li><strong>Cut</strong> to cut the file or folder off the project tree</li>
+<li><strong>Paste</strong> to paste the cut object.</li>
+<li><strong>Delete</strong> to delete the object.</li>
+<li><strong>Rename</strong> to rename a project</li>
+</ul>
+<p>On folders</p>
+<ul>
+<li><strong>Refresh</strong> to reload all relevant files for current folder</li>
+<li><strong>Sort</strong> to arrange all files using name, type or modify date</li>
+<li><strong>Open in explorer</strong> - to see current folder in Windows's explorer.</li>
+</ul>
+<p>On files, various commands can be applied depending on the type of files. The most common ones are:</p>
+<p>For MSD node:</p>
+<ul>
+<li><strong>Associate PPF</strong> to assign a force field (PPF file) to the model</li>
+<li><strong>Dissociate PPF</strong> to remove the assigned force field.</li>
+</ul>
+<p>For QMD file</p>
+<ul>
+<li><strong>Create MSD</strong> - to extract the structure of lowest energy and save into a MSD file.</li>
+</ul></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>

@@ -145,12 +145,26 @@
 <li><a href="ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><p>DFF User Guide Rev. 2024.08.08</p>
-<h2 id="introduction"><a href="#introduction">Introduction</a></h2>
-<p>Direct Force field (DFF) is a software package for development and deployment of molecular force fields. It comes in two versions: Standard and Professional. The Standard version is for deployment, while the Professional version offers additional functionalities for development.</p>
-<p>DFF provides multiple force fields in popular functional forms collectively called TEAM force fields (TEAMFF). TEAMFF is managed by using computer database technology to maximize coverage while maintain high accuracy. To use TEAMFF is straightforward: load a molecular model, set a few options, and run DFF to assign atom types and force field parameters. The results are saved in files that can be used for designated simulation software packages such as LAMMPS and  GROMACS.</p>
-<p>The professional version offers additional functionalities of making new force fields, either to augment the TEAMFF database or to make specific force fields for target systems.</p>
-<p>DFFWeb is a website providing online version of the standard version. To use DFF offline, download and install DFF software. Depending on license configuration, you may use the standard version or professional version. The offline version of DFF includes a graphic user interface.</p></article></main>
+    <main id="main"><article><h3 id="common-use-cases"><a href="#common-use-cases">Common Use Cases</a></h3>
+<p>The functionality of DFF includes</p>
+<ol>
+<li>Use TEAMFF (Standard version)</li>
+<li>Augment TEAMFF (Professional version)</li>
+<li>Make specific force fields (Professional version)</li>
+</ol>
+<h4 id="use-teamff"><a href="#use-teamff">Use TEAMFF</a></h4>
+<p>Using TEAMFF is similar with the online version, with additional features of build molecular models, flexibility of handling the parameter assignments.</p>
+<h4 id="augment-teamff"><a href="#augment-teamff">Augment TEAMFF</a></h4>
+<p>Augment TEAMFF database can be done in a couple of ways. To add new parameters to an existing force field is challenging and often problematic because of conflicts. A better practice is to put the new parameters into a new force field table and then use the table together with existing ones.</p>
+<p>To make new force field starts from identifying training set. Given selected force field type and force fields, if TEAMFF is incomplete, molecular fragments that contains the absent parameters will be created and saved, which form the training set.</p>
+<p>Next, execute Gaussian calculations to generate quantum mechanics data (QMD) for the training set. DFF provide automatic methods that efficiently sample the potential energy surface for parametrization.</p>
+<p>Using the QMD files, carry out parameterization using the automated fitting program. The validation of parameterization is automatically conducted at the the of fitting. Default LJ-12-6 parameters, sourced from prior work, are used and fixed. The LJ-12-6 parameters can be optimized with reliable experimental liquid data.</p>
+<p>When the force field is completed, create a new force field table in TEAMFF. The table can be used with other force fields in the same force field type.</p>
+<h4 id="make-specific-force-field-from-qm-data"><a href="#make-specific-force-field-from-qm-data">Make specific force field from QM data</a></h4>
+<p>Traditional force fields consistently face challenges in terms of coverage and accuracy. This stems from poorly defined transferability assumed in force field parametrization, which doesn't always yield optimal results. In essence, any data model derived from regressing a diverse and large dataset, regardless of the regression methodology employed, inherently involves a trade-off between coverage and accuracy.</p>
+<p>From an individual user's perspective, this broad coverage may not always be the ideal solution. Given that it's possible to construct a force field directly from quantum mechanical data, a superior approach involves representing a smaller, specific subspace of interest. This approach ensures the most precise representation of the underlying quantum mechanical description. This is where DFF comes into play, offering the opportunity for such specialization.</p>
+<p>The solution includes a database (QMDFF) that stores QM data of fragments and developed force fields for molecular systems identified by constituent fragments.</p>
+<p>For any target system, DFF parses the structure data and search QMDFF database for force field. If none exists, a new force field will be created using the fragments as training set. Since fragments often shared by different molecules and the QM data of fragments are saved in the database, the requirement of expensive QM computations is minimized. The fitting and validation of force field is the same as explained above. If successful, the result force field is saved in the database for reuse.</p></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>

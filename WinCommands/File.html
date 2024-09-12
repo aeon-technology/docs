@@ -39,32 +39,32 @@
 <p>III. Tutorials</p>
 <ul>
 <li>[Overview] (./offline/tutorials.md)</li>
-<li><a href="tutorials-project/lecture.html">Project and Models</a></li>
-<li><a href="tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
-<li><a href="tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
-<li><a href="tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
-<li><a href="tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
-<li><a href="tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
-<li><a href="tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
-<li><a href="tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
-<li><a href="tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
+<li><a href="../offline/tutorials-project/lecture.html">Project and Models</a></li>
+<li><a href="../offline/tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
+<li><a href="../offline/tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
+<li><a href="../offline/tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
+<li><a href="../offline/tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
+<li><a href="../offline/tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
+<li><a href="../offline/tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
+<li><a href="../offline/tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
+<li><a href="../offline/tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
 </ul>
 <p>IV References of Commands</p>
 <ul>
-<li><a href="../WinCommands/ProjectNav.html">Project Navigator</a></li>
-<li><a href="../WinCommands/Toolbar.html">Toolbar</a></li>
-<li><a href="../WinCommands/Mouse.html">Mouse Functions</a></li>
-<li><a href="../WinCommands/File.html">File Menu</a></li>
-<li><a href="../WinCommands/Edit.html">Edit Menu</a></li>
-<li><a href="../WinCommands/Build.html">Build Menu</a></li>
-<li><a href="../WinCommands/View.html">View Menu</a></li>
-<li><a href="../WinCommands/TEAMFF.html">TEAMFF Menu</a></li>
-<li><a href="../WinCommands/Simulation.html">Simulation Menu</a></li>
-<li><a href="../WinCommands/QMDFF.html">QMDFF Menu</a></li>
-<li><a href="../WinCommands/Forcefield.html">ForceField Menu</a></li>
-<li><a href="../WinCommands/Parameter.html">Parameter Menu</a></li>
-<li><a href="../WinCommands/QMD.html">QMD Menu</a></li>
-<li><a href="../WinCommands/Help.html">Help Menu</a></li>
+<li><a href="ProjectNav.html">Project Navigator</a></li>
+<li><a href="Toolbar.html">Toolbar</a></li>
+<li><a href="Mouse.html">Mouse Functions</a></li>
+<li><a href="File.html">File Menu</a></li>
+<li><a href="Edit.html">Edit Menu</a></li>
+<li><a href="Build.html">Build Menu</a></li>
+<li><a href="View.html">View Menu</a></li>
+<li><a href="TEAMFF.html">TEAMFF Menu</a></li>
+<li><a href="Simulation.html">Simulation Menu</a></li>
+<li><a href="QMDFF.html">QMDFF Menu</a></li>
+<li><a href="Forcefield.html">ForceField Menu</a></li>
+<li><a href="Parameter.html">Parameter Menu</a></li>
+<li><a href="QMD.html">QMD Menu</a></li>
+<li><a href="Help.html">Help Menu</a></li>
 </ul>
 <p>V. References of Executable Commands</p>
 <ul>
@@ -145,9 +145,55 @@
 <li><a href="../ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><h2 id="offline-use"><a href="#offline-use">Offline Use</a></h2>
-<p>To use DFF offline, register an account first, and then download and install the software on your computer.</p>
-<p>Offline use requires a node-locked license. For new users, a 30-days trial license can be obtained free of charge.</p></article></main>
+    <main id="main"><article><h2 id="file-menu"><a href="#file-menu">File Menu</a></h2>
+<p>The File menu includes commands for managing DFF projects and files.</p>
+<h3 id="commands-for-projects"><a href="#commands-for-projects">Commands for Projects</a></h3>
+<p>The following commands in the File menu are used for managing Projects. A project is a folder and its sub-folders with relevant files listed in the Project Navigator. The location of the project is listed as the title bar of DFF main window.</p>
+<ul>
+<li>
+<p><strong>Recent Projects</strong> lists projects that have been opened recently. Click one on the list will open it. This is a convenient method to access existing projects.</p>
+</li>
+<li>
+<p><strong>Open Project</strong> opens a dialog to reload or create a project from disk. Browse to a folder and click Open. If this folder contains .pjf file, the files and folders used by previous session will be restored.</p>
+</li>
+<li>
+<p><strong>New Project</strong> opens a dialog to create a new folder and opens it as a Project. Browse to where to place the work, enter a name for the project and click Create Project command in the dialog. A new folder will be created and loaded.</p>
+</li>
+<li>
+<p><strong>Close Project</strong> closes the current project. The project folder and its files and sub-folders are saved. If the project content has changed since the last save, you will be prompted to save again before closing the project.</p>
+</li>
+<li>
+<p><strong>Refresh Project</strong> reloads all contents of the current project folder. All subfolders and DFF-relevant files will be listed in the Project Navigator.</p>
+</li>
+<li>
+<p><strong>Save Project</strong> saves the current project folder under the current name and disk location.</p>
+</li>
+<li>
+<p><strong>Save Project As</strong> saves the current project under a specific name or location. You can select a different name in the same folder or a different folder altogether.</p>
+</li>
+</ul>
+<h3 id="commands-for-files"><a href="#commands-for-files">COMMANDS FOR FILES</a></h3>
+<ul>
+<li>
+<p><strong>New</strong> is a command to make a new model or folder to the project. The model can be created by drawing and saved in MSD format.</p>
+</li>
+<li>
+<p><strong>Import</strong> is a command to load existing files to the project. The files can be one of those supported file formats. The imported file will be saved in the project folder and listed in the Project Navigator.</p>
+</li>
+<li>
+<p><strong>Open</strong> can be used to select and load MSD files to the interface. This function can be done by double-clicking on the model nodes in Project Navigator.</p>
+</li>
+<li>
+<p><strong>Save</strong> will save the selected model to disk file if the model has been changed.</p>
+</li>
+<li>
+<p><strong>Save All</strong> will save all opened and modified models to the disk.
+Close All closes all models. For any models that have been changed, a warning will be given. You can select either save or abandon any changes.</p>
+</li>
+<li>
+<p><strong>Exit</strong> closes DFF.</p>
+</li>
+</ul></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>

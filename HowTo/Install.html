@@ -17,10 +17,10 @@
 </ul>
 <p>II. How To</p>
 <ul>
-<li><a href="../HowTo/Install.html">Download and installation</a></li>
-<li><a href="../HowTo/License.html">Get license</a></li>
-<li><a href="../HowTo/Navigate.html">Navigate DFF</a></li>
-<li><a href="../HowTo/BuildModel.html">Build a model</a></li>
+<li><a href="Install.html">Download and installation</a></li>
+<li><a href="License.html">Get license</a></li>
+<li><a href="Navigate.html">Navigate DFF</a></li>
+<li><a href="BuildModel.html">Build a model</a></li>
 <li>Import models</li>
 <li>Assign TEAMFF</li>
 <li>Export models</li>
@@ -80,50 +80,50 @@
 <p>IV. Concepts, Methods and Algorithms</p>
 <ul>
 <li>
-<p><a href="introduction.html">Introduction</a></p>
+<p><a href="../topics/introduction.html">Introduction</a></p>
 </li>
 <li>
-<p><a href="forcefield-types.html">Force Field Types</a></p>
+<p><a href="../topics/forcefield-types.html">Force Field Types</a></p>
 <ul>
-<li><a href="forcefield-types.html">AMBER Type</a></li>
-<li><a href="forcefield-types.html">TEAM Type</a></li>
+<li><a href="../topics/forcefield-types.html">AMBER Type</a></li>
+<li><a href="../topics/forcefield-types.html">TEAM Type</a></li>
 </ul>
 </li>
 <li>
-<p><a href="atom-types.html">Atom Types</a></p>
+<p><a href="../topics/atom-types.html">Atom Types</a></p>
 <ul>
-<li><a href="atom-types-properties.html">Molecular and Atomic Properties</a></li>
-<li><a href="atom-types-typingrules.html">Typing Rules</a></li>
-<li><a href="atom-types-extensible.html">Extensible Definitions</a></li>
-<li><a href="atom-types-hypervalence.html">Hyper-valence</a></li>
-<li><a href="atom-types-equivalence.html">Equivalent Types</a></li>
-<li><a href="atom-types-integrated.html">Integrated Types</a></li>
+<li><a href="../topics/atom-types-properties.html">Molecular and Atomic Properties</a></li>
+<li><a href="../topics/atom-types-typingrules.html">Typing Rules</a></li>
+<li><a href="../topics/atom-types-extensible.html">Extensible Definitions</a></li>
+<li><a href="../topics/atom-types-hypervalence.html">Hyper-valence</a></li>
+<li><a href="../topics/atom-types-equivalence.html">Equivalent Types</a></li>
+<li><a href="../topics/atom-types-integrated.html">Integrated Types</a></li>
 </ul>
 </li>
 <li>
-<p><a href="parametrization.html">Parametrization</a></p>
+<p><a href="../topics/parametrization.html">Parametrization</a></p>
 <ul>
-<li><a href="parametrization-trainingset.html">Training Set</a></li>
-<li><a href="parametrization-general.html">General Procedure</a></li>
-<li><a href="parametrization-autoPar.html">Automatic Parameters</a></li>
-<li><a href="parametrization-qmd.html">Quantum Mechanics Data </a></li>
-<li><a href="parametrization-fitqmd.html">Fit Quantum Mechanics Data </a></li>
-<li><a href="parametrization-fitdimer.html">Fit Molecular Dimer</a></li>
-<li><a href="parametrization-fitliquid.html">Fit Liquid Data</a></li>
+<li><a href="../topics/parametrization-trainingset.html">Training Set</a></li>
+<li><a href="../topics/parametrization-general.html">General Procedure</a></li>
+<li><a href="../topics/parametrization-autoPar.html">Automatic Parameters</a></li>
+<li><a href="../topics/parametrization-qmd.html">Quantum Mechanics Data </a></li>
+<li><a href="../topics/parametrization-fitqmd.html">Fit Quantum Mechanics Data </a></li>
+<li><a href="../topics/parametrization-fitdimer.html">Fit Molecular Dimer</a></li>
+<li><a href="../topics/parametrization-fitliquid.html">Fit Liquid Data</a></li>
 </ul>
 </li>
 <li>
-<p><a href="teamff-database.html">TEAMFF Database</a></p>
+<p><a href="../topics/teamff-database.html">TEAMFF Database</a></p>
 <ul>
-<li><a href="teamff-forcefields.html">Included Force Fields</a></li>
-<li><a href="teamff-extensibility.html">Extensibility of TEAMFF</a></li>
+<li><a href="../topics/teamff-forcefields.html">Included Force Fields</a></li>
+<li><a href="../topics/teamff-extensibility.html">Extensibility of TEAMFF</a></li>
 </ul>
 </li>
 <li>
-<p><a href="qmdff-database.html">QMDFF Database</a></p>
+<p><a href="../topics/qmdff-database.html">QMDFF Database</a></p>
 </li>
 <li>
-<p><a href="molecular-simulations.html">Molecular Simulations</a></p>
+<p><a href="../topics/molecular-simulations.html">Molecular Simulations</a></p>
 </li>
 </ul>
 <p>WebDFF</p>
@@ -145,15 +145,32 @@
 <li><a href="../ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><h2 id="teamff"><a href="#teamff">TEAMFF</a></h2>
-<p>TEAMFF is a database to store and manage force fields and parameters.
-Each force field is a table in the database, completely defined with specific force field type (AMBER, CHARMM, CFF, etc.), atom typing rules, and parameters. The independence of force field in the TEAMFF database allows developments of high quality force field without being constrained by existing parameters. Multiple force field in the same force field type can be used together. This greatly enhances the extensibility of TEAMFF.</p>
-<p>The relational database model is used to implement TEAMFF, the structure is illustrated as follows:</p>
-<p><img src="media/teamff-struct.png" alt="TEAMFF structure"></p>
-<p>A force field table (upper block) lists the force fields in the database. The headings are identifiers (FF_1, FF_2, …), and the tuples include force field names, functional forms, typing rules, references and flags.
-Each force field is linked to a parameter table (lower block). The headings are identifiers for parameter entries (entry_1, entry_2, …); the tuples include version number, energy terms, atom types, parameters and parameterization notes.</p>
-<p>Using a database to manage force fields provides a standardized interface to add, delete, copy, and extract parameters. Operations can be automated, thereby avoiding unintentional human errors. Only new entries are accepted because each entry in the database is unique, and new entries are automatically assigned to a new version number. This version number can be used as a search criterion to recall a certain range of parameters upon retrieval, and is also useful when calculations are repeated using older version parameters.</p>
-<p>There are three sets of force fields in TEAMFF, basic, general and specific.</p></article></main>
+    <main id="main"><article><h2 id="download-and-install-dff"><a href="#download-and-install-dff">Download and install DFF</a></h2>
+<h3 id="system-requirements"><a href="#system-requirements">System Requirements</a></h3>
+<p>Linux or Windows operating systems with at least 1 GB of free disk space and 1 GB of memory are required.</p>
+<ol>
+<li>Windows – versions after XP are supported.</li>
+<li>Linux - kernel version 2.6.9 and above are supported.</li>
+</ol>
+<p>DFF requires Java Runtime Environment (JRE). The DFF installation package of Windows includes JRE. On Linux platform, make sure that JRE has been installed, which can be verified by using
+
+<code>java -version</code>
+
+from command line.</p>
+<h3 id="installation"><a href="#installation">Installation</a></h3>
+<p>On Windows, run the installer program such as <code>dff8003-WinJre.exe</code> to start the installation process and follow the instructions. You can choose where to place the software, make sure proper written permission to the installation directory.</p>
+<p>The installation directory is referred as &#x3C;dff-root> in this document. Several subdirectories such as: /bin64w, /data, /database, /force fields, /images, /jar, /License, can be found in the installation directory.</p>
+<p>On Linux, unpack the release package. For example:
+
+<code>$tar zxvf dff8003.tar.gz</code>
+
+which will create the &#x3C;dff-root>. By default the installation directory is under the current directory. You may move it to anywhere appropriate.</p>
+<h3 id="uninstall"><a href="#uninstall">Uninstall</a></h3>
+<p>To uninstall DFF from Windows systems, run <code>uninstall.exe</code> which is in the &#x3C;dff-root> directory. On Linux platform, delete the DFF installation directory.</p>
+<h3 id="start-dff"><a href="#start-dff">Start DFF</a></h3>
+<p>On windows, after the installation, click the DFF icon which should be created during the installation or run &#x3C;dff-root>\DFF8.bat file to start.</p>
+<p>On Linux, depending on system configuration, you may start DFF8.sh by clicking on it, or run DFF8.sh from command line.</p>
+<p>Unless the license file has been installed, an error message will appear when you first start DFF. Close the error message, the "License Manager" dialog will appear for configuring a license. Please see <a href="./licensing.html">License</a> to continue.</p></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>

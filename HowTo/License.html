@@ -17,10 +17,10 @@
 </ul>
 <p>II. How To</p>
 <ul>
-<li><a href="../HowTo/Install.html">Download and installation</a></li>
-<li><a href="../HowTo/License.html">Get license</a></li>
-<li><a href="../HowTo/Navigate.html">Navigate DFF</a></li>
-<li><a href="../HowTo/BuildModel.html">Build a model</a></li>
+<li><a href="Install.html">Download and installation</a></li>
+<li><a href="License.html">Get license</a></li>
+<li><a href="Navigate.html">Navigate DFF</a></li>
+<li><a href="BuildModel.html">Build a model</a></li>
 <li>Import models</li>
 <li>Assign TEAMFF</li>
 <li>Export models</li>
@@ -39,15 +39,15 @@
 <p>III. Tutorials</p>
 <ul>
 <li>[Overview] (./offline/tutorials.md)</li>
-<li><a href="tutorials-project/lecture.html">Project and Models</a></li>
-<li><a href="tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
-<li><a href="tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
-<li><a href="tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
-<li><a href="tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
-<li><a href="tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
-<li><a href="tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
-<li><a href="tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
-<li><a href="tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
+<li><a href="../offline/tutorials-project/lecture.html">Project and Models</a></li>
+<li><a href="../offline/tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
+<li><a href="../offline/tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
+<li><a href="../offline/tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
+<li><a href="../offline/tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
+<li><a href="../offline/tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
+<li><a href="../offline/tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
+<li><a href="../offline/tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
+<li><a href="../offline/tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
 </ul>
 <p>IV References of Commands</p>
 <ul>
@@ -145,9 +145,48 @@
 <li><a href="../ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><h2 id="offline-use"><a href="#offline-use">Offline Use</a></h2>
-<p>To use DFF offline, register an account first, and then download and install the software on your computer.</p>
-<p>Offline use requires a node-locked license. For new users, a 30-days trial license can be obtained free of charge.</p></article></main>
+    <main id="main"><article><h2 id="licensing"><a href="#licensing">Licensing</a></h2>
+<p>DFF requires license to run. The license is node locked, which means it only works on the designated computer identified by its MAC addresses. However, you can use DFF either on the same computer as default, or on different computers by using the floating license mechanism.</p>
+<h3 id="local-license"><a href="#local-license">Local License</a></h3>
+<p>To use the local mode is straightforward. After DFF is installed, get an authorized license file following the instructions as you run DFF at the first time. When the license file is received, save it as &#x3C;dff-root>\License\License.txt. By default, DFF will be running using the local license mechanism.</p>
+<h3 id="floating-license"><a href="#floating-license">Floating License</a></h3>
+<p>To use the floating mode, the computer that has license installed is called license server, and the computers that access the license server is called license clients. The license server must be set up first, and the client computers should have DFF installed and configured to use the license server.</p>
+<h3 id="license-manager"><a href="#license-manager">License Manager</a></h3>
+<p>There is an interface that can be used to configure license, either as a local mode or floating mode.
+When DFF is started, if a license is not found, an message will appear, close the error message, the "License Manager" dialog will appear:</p>
+<p><img src="image.png" alt="alt text"></p>
+<p>This dialog can also be opened by using Help→License command from DFF user interface.</p>
+<p>There are four command buttons on this dialog.</p>
+<p><strong>Request</strong> is used to generate a license request file. Click this button and follow the instructions to generate a license request form, and send this form to DFF distributor to obtain a license file.</p>
+<p><strong>Install</strong> is used to install the license file. After you have received a license file, click this button to allocate the license file and install it, which copies the license file to &#x3C;dff-root>/License/License.txt.</p>
+<p><strong>Configure</strong> is used to set up how to access the license. The default values are "localhost" and "null" which sets the local license. To use floating license, enter the IP address and port number of the license server. For example,</p>
+<p><img src="image-1.png" alt="alt text"></p>
+<p>The port number is defaulted to 3583, which can be set differently when you set up the license server.</p>
+<p><strong>OK</strong> to close this dialog.</p>
+<h3 id="license-server"><a href="#license-server">License Server</a></h3>
+<p>If DFF is fully installed on the server computer, the computer can be used as both client and server. If the licensed computer is used as a license server only, only two files are required:</p>
+<ol>
+<li>The executable: &#x3C;dff-root>\bin64x\dfflsv.exe</li>
+<li>The license file: &#x3C;dff-root>/License/License.txt</li>
+</ol>
+<p>Note that the license file must be authorized to the server computer.</p>
+<p>The simplest way to start the server is run the server program from command line, on Linux it may be:</p>
+<p>     <code>$dfflsv.exe start &#x26;</code></p>
+<p>which puts the program running in the background. The server can run automatically on Windows or Linux. Refer to the system guidance for instructions.</p>
+<h3 id="options-of-dfflsvexe"><a href="#options-of-dfflsvexe">Options of dfflsv.exe</a></h3>
+<p>This program can be used on server or client, depending on tasks.</p>
+<p><em>The square brackets indicate required parameters, the angle brackets indicate optional parameters.</em></p>
+<p><strong>On both client and server</strong></p>
+<p><code>dfflsv.exe help</code> - to show the options as explained below</p>
+<p><code>dfflsv.exe request [filename]</code> - to make and save a license request file.</p>
+<p><code>dfflsv.exe install [filename]</code> - to install the license file.</p>
+<p><code>dfflsv.exe getmac [filename]</code> - to get and save the MAC address in a file.</p>
+<p><code>dfflsv.exe test &#x3C;host &#x3C;port>></code> - to test the connection to the server.</p>
+<p><code>dfflsv.exe status &#x3C;host &#x3C;port>></code> - to list the license information.</p>
+<p><code>dfflsv.exe reset &#x3C;host &#x3C;port>></code> - to clear the list of computers registered.</p>
+<p><strong>On Server Only</strong></p>
+<p><code>dfflsv.exe start &#x3C;port></code> - to start a server with optional port (the default port number is 3583).</p>
+<p><code>dfflsv.exe stop &#x3C;port></code> - to stop the server, the port must be the same as start.</p></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>

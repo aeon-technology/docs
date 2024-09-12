@@ -39,32 +39,32 @@
 <p>III. Tutorials</p>
 <ul>
 <li>[Overview] (./offline/tutorials.md)</li>
-<li><a href="tutorials-project/lecture.html">Project and Models</a></li>
-<li><a href="tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
-<li><a href="tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
-<li><a href="tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
-<li><a href="tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
-<li><a href="tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
-<li><a href="tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
-<li><a href="tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
-<li><a href="tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
+<li><a href="../offline/tutorials-project/lecture.html">Project and Models</a></li>
+<li><a href="../offline/tutorials-liquid.html">Use TEAMFF for Liquids</a></li>
+<li><a href="../offline/tutorials-polymer.html">Use TEAMFF for Macromolecules</a></li>
+<li><a href="../offline/tutorials-mixforcefields.html">Use Multiple Force Fields of TEAMFF</a></li>
+<li><a href="../offline/tutorialsB-qmdata.html">Prepare QM Data for Parameterization</a></li>
+<li><a href="../offline/tutorialsB-fitmolecule.html">Fit QM Data of Molecules</a></li>
+<li><a href="../offline/tutorialsB-fitliquid.html">Optimize LJ parameters</a></li>
+<li><a href="../offline/tutorials-addteamff.html">Extend TEAMFF by Adding New Force Fields</a></li>
+<li><a href="../offline/tutorials-useqmdff.html">Use QMDFF for Specific Force Fields</a></li>
 </ul>
 <p>IV References of Commands</p>
 <ul>
-<li><a href="../WinCommands/ProjectNav.html">Project Navigator</a></li>
-<li><a href="../WinCommands/Toolbar.html">Toolbar</a></li>
-<li><a href="../WinCommands/Mouse.html">Mouse Functions</a></li>
-<li><a href="../WinCommands/File.html">File Menu</a></li>
-<li><a href="../WinCommands/Edit.html">Edit Menu</a></li>
-<li><a href="../WinCommands/Build.html">Build Menu</a></li>
-<li><a href="../WinCommands/View.html">View Menu</a></li>
-<li><a href="../WinCommands/TEAMFF.html">TEAMFF Menu</a></li>
-<li><a href="../WinCommands/Simulation.html">Simulation Menu</a></li>
-<li><a href="../WinCommands/QMDFF.html">QMDFF Menu</a></li>
-<li><a href="../WinCommands/Forcefield.html">ForceField Menu</a></li>
-<li><a href="../WinCommands/Parameter.html">Parameter Menu</a></li>
-<li><a href="../WinCommands/QMD.html">QMD Menu</a></li>
-<li><a href="../WinCommands/Help.html">Help Menu</a></li>
+<li><a href="ProjectNav.html">Project Navigator</a></li>
+<li><a href="Toolbar.html">Toolbar</a></li>
+<li><a href="Mouse.html">Mouse Functions</a></li>
+<li><a href="File.html">File Menu</a></li>
+<li><a href="Edit.html">Edit Menu</a></li>
+<li><a href="Build.html">Build Menu</a></li>
+<li><a href="View.html">View Menu</a></li>
+<li><a href="TEAMFF.html">TEAMFF Menu</a></li>
+<li><a href="Simulation.html">Simulation Menu</a></li>
+<li><a href="QMDFF.html">QMDFF Menu</a></li>
+<li><a href="Forcefield.html">ForceField Menu</a></li>
+<li><a href="Parameter.html">Parameter Menu</a></li>
+<li><a href="QMD.html">QMD Menu</a></li>
+<li><a href="Help.html">Help Menu</a></li>
 </ul>
 <p>V. References of Executable Commands</p>
 <ul>
@@ -145,9 +145,37 @@
 <li><a href="../ch00/04-math-expression.html">Math expression</a></li>
 </ul></nav>
     </aside>
-    <main id="main"><article><h2 id="offline-use"><a href="#offline-use">Offline Use</a></h2>
-<p>To use DFF offline, register an account first, and then download and install the software on your computer.</p>
-<p>Offline use requires a node-locked license. For new users, a 30-days trial license can be obtained free of charge.</p></article></main>
+    <main id="main"><article><h2 id="edit-menu"><a href="#edit-menu">Edit Menu</a></h2>
+<p>The Edit menu is for modifying molecular properties, such as atomic mass (isotope), connectivity, bond orders, formal charges, charge groups, etc., which are required for developing or using force fields. These tasks are often useful for imported models that may have topology data different from DFF.</p>
+<ul>
+<li>
+<p><strong>Isotope</strong> sets atom masses of isotopes for currently selected model. This command can be applied to change a single atom or all atoms of the same element in a model. Click to open a dialog. In the dialog, get an atom to be modified by using mouse click, select the scope of application and atom mass, and then hit <strong>Execute</strong> to set.</p>
+</li>
+<li>
+<p><strong>Add Hydrogen</strong> adds hydrogen atoms by using standard octet rule. This is often useful for imported models that do not have explicit hydrogen atoms.</p>
+</li>
+<li>
+<p><strong>Bond Order</strong> sets the connectivity and bond orders of the selected models. It is optional to keep existing connectivity or rebuild connectivity before calculating the bond orders.</p>
+</li>
+<li>
+<p><strong>Formal Charge</strong> assigns or remove formal charges. The assignment can be done automatically or manually. To use the automatic assignment, existing values will be removed by default. Optionally the existing formal charges can be protected. The manual option is useful for assigning special formal charges, either by atom, or by atom types.</p>
+</li>
+<li>
+<p><strong>Torsion Angle</strong> sets or modifies torsion angles by opening a dialog. In the dialog, selecting four atoms consecutively that defines a dihedral angle. A new angle can then be set, or an existing one can be rotated by a specified value. Clicking Execute performs the specified function. If the option of <strong>Make new model(s)</strong> is selected, each Execute will generate a new model with the specified torsion angles.</p>
+</li>
+<li>
+<p><strong>Improper Torsion Angle</strong> is similar to the Torsion command, but set or modify improper torsion angles. In the popup dialog, selecting four atoms that defines an improper dihedral angle. Improper torsion can be defined for four atoms with one atom at the center bonded to other three. The definition of improper dihedral angles can be different, usually select one that is out-of-plane as the first atom, and the center atom is the second.</p>
+</li>
+<li>
+<p><strong>Reset COM</strong> resets the center of mass for a model. Relative positions of atoms are not altered and energy calculations are not impacted. Reset COM is useful to obtain a better view of the model, especially when the model needs to be rotated on the screen.</p>
+</li>
+<li>
+<p><strong>Charge Group</strong> defines charge groups in a molecule model as is often required by simulation engines. This method can be used only after a force field has been assigned. It works by querying the charge separation between any two bonded atoms. If the charge crossing a bond is smaller than a threshold that can be adjusted, then the bond is used as a division of two charge groups. Execute begins the calculation, and the results are displayed in the center panel.</p>
+</li>
+<li>
+<p><strong>Subsets</strong> defines a group of atoms or molecules as a subset of the molecular model. It opens a Define Subsets dialog, which provides two options, Manual Define and Auto Define. The Manual Define option offers the flexibility of defining subsets based on atom or molecule. In either case, atoms or molecules can be selected individually. Alternatively, all atoms or molecules identical to a selected atom/molecule can be selected at once. Define finalizes one subset definition. The Auto Define option identifies subsets and defines them as molecules automatically. Execute runs the definition algorithm. Defined subsets are marked with different colors. If necessary, Reset restarts the process.</p>
+</li>
+</ul></article></main>
     <script type="module">"use strict";console.log("ui ready");[...document.querySelectorAll("nav a")].find(a=>a.pathname===location.pathname)?.classList.add("active");
 </script>
   </body>
