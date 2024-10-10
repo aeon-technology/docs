@@ -1,4 +1,4 @@
-Fit Quantum Mechanics Data
+# Fit Quantum Mechanics Data
 
 Methods
 Atomic charges must be calculated and assigned first. Atomic charges can be calculated using QM methods (ESP charges or Mulliken Charges) or using the charge equilibrium method. Direct Forcefield uses a charge equilibrium method similar to the published QEq method. The basic parameters used to calculate charge distribution are the ionization potentials (IP) and electron affinities (EA) of relevant atoms, which are collected from literature and included in the Elements.dat file.

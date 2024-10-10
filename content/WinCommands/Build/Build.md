@@ -13,4 +13,3 @@ The Build Menu provides tools for building and manipulating bulk models for simu
 - **Bulk Liquid** builds a molecular liquid model as a cubic box (A=B=C) or a slab (A=B≠C) box. Molecules are placed with random orientations in the box at low density initially and then compressed to a targeted density. For detail explanation click [here](./Build-Liquid-Bulk.md).
 
 - **Liquid Interface** builds an interface of two phases (A and B) of liquids, optionally with an interphase between (X), using compression method. It opens a Liquid Interface dialog for setting the options and starting the computation. Click [here](./build-Liquid-Interface.md) for details.
-
