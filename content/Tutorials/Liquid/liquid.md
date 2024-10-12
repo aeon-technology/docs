@@ -1,6 +1,6 @@
 # Build a Liquid Model
 
-DFF has functionality to build liquid models for the purposes of parameterization and validation of nonbond parameters. In this lesson we show how to build pure liquid model and liquid interface model, and use TEAMFF to prepare simulation jobs. 
+Liquid models are useful for the purposes of parameterization and validation of nonbond parameters. In this lesson we show how to build pure liquid model and a liquid interface model.
 
 ## Build a Liquid Model
 
@@ -33,7 +33,10 @@ DFF has functionality to build liquid models for the purposes of parameterizatio
 
 5.	When the job is finished, a bilayer model is built. Turn it around you can see the model looks like this: 
 
-![liquid-vapor](image.png)
+<img src="./image.png" 
+    alt="Liquid vapor interface" 
+    width="300" height="150"
+    style="display: block; margin: 0 auto" />
 
 6.	Use **Simulation/Molecular Dynamics** to relax the system, and then use **Simulation/LAMMPS** to submit a simulation job. 
 

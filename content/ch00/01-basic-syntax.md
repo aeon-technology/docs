@@ -59,7 +59,14 @@ OpenJDK 64-Bit Server VM (build 25.201-b09, mixed mode)
 ```
 
 ## Media
+[external reference style link]: https://wikipedia.org
 
 ![This is an image](./media/sample-01.png)
 
-[external reference style link]: https://wikipedia.org
+<img src="./media/sample-01.png" 
+    alt="resized and centered picture" 
+    width="300" height="150"
+    style="display: block; margin: 0 auto" />
+
+
+

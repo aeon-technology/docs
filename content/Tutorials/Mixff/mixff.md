@@ -10,27 +10,27 @@ The model contains two different kinds of materials, zeolite, and organic molecu
 We will first use the order method, and then the subset method which gives us more specifically control.
 USING THE ORDER OF TABLES
 
-2. Click TEAMFF → Admin, load “TEAMFF.TEAMFF”, select TEAM as the force field type, and select two force fields, “TEAM-General” and “TEAM-Zeolite”, which is indicated by the check mark in the first column. Since we will use the order to get parameters, make sure the more specific force field, TEAM-Zeolite, is on top of TEAM-General. If the order is different, select a line and use the buttons Up and Down to adjust its position.
+2. Click **TEAMFF/Admin**, load “TEAMFF.TEAMFF”, select TEAM as the force field type, and select two force fields, “TEAM-General” and “TEAM-Zeolite”, which is indicated by the check mark in the first column. Since we will use the order to get parameters, make sure the more specific force field, TEAM-Zeolite, is on top of TEAM-General. If the order is different, select a line and use the buttons Up and Down to adjust its position.
 
 <img src="image-8.png" 
     alt="alt text" 
     width="400" height="150"
     style="display: block; margin: 0 auto" />
 
-3. With the force fields are selected, click TEAMFF → Assign. Make sure the “Use the order of selected tables” is selected, leave other options as given, and then click OK to launch the job. A new force field will be generated and associated with the model. 
+3. With the force fields are selected, click **TEAMFF/Assign**. Make sure the “Use the order of selected tables” is selected, leave other options as given, and then click OK to launch the job. A new force field will be generated and associated with the model. 
  
 <img src="image-9.png" 
     alt="alt text" 
     width="300" height="200"
     style="display: block; margin: 0 auto" />
 
-4. To verify the force field is set properly. Use Simulation → LAMMPS command to launch a short MD simulation. When the job is done, using Simulation → Trajectory to see the simulation trajectory or examining LAMMPS output file to verify the simulation is carried out successfully.
+4. To verify the force field is set properly. Use **Simulation/LAMMPS** command to launch a short MD simulation. When the job is done, using **Simulation/Trajectory** to see the simulation trajectory or examining LAMMPS output file to verify the simulation is carried out successfully.
 Note: DFF does not support simulations of crystals.  
 
 ## USING SUBSETS
 To use subsets to assign force field for different part of model, we first set the subsets.
 
-1. Click Build → Subsets. In the pop-up dialog, select the “automatic – to set subsets using connectivity” option and click Execute. This will create two subsets based on connectivity – one for the zeolite and another for the xylene molecules. 
+1. Click **Build/Subsets**. In the pop-up dialog, select the “automatic – to set subsets using connectivity” option and click Execute. This will create two subsets based on connectivity – one for the zeolite and another for the xylene molecules. 
  
 <img src="image-10.png" 
     alt="alt text" 
@@ -44,10 +44,10 @@ To use subsets to assign force field for different part of model, we first set t
     width="200" height="130"
     style="display: block; margin: 0 auto" />
 
-3. Click TEAMFF → Admin, load “TEAMFF.TEAMFF”, select TEAM as the force field type, and select two force fields, “TEAM-General” and “TEAM-Zeolite”. Close the dialog.
+3. Click **TEAMFF/Admin**, load “TEAMFF.TEAMFF”, select TEAM as the force field type, and select two force fields, “TEAM-General” and “TEAM-Zeolite”. Close the dialog.
 Since we will use subsets to assign different force field, the order does not matter in this case. 
 
-4. Click TEAMFF → Assign. In the “Assign force field parameters” dialog, select “Select table for subset” and click Mapping to open another dialog to choose force field table for each subset as shown below:
+4. Click **TEAMFF/Assign**. In the “Assign force field parameters” dialog, select “Select table for subset” and click Mapping to open another dialog to choose force field table for each subset as shown below:
 
 <img src="image-12.png" 
     alt="alt text" 
@@ -57,5 +57,5 @@ Since we will use subsets to assign different force field, the order does not ma
 
 Click OK to close the dialogs. Leave other options in “Assign force field parameters” dialog unchanged, and then click Ok to begin the assignment process. When the job is completed, a force field will be loaded showing parameters taken from two tables.
 
-5. To verify the force field has been set properly. Use Simulation → LAMMPS command to launch a short MD simulation. When the job is done, using Simulation → Trajectory to see the simulation trajectory or examining LAMMPS output file to verify the simulation is carried out successfully.
+5. To verify the force field has been set properly. Use **Simulation/LAMMPS** command to launch a short MD simulation. When the job is done, using **Simulation/Trajectory** to see the simulation trajectory or examining LAMMPS output file to verify the simulation is carried out successfully.
  

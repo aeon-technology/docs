@@ -15,15 +15,20 @@ II. How To
  
 III. Tutorials
 - [Overview](./Tutorials/Overview.md)  
-- [Project and Models](./Tutorials/Project/lecture.md)
-- [Build Liquid Models](./Tutorials/Liquid/lecture.md)	
-- [Use TEAMFF for Macromolecules](./Tutorials/Macromol/lecture.md)
-- [Use Multiple Force Fields of TEAMFF](./Tutorials/Mixff/lecture.md)	
-- [Prepare QM Data](./Tutorials/PreQMD/lecture.md)	
-- [Fit QM Data](./Tutorials/FitQMD/lecture.md)	
-- [Optimize LJ Parameters](./Tutorials/OptLJ/lecture.md)	
+- [Project and Models](./Tutorials/Project/project.md)
+- [Build Liquid Models](./Tutorials/Liquid/liquid.md)	
+- [Use TEAMFF on Macromolecules](./Tutorials/Macromol/useTEAMFF.md)
+- [Mix TEAMFF Force Fields](./Tutorials/Mixff/mixFF.md)	
+- [Fit Simple Molecule](./Tutorials/FitRigid/fitKeton.md)
+- [Fit Flexible Molecule](./Tutorials/FitFlexMol/fitAmnol.md)	
+
+
+- [Fit Molecular Dimer](./Tutorials/FitDimer/ditDimer.md)	
+- [Fit Liquid Date](./Tutorials/FitLiquid/fitLiquid.md)	
+
 - [Extend TEAMFF](./Tutorials/ExtTEAM/lecture.md)	
-- [Use MFDFF](./Tutorials/UseMFDFF/lecture.md)	
+- [Make MT-FF](./Tutorials/MakeMTFF/makeMTFF.md)	
+- [Build MT-FF library](./Tutorials/BuildLib/buildLib.md)	
 
 IV References of Commands
   - [Project Navigator](./WinCommands/Project/ProjectNav.md)

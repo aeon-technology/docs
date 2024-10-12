@@ -23,6 +23,8 @@ In each table, select rows and right-click mouse button will open a popup comman
 
 **Compute** is only used on FragMSD table. the selected entries will be collected and open a dialog to perform the QM computations.
 
+*The following commands can be used to make MFDFF force fields semi-automatically.*
+
 ## Enquiry Force Field 
 
 This command applies to any molecule models, large or small. One or multiple models can be handled at once. 
@@ -34,22 +36,42 @@ In the background, DFF analyzes each of the models, identify molecule types in t
 ## Collect Fragment QMD
 Select fragments to be used for parametrization, click this command. DFF will search and download corresponding QMD files from the FragQMD table. Depending on the results of searching, several selection dialogs will appears. Respond to the questions to proceed. You can recompute all QMD, or skip existing ones. If new computations are requested, the corresponding MSD files will be collected, saved in the FragMSD table, and prompt in a QMD computation window.
 
+![Compute QMD ](image-2.png)
 
+This interface is used to set up QMD computation options. The jobs can be run now on the local host computer, or saved for later or submitted to remote computers. The computation is done by using Gaussian program package, driven by DFFQMD.exe program. The **Task** section provides selection of what to be computed.  
 
-## Compute QMD
-This command works on fragment MSD files. Select MSD files and open this command to perform the QMD computations. The results QMD files will be saved in project tree for examination. 
+*Note: This command window can be opened by using the pull-down command on FragMSD table and the **Compute Frag QMD** command. 
+
+## Build MolType PPF
+When all required QMD files are in the database, use this command to build MT-FF for molecule types. 
+For each molecule type, DFF searches and downloads required fragment QMD files, then starts regression using a default fitting and validation procedure. Watch the computation output to see the summary of regressions.  
+
+## Assign and Test MolType PPF
+This command assigns the force field obtained from regression of fragment QMD to the target molecule type, which will reduce the parameters to the target molecule only. It also runs a short MD simulation to test the stability of the result force field. If all appears to be right, prompt to update the MolPPF table.  
+
+*Note: When the new MT-FFs have been uploaded, repeat **Enquiry** command to get the force field for the target model. 
+The following commands are fro specific tasks, which can be used when the semi-automatic procedure is interrupted or failed.*
+
+## Molecule Type
+This command works on any models, it is used to find the molecular types in the models and save the result in /MolType folder.
+
+## Standard Fragment
+This works on molecular types, identify constituent fragments and save the fragments in /Fragment folder.
 
 ## Update FragQMD
-This command works on QMD files. It uploads the selected QMD files, this operation will overwrite existing entries. If successful, corresponding fragments saved in FragMSD table will be removed.  
+This command uploads the selected QMD files to FragQMD table. If any QMD files exist in the table, identified by fragment SMILES strings, the existing ones will be overwritten. If update is done successfully, corresponding fragments saved in FragMSD table will be removed.  
 
-## Parametrization
-This command works on molecules types. open this command. For each molecule type, DFF will identify its constituent fragments, and download QMD from the database, and fit the QMD files to make a molecule type force field.
+## Download FragQMD
+This command uses fragment MSD to search and download corresponding QMD.   
 
 ## Update MolPPF
-Load PPF files for molecule types. Each molecule type is identified by combined smiles of the constituent fragments.
+Load PPF files for molecule types, identified as molecule type MSD files.
 
-## WorkFlow
-The entire procedure automated for working on molecule models. 
+## Download MolPPF
+Search and download PPF files for molecule types, provided as MSD files.
+
+## Program Fit
+This command provides flexible fitting options, organized as multiple tasks, each is presented by a tabbed panel. The jobs can be run sequentially or independently, so that different options can be tested and compared. 
 
 
 
