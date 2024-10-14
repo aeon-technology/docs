@@ -4,7 +4,7 @@ In this tutorial, we will practice how to use two force fields in one simulation
 
 In this lesson, we will use a model consisting of zeolite (MOR) interacting with two xylene molecules. For convenience, a sample file “MOR_2Xylene.msd” is provided in the Tutorial directory.
 
-1. Start DFF and open the project "Tutorials.dpf" if it has been closed. Open “tutorials/tutorialA5_Zeolite” folder, a unit cell containing two xylene molecules caged in zeolite is listed. Open the model.
+1. Start DFF and open the project "Tutorials.dpf" if it has been closed. Open “tutorials/tutorialA5_mixFF” folder, a unit cell containing two xylene molecules caged in zeolite is listed. Open the model.
 
 The model contains two different kinds of materials, zeolite, and organic molecules, which are described using different force fields in TEAMFF. There are two ways to use these force fields, the simplest way is set the order of force field in TEAMFF so that the force fields are used in the order as specified. Another is to define subsets and use different force fields for different subsets. 
 We will first use the order method, and then the subset method which gives us more specifically control.

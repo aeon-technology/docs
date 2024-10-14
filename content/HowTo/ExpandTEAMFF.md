@@ -1,4 +1,4 @@
-## Expand TEAMFF
+## Extend TEAMFF
 
 Augment TEAMFF database could be done in one of two ways. One is to add new parameters to existing force field, another is to add a completely new force field table. It should be noted that to add new parameters to an existing force field is challenging and often error prone. To put the new parameters into a new force field table and then use the table together with existing ones is easier.
 

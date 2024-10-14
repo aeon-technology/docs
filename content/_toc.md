@@ -21,14 +21,11 @@ III. Tutorials
 - [Mix TEAMFF Force Fields](./Tutorials/Mixff/mixFF.md)	
 - [Fit Simple Molecule](./Tutorials/FitRigid/fitKeton.md)
 - [Fit Flexible Molecule](./Tutorials/FitFlexMol/fitAmnol.md)	
-
-
 - [Fit Molecular Dimer](./Tutorials/FitDimer/ditDimer.md)	
 - [Fit Liquid Date](./Tutorials/FitLiquid/fitLiquid.md)	
-
-- [Extend TEAMFF](./Tutorials/ExtTEAM/lecture.md)	
-- [Make MT-FF](./Tutorials/MakeMTFF/makeMTFF.md)	
-- [Build MT-FF library](./Tutorials/BuildLib/buildLib.md)	
+- [Make a Force Field](./Tutorials/MakeFF/makeFF.md)	
+- [Extend TEAMFF](./Tutorials/ExtTEAM/extTEAMFF.md)	
+- [Use MFDFF](./Tutorials/UseMFDFF/useMFDFF.md)	
 
 IV References of Commands
   - [Project Navigator](./WinCommands/Project/ProjectNav.md)
@@ -90,8 +87,6 @@ IV. Concepts, Methods and Algorithms
   
   - [Molecular Simulations](./topics/molecular-simulations.md)
   
-
-
 WebDFF
   - [Registration](./online/registration.md)
   - [Tutorial](./online/tutorial.md)
@@ -100,9 +95,3 @@ WebDFF
 Appendix
   - [Force Field Functions](./appendix/functions.md)
   - [File Formats](./exe-commands/firl-formats.md)
-
-Temporary Examples
-  - [Basic syntax](./ch00/01-basic-syntax.md)
-  - [Footnote](./ch00/02-footnote.md)
-  - [Table](./ch00/03-table.md)
-  - [Math expression](./ch00/04-math-expression.md)
