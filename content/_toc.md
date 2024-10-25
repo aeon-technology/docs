@@ -1,3 +1,7 @@
+- [MarkDown](./markdown-cheat-sheet.md)
+- [EquRef](./EquRef.md)
+
+
 I. Introduction
 - [Overview](./index.md) 
 - [Feature List](./features.md)
@@ -27,7 +31,39 @@ III. Tutorials
 - [Extend TEAMFF](./Tutorials/ExtTEAM/extTEAMFF.md)	
 - [Use MFDFF](./Tutorials/UseMFDFF/useMFDFF.md)	
 
-IV References of Commands
+IV. Concepts, Methods and Algorithms
+  - [Project and File System](./Topics/ProjectFiles/project-files.md) 
+  - [Force Field](./Topics/ForceField/forcefield.md)
+    - [Force Field Types](./Topics/ForceField/forcefield-types.md)
+    - [Atom Types](./Topics/ForceField/atom-types.md)
+    - [Parameters](./Topics/ForceField/parameters.md) 
+  - [Molecular Topology and Atomic Attributes](./Topics/Attributes/molecular-atomic-attributes.md) 
+  - [Definition of Atom Types](./Topics/AtomTypedefinitions.md)
+    - [Typing Rules](./Topics/AtomType/typingRules.md)
+    - [Extending Definitions](./Topics/AtomType/extendDefinitions.md)
+    - [Hyper-valence Atom Types](./Topics/AtomType/hypervalence.md)
+    - [Equivalent and Integrated Atom Types](./Topics/AtomType/equivIntegAtomTypes.md)
+  - [Training Set](./Topics/TrainingSet/introduction.md)
+    - [Fragments](./Topics/TrainingSet/fragments.md)
+    - [Training Set data](./Topics/TrainingSet/trainingData.md)
+    - [Quantum Mechanics Data ](./Topics/TrainingSet/qmd.md)
+  - [Parametrization](./Topics/Parameters/introduction.md)
+    - [General Procedure](./Topics/parameters/general.md)
+    - [Automatic Parameters](./Topics/parameters/autoPar.md)
+    - [Fitting Methods](./Topics/parameters/fitMethods.md)
+    - [Fit Charge and Valence Parameters](./Topics/parameters/fitChargeValencePar.md)
+    - [Fit Lennard-Jones Parameters](./Topics/parameters/fitLennardJonesPar.md)
+  - [TEAMFF Database](./Topics/TEAMFF/database.md)
+    - [Force Fields of TEAMFF](./Topics/TEAMFF/forcefields.md)
+    - [Combination of Force Fields of TEAMFF](./Topics/TEAMFF/combination.md)
+    - [Extensibility of TEAMFF](./Topics/TEAMFF/extensibility.md)
+  - [MFDFF](./Topics/MFDFF/mfdff.md)
+    - [Overview](./Topics/MFDFF/motivation.md)
+    - [How it works](./Topics/MFDFF/procedure.md)
+    - [Implementation](./Topics/MFDFF/issues.md)
+  - [Simulations](./Topics/molecular-simulations.md)
+  
+V. References of DFFWin Commands
   - [Project Navigator](./WinCommands/Project/ProjectNav.md)
   - [Toolbar and Mouse](./WinCommands/Toolbar/Toolbar.md)
   - [File Menu](./WinCommands/File/File.md)
@@ -42,56 +78,22 @@ IV References of Commands
   - [MFDFF Menu](./WinCommands/MFDFF/MFDFF.md)
   - [Help Menu](./WinCommands/Help/Help.md)
 
-V. References of Executable Commands
+VI. References of Executable Commands
+  - [Overview](./ExeCommands/Overview.md)
   - [Model Commands](./ExeCommands/Model.md)
   - [ForceField Commands](./ExeCommands/ForceField.md)
   - [Export Commands](./ExeCommands/Export.md)
-  - [TEAMFF Commands](./ExeCommands/REAMFF.md)
+  - [TEAMFF Database Commands](./ExeCommands/TEAMFF.md)
   - [Fit Commands](./ExeCommands/Fit.md)
   - [Molecular Mechanics Commands](./ExeCommands/MM.md)
   - [Quantum Mechanics Commands](./ExeCommands/QM.md)
   - [MFDFF commands](./ExeCommands/MFDFF.md)
 
-IV. Concepts, Methods and Algorithms
-  - [Introduction](./topics/introduction.md) 
-  - [Force Field Types](./topics/forcefield-types.md)
-    - [AMBER Type](./topics/forcefield-types.md#amber-force-field-type) 
-    - [TEAM Type](./topics/forcefield-types.md#team-force-field-type) 
-  - [Atom Types](./topics/atom-types.md)
-    - [Molecular and Atomic Properties](./topics/atom-types-properties.md) 
-    - [Typing Rules](./topics/atom-types-typingrules.md) 
-    - [Extensible Definitions](./topics/atom-types-extensible.md)
-    - [Hyper-valence](./topics/atom-types-hypervalence.md)
-    - [Equivalent Types](./topics/atom-types-equivalence.md)
-    - [Integrated Types](./topics/atom-types-integrated.md)
-  - [Training Set Data](./topics/TrainingDatafragments.md)
-    - [Fragments](./topics/fragments.md)
-    - [Training Set](./topics/parametrization-trainingset.md)
-    - [Quantum Mechanics Data ](./topics/parametrization-qmd.md)
-
-  - [Parametrization](./topics/parametrization.md)
-    - [General Procedure](./topics/parametrization-general.md)
-    - [Automatic Parameters](./topics/parametrization-autoPar.md)
-    - [Fit Quantum Mechanics Data ](./topics/parametrization-fitqmd.md)
-    - [Fit Molecular Dimer](./topics/parametrization-fitdimer.md)
-    - [Fit Liquid Data](./topics/parametrization-fitliquid.md)
-
-  - [TEAMFF Database](./topics/teamff-database.md)
-    - [Included Force Fields](./topics/teamff-forcefields.md)
-    - [Extensibility of TEAMFF](./topics/teamff-extensibility.md)
-
-  - [MFDFF Method](./topics/MFDFF.md)
-    - [Advantages](./topics/mfdff-advantages.md)
-    - [How it works](./topics/mfdff-how.md)
-    - [Implementation Issues](./topics/mfdff-issues.md)
-  
-  - [Molecular Simulations](./topics/molecular-simulations.md)
-  
-WebDFF
+VII. WebDFF
   - [Registration](./online/registration.md)
   - [Tutorial](./online/tutorial.md)
   - [Support](./online/support.md)
 
-Appendix
+VIII. Appendix
   - [Force Field Functions](./appendix/functions.md)
-  - [File Formats](./exe-commands/firl-formats.md)
+  - [File Formats](./appendix/file-formats.md)
