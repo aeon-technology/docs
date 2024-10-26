@@ -1,5 +1,6 @@
 - [MarkDown](./markdown-cheat-sheet.md)
 - [EquRef](./EquRef.md)
+- [WishList](./WishList.md)
 
 
 I. Introduction
