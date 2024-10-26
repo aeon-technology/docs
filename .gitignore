@@ -2,3 +2,4 @@ node_modules
 dist
 _content_gen
 .DS_Store
+/wkhtmltopdf
