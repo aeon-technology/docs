@@ -63,7 +63,11 @@ $$
 \int_0^\infty ...\int_0^\infty\mu(u_1,\dots,u_k) \,du_1 \dots du_k
 $$
 
-
+## Size image
+<img src="./Tutorials/Project/aspirin.png" 
+    alt="alt text" 
+    width="250" height="280"
+    style="display: block; margin: 0 auto"/>
 
 
 # References
