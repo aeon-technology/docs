@@ -1,7 +1,6 @@
-- [MarkDown](./markdown-cheat-sheet.md)
-- [EquRef](./EquRef.md)
-- [WishList](./WishList.md)
-
+- [MarkDown](./ch00/markdown-cheat-sheet.md)
+- [EquRef](./ch00/EquRef.md)
+- [WishList](./ch00/WishList.md)
 
 I. Introduction
 - [Overview](./index.md) 
@@ -16,7 +15,7 @@ II. How To
 - [Use TEAMFF](./HowTo/UseTEAMFF.md) 
 - [Expand TEAMFF](./HowTo/ExpandTEAMFF.md)
 - [Compute QMD](./HowTo/CompQMD.md)
-- [Make and Use MFDFF](.HowTo/MFDFF.md)
+- [Make and Use MFDFF](./HowTo/MFDFF.md)
  
 III. Tutorials
 - [Overview](./Tutorials/Overview.md)  
@@ -91,9 +90,9 @@ VI. References of Executable Commands
   - [MFDFF commands](./ExeCommands/MFDFF.md)
 
 VII. WebDFF
-  - [Registration](./online/registration.md)
-  - [Tutorial](./online/tutorial.md)
-  - [Support](./online/support.md)
+  - [Registration](./WebDFF/registration.md)
+  - [Tutorial](./WebDFF/tutorial.md)
+  - [Support](./WebDFF/support.md)
 
 VIII. Appendix
   - [Force Field Functions](./appendix/functions.md)
