@@ -1,6 +1,6 @@
 # Registration
 
-To use DFF, either online or offline, you need to register an account, which helps us to provide excellent service and support. The required information are:
+To use WebDFF, register an account, which helps us to provide excellent service and support. The required information are:
 - Name and job title  
 - Affiliation (school/company and department/division)
 - Email address
