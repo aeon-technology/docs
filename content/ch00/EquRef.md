@@ -32,19 +32,15 @@ $$
 # Math
 
 $$
-χ^2 = \sum_{i=1}^N [y_i^o - y_i(i)a/σ_i]^2 + \sum_{j}^N aP_j{(a_j-a_j^*)}^2         \tag{6-2}					
-$$  		
-
-$$
 E = \sum_{d} \sum_{n=1}^3 [1 + k_{d,n} cos(n\phi_d - \phi_d^0)]
 $$
 
 $$
-χ^2 = \sum_{i=1}^N [y_i^o-y_i(a)/σ_i]^2 + \sum_j^N aP_j(a_j-a_j^*)^2					
+χ^2=\sum_{i=1}^N\bigg[\frac{y_i - \sum_{k}a_kx_k}{σ_i}\bigg]^2=\bigg|B-A⋅a\bigg|^2	  
 $$
 
 $$
-χ^2=\sum_{i=1}^N[\frac{y_i - \sum_{k}a_kx_k}{σ_i}]^2=|B-A⋅a|^2	  
+r_{ij}^o = \left[\frac{(r_i^o)^6 + (r_j^o)^6}{2}\right]^{1/6}
 $$
 
 $$
@@ -63,8 +59,9 @@ $$
 \int_0^\infty ...\int_0^\infty\mu(u_1,\dots,u_k) \,du_1 \dots du_k
 $$
 
+
 ## Size image
-<img src="./Tutorials/Project/aspirin.png" 
+<img src="../Tutorials/Project/aspirin.png" 
     alt="alt text" 
     width="250" height="280"
     style="display: block; margin: 0 auto"/>

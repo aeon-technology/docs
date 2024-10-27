@@ -1,15 +1,15 @@
-# Licensing
+## Licensing
 
 DFF requires license to run. The license is node locked, which means it only works on the designated computer identified by its MAC addresses. However, you can use DFF either on the same computer as default, or on different computers by using the floating license mechanism. 
 
-## Local License
+### Local License
 
 To use the local mode is straightforward. After DFF is installed, get an authorized license file following the instructions as you run DFF at the first time. When the license file is received, save it as \<dff-root>\License\License.txt. By default, DFF will be running using the local license mechanism.
 
-## Floating License
+### Floating License
 To use the floating mode, the computer that has license installed is called license server, and the computers that access the license server is called license clients. The license server must be set up first, and the client computers should have DFF installed and configured to use the license server. 
 
-## License Manager
+### License Manager
 There is an interface that can be used to configure license, either as a local mode or floating mode.
 When DFF is started, if a license is not found, an message will appear, close the error message, the "License Manager" dialog will appear:
 
@@ -31,7 +31,7 @@ The port number is defaulted to 3583, which can be set differently when you set 
 
 **OK** to close this dialog.
 
-## License Server
+### License Server
 
 If DFF is fully installed on the server computer, the computer can be used as both client and server. If the licensed computer is used as a license server only, only two files are required:
 
@@ -46,7 +46,7 @@ The simplest way to start the server is run the server program from command line
 
 which puts the program running in the background. The server can run automatically on Windows or Linux. Refer to the system guidance for instructions.
 
-## Options of dfflsv.exe 
+### Options of dfflsv.exe 
 
 This program can be used on server or client, depending on tasks.
 

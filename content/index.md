@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # DFF User Guide Rev. 
 
 2024.08.08
@@ -5,6 +6,15 @@
 
 I. Introduction
 - [Introduction](./Introduction/intro.md) 
+=======
+# DFF User Guide 
+Rev. 2024.08.08
+
+
+
+I. Introduction
+- [Introduction](./Introduction/introduction.md) 
+>>>>>>> Stashed changes
 - [Feature List](./Introduction/features.md)
 - [Typical Use Cases](./Introduction/usecases.md)
 
@@ -78,6 +88,29 @@ V. References of DFFWin Commands
   - [QMD Menu](./WinCommands/QMD/QMD.md)
   - [MFDFF Menu](./WinCommands/MFDFF/MFDFF.md)
   - [Help Menu](./WinCommands/Help/Help.md)
+<<<<<<< Updated upstream
+=======
+
+VI. References of Executable Commands
+  - [Overview](./ExeCommands/Overview.md)
+  - [Model Commands](./ExeCommands/Model.md)
+  - [ForceField Commands](./ExeCommands/ForceField.md)
+  - [Export Commands](./ExeCommands/Export.md)
+  - [TEAMFF Database Commands](./ExeCommands/TEAMFF.md)
+  - [Fit Commands](./ExeCommands/Fit.md)
+  - [Molecular Mechanics Commands](./ExeCommands/MM.md)
+  - [Quantum Mechanics Commands](./ExeCommands/QM.md)
+  - [MFDFF commands](./ExeCommands/MFDFF.md)
+
+VII. WebDFF
+  - [Registration](./WebDFF/registration.md)
+  - [Tutorial](./WebDFF/tutorial.md)
+  - [Support](./WebDFF/support.md)
+
+VIII. Appendix
+  - [Force Field Functions](./appendix/functions.md)
+  - [File Formats](./appendix/file-formats.md)
+>>>>>>> Stashed changes
 
 VI. References of Executable Commands
   - [Overview](./ExeCommands/Overview.md)

@@ -1,7 +1,7 @@
-# Feature List
+## Feature List
 (* indicates functions of the Professional version)
 
-## Model Builder
+### Model Builder
 - Sketch, edit and modify molecular structures. 
 - Supports all elements on the periodic table. 
 - Automatically edit molecular topologies.
@@ -20,13 +20,13 @@ Visualization
 - Measure molecular properties. 
 - Customize Look-and-Feel, including adjustable font sizes.
 
-## TEAMFF Database 
+### TEAMFF Database 
 -Integration of different independent force fields in one database
 - Supports common force field types - TEAM, AMBER, CHARMM, CFF, DREIDING, provide parameters in each force field type as the base for continue development. 
 - Provides high quality parameters with great coverage in common organic molecules, synthetic polymers, solid state materials, transition metal complexes and drug-like compounds in TEAM and AMBER force field types.
 - Graphic interface for managing and using database, automatically assign atom types using multiple force fields, with options to handle missing parameters.
 
-## Augment TEAMFF *
+### Augment TEAMFF *
 - Full functionality for managing the database contents.
 - Create customized force fields to be used with the provided force fields. 
 - Check out original atom types and parameters for examination and extended development.
@@ -34,7 +34,7 @@ Visualization
 - Functionality for importing common force fields into database.
 - Advanced handling of missing parameters, automatically build molecular fragments for parameterization.
 
-## Force Field Development*
+### Force Field Development*
 - Support popular force field types: TEAM, AMBER, CHARMM, CFF, DREIDING and customized force field types using common functional forms.
 - Support preset (default) and customized atom-typing rules.
 - Automatic generation of molecular fragments for parameterization.
@@ -42,16 +42,16 @@ Visualization
 - Automatic fit charge and valence parameters using QMD.
 - Automatic optimizing the Lennard-Jones parameters by fitting molecular simulation data against experimental liquid data.
 
-## Force Field Workflow*
+### Force Field Workflow*
 - Database storage of QMD and parameterized force field files (QMDFF).
 - Automatic workflow enables on-the-fly force field (OTF-FF) parameterization for target molecular systems, which can be drug molecules, liquids, and macromolecules, pure or mixed components.
 
-## Simulations
+### Simulations
 - Energy calculation, normal mode analysis, structure optimization and molecular dynamics simulation for validation of force fields.
 - Interface to quantum mechanics software, GAUSSIAN.
 - Integrated with GROMACS and LAMMPS.
 
-## User-Friendly Features 
+### User-Friendly Features 
 - Toolbars for quick and easy access to common commands. 
 - Project Navigator for convenient organization.
 - Integrated project and disk file management. 

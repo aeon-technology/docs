@@ -3,11 +3,21 @@
 - [WishList](./ch00/WishList.md)
 - [DFF Home](./index.md) 
 
+<<<<<<< Updated upstream
 I. Introduction
 - [Introduction](./Introduction/intro.md) 
 - [Feature List](./Introduction/features.md)
 - [Typical Use Cases](./Introduction/usecases.md)
 
+=======
+- [DFF Home](./index.md) 
+
+I. Introduction
+- [Introduction](./Introduction/introduction.md) 
+- [Feature List](./Introduction/features.md)
+- [Typical Use Cases](./Introduction/usecases.md)
+
+>>>>>>> Stashed changes
 II. [How To](./HowTo/1-HowTo.md)
 - [Download and Installation](./HowTo/2-Install.md)
 - [Get License](./HowTo/3-License.md)
