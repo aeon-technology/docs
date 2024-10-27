@@ -8,11 +8,11 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "esbuild": "^0.14.46",
+    "esbuild": "^0.24.0",
     "fs-extra": "^10.1.0",
     "hast-util-shift-heading": "^3.0.0",
     "js-yaml": "^4.1.0",
-    "nodemon": "^2.0.16",
+    "nodemon": "^3.1.7",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-mathjax": "^4.0.2",
     "rehype-slug": "^5.0.1",

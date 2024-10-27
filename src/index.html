@@ -8,7 +8,14 @@
     {{ beforeHeadEnd }}
   </head>
   <body class="c-app-layout">
-    <aside class="c-app-menu">
+    <header class="c-app-header u-no-print" >
+      <h1>Direct Force Field User Manual</h1>
+      <menu class="c-app-controls" id="nav-buttons">
+        <button id="go-prev">Prev</button>
+        <button id="go-next">Next</button>
+      </menu>
+    </header>
+    <aside class="c-app-menu u-no-print">
       <nav class="u-reset">{{ nav }}</nav>
     </aside>
     <main id="main">{{ main }}</main>
