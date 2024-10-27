@@ -1,32 +1,21 @@
-<<<<<<< Updated upstream
-# DFF User Guide Rev. 
-
-2024.08.08
-
-
-I. Introduction
-- [Introduction](./Introduction/intro.md) 
-=======
 # DFF User Guide 
+
 Rev. 2024.08.08
-
-
 
 I. Introduction
 - [Introduction](./Introduction/introduction.md) 
->>>>>>> Stashed changes
 - [Feature List](./Introduction/features.md)
 - [Typical Use Cases](./Introduction/usecases.md)
 
-II. [How To](./HowTo/1-HowTo.md)
-- [Download and Installation](./HowTo/2-Install.md)
-- [Get License](./HowTo/3-License.md)
-- [Navigate DFF](./HowTo/4-Navigate.md)
-- [Build/Import Models](./HowTo/5-BuildModel.md)
-- [Use TEAMFF](./HowTo/6-UseTEAMFF.md) 
-- [Expand TEAMFF](./HowTo/7-ExpandTEAMFF.md)
-- [Compute QMD](./HowTo/8-CompQMD.md)
-- [Make and Use MFDFF](./HowTo/9-MFDFF.md)
+II. [How To](./HowTo/HowTo.md)
+- [Download and Installation](./HowTo/Install.md)
+- [Get License](./HowTo/License.md)
+- [Navigate DFF](./HowTo/Navigate.md)
+- [Build/Import Models](./HowTo/BuildModel.md)
+- [Use TEAMFF](./HowTo/UseTEAMFF.md) 
+- [Expand TEAMFF](./HowTo/ExpandTEAMFF.md)
+- [Compute QMD](./HowTo/CompQMD.md)
+- [Make and Use MFDFF](./HowTo/MFDFF.md)
  
 III. Tutorials
 - [Overview](./Tutorials/Overview.md)  
