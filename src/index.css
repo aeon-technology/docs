@@ -59,16 +59,14 @@ table :where(th, td) {
   grid-template-rows: auto 1fr;
   grid-template-columns: auto 1fr;
 
-  --header-height: 40px;
+  height: 100vh;
 }
 
 .c-app-menu {
-  top: var(--header-height);
-  position: sticky;
   overflow-y: scroll;
   padding: 16px 16px 32px 16px;
   background-color: #eee;
-  height: calc(100vh - var(--header-height));
+  height: 100%;
   width: max(320px, 20vw);
   resize: horizontal;
   border-right: 1px solid var(--divider-color);
@@ -99,10 +97,7 @@ table :where(th, td) {
 }
 
 .c-app-header {
-  position: sticky;
-  height: var(--header-height);
-  top: 0;
-  margin: 0;
+  height: 40px;
   padding: 0 16px;
 
   display: flex;
@@ -123,6 +118,8 @@ table :where(th, td) {
 }
 
 .c-app-main {
+  height: 100%;
+  overflow: auto;
   padding: 0 16px 32px 32px;
 }
 
