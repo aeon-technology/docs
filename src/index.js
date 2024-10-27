@@ -2,9 +2,14 @@ highlightActiveNavItem();
 handleUrlFragmentFromSearchParameter();
 enableBackForwardNavButton();
 
-
 function highlightActiveNavItem() {
   [...document.querySelectorAll("nav a")].find((a) => a.pathname === location.pathname)?.classList.add("active");
+  const activeElement = document.querySelector("nav a.active");
+  if (activeElement?.scrollIntoViewIfNeeded) {
+    activeElement.scrollIntoViewIfNeeded(false);
+  } else {
+    activeElement.scrollIntoView();
+  }
 }
 
 // Convert `?` search parameter to `#` hash
