@@ -1,12 +1,9 @@
-- [MarkDown](./ch00/markdown-cheat-sheet.md)
-- [EquRef](./ch00/EquRef.md)
-- [WishList](./ch00/WishList.md)
 - [DFF Home](./index.md) 
 
-[1. Introduction](./Introduction/0_introduction.md)
-- [Overview](./Introduction/0_introduction.md#overview) 
-- [Feature List](./Introduction/0_introduction.md#feature-list) 
-- [Common Use Cases](./Introduction/0_introduction.md#common-use-cases) 
+[1. Introduction](./Introduction/introduction.md)
+- [Overview](./Introduction/introduction.md#overview) 
+- [Feature List](./Introduction/introduction.md#feature-list) 
+- [Common Use Cases](./Introduction/introduction.md#common-use-cases) 
 
 II. How To ...
 - [Download and Installation](./HowTo/1-Install.md)
@@ -98,3 +95,8 @@ VII. WebDFF
 VIII. Appendix
   - [Force Field Functions](./appendix/functions.md)
   - [File Formats](./appendix/file-formats.md)
+
+
+- [MarkDown](./ch00/markdown-cheat-sheet.md)
+- [EquRef](./ch00/EquRef.md)
+- [WishList](./ch00/WishList.md)
