@@ -3,20 +3,20 @@
 - [WishList](./ch00/WishList.md)
 - [DFF Home](./index.md) 
 
-I. Introduction
-- [Introduction](./Introduction/introduction.md) 
-- [Feature List](./Introduction/features.md)
-- [Typical Use Cases](./Introduction/usecases.md)
+[1. Introduction](./Introduction/0_introduction.md)
+- [Overview](./Introduction/0_introduction.md#overview) 
+- [Feature List](./Introduction/0_introduction.md#feature-list) 
+- [Common Use Cases](./Introduction/0_introduction.md#common-use-cases) 
 
-II. [How To](./HowTo/1-HowTo.md)
-- [Download and Installation](./HowTo/2-Install.md)
-- [Get License](./HowTo/3-License.md)
-- [Navigate DFF](./HowTo/4-Navigate.md)
-- [Build/Import Models](./HowTo/5-BuildModel.md)
-- [Use TEAMFF](./HowTo/6-UseTEAMFF.md) 
-- [Expand TEAMFF](./HowTo/7-ExpandTEAMFF.md)
-- [Compute QMD](./HowTo/8-CompQMD.md)
-- [Make and Use MFDFF](./HowTo/9-MFDFF.md)
+II. How To ...
+- [Download and Installation](./HowTo/1-Install.md)
+- [Get License](./HowTo/2-License.md)
+- [Navigate DFF](./HowTo/3-Navigate.md)
+- [Build/Import Models](./HowTo/4-BuildModel.md)
+- [Use TEAMFF](./HowTo/5-UseTEAMFF.md) 
+- [Expand TEAMFF](./HowTo/6-ExpandTEAMFF.md)
+- [Compute QMD](./HowTo/7-CompQMD.md)
+- [Make and Use MFDFF](./HowTo/8-MFDFF.md)
  
 III. Tutorials
 - [Overview](./Tutorials/Overview.md)  

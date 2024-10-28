@@ -1,4 +1,4 @@
-## Introduction
+## Overview
 
 Direct Force field (DFF) is a software package for development and deployment of molecular force fields. It comes in two versions: Standard and Professional. The Standard version is for deployment, while the Professional version offers additional functionalities for development.
 
@@ -7,4 +7,3 @@ DFF provides multiple force fields in popular functional forms collectively call
 The professional version offers additional functionalities of making new force fields, either to augment the TEAMFF database or to make specific force fields for target systems. 
 
 DFFWeb is a website providing online version of the standard version. To use DFF offline, download and install DFF software. Depending on license configuration, you may use the standard version or professional version. The offline version of DFF includes a graphic user interface.
-

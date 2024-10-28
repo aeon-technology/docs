@@ -1,3 +1,0 @@
-# How To
-
-first level
