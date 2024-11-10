@@ -1,4 +1,4 @@
-# Fitting a Molecular Dimer
+# Fitting Molecular Dimer
 
 In this tutorial, we will learn how to fit QM data of a molecular dimer to determine VDW parameters, demonstrated by methane molecules. To fit a VDW dimer, three models are required: dimer and two monomers. The two monomers may be the same as shown in this example. In practice, valence parameters should be determined before the VDW parameters to be adjusted. In this tutorial we will checkout parameters from TEAMFF.
 

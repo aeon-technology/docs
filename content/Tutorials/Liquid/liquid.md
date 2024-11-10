@@ -1,4 +1,4 @@
-# Build a Liquid Model
+# Build Liquid Models
 
 Liquid models are useful for the purposes of parameterization and validation of nonbond parameters. In this lesson we show how to build pure liquid model.
 

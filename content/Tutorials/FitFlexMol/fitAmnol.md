@@ -1,4 +1,4 @@
-# Fitting Parameters if a Flexible Molecule
+# Fitting Parameters for a Flexible Molecule
 
 In this lesson we will learn how to fit a force field of 2-methylamino-ethanol (C3H9NO), a molecule with several rotatable bonds. Fitting flexible molecules is more difficult than fitting a rigid molecule. We will compare two sampling strategies and demonstrate the impact of different samplings on the quality of developed force field. The first is rigid sampling, in which all internal coordinates are fixed at selected values, as we used in the previous lesson. The second sampling is flexible; we sample the minimized energy curves along selected internal coordinates. For convenience, pre-calculated QMD files are included in the “tutorialB2_fitAmnol” folder.
 
