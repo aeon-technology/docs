@@ -1,8 +1,9 @@
-#TUTORIAL B2 - FITTING PARAMETERS OF A FLEXIBLE MOLECULE
+# Fitting Parameters if a Flexible Molecule
 
 In this lesson we will learn how to fit a force field of 2-methylamino-ethanol (C3H9NO), a molecule with several rotatable bonds. Fitting flexible molecules is more difficult than fitting a rigid molecule. We will compare two sampling strategies and demonstrate the impact of different samplings on the quality of developed force field. The first is rigid sampling, in which all internal coordinates are fixed at selected values, as we used in the previous lesson. The second sampling is flexible; we sample the minimized energy curves along selected internal coordinates. For convenience, pre-calculated QMD files are included in the “tutorialB2_fitAmnol” folder.
 
-## RIGID SAMPLING 
+## Rigid Sampling 
+
 1.	Start DFF and open the "Tutorials" project. Open the “TutorialB2_fitAmnol” folder. Double-click on the C3H9NO.msd model in Project Navigator. Click **QM Data/Conformer** to open a dialog of sampling. The amino group is not planar, therefore, we shall sample the out-off-plane (OOP) angle as well. Select “Fixed interval” for “OOPA”. Leave all other parameters as default, then click on OK to launch the job. A total of 85 conformational isomers will be generated. 
 
 2.	Run single point energy and gradient calculations for these structures using the B3LYP/6-31G* protocol. When the calculations are done, combine all data including the fully optimized structure with Hessian calculated (86 data in total) into one QMD file, which is named “rigid.qmd” in this Tutorial. Open “rigid.qmd”, select all entries and click on the “Energy” button to see the relative energy. The highest value is about 20 kcal/mol. 
@@ -25,9 +26,9 @@ In this lesson we will learn how to fit a force field of 2-methylamino-ethanol (
 
 As seen in this chart, the agreement at low energy region is not perfect, but acceptable. As the example above demonstrates, the rigid sampling is fast, but does not yield very accurate torsional energy curves.
 
-## RELAXED SAMPLINGS
+## Relaxed Sampling
 
-Alternatively, DFF provides a functionality that samples internal rotation energy curves using constrained minimization. This is done by conducting the Scan calculations using Gaussian. 
+Alternatively, DFF provides a functionality that samples internal rotation energy curves using constrained minimization. This is done by conducting the Scan calculations of Gaussian. 
 
 1.	Click **QM Date/Compute** to optimize and calculate Hessians of the molecule using the DFT B3LYP/6-31G* method. Import the result into a QMD file. Make sure a MSD file is obtained from the optimized structure, which will be used to as the starting point to sample the conformational space. 
 

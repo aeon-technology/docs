@@ -12,4 +12,4 @@ Next is to decide which force field type (e.g. AMBER, TEAM, CHARMM,...) and simu
 Several force fields can be used for a force field type. In most case, the general force field is sufficient. You may select other or multiple force fields. If multiple force fields are selected, adjust the order of usage is important as DFF will search parameters in the order. For more details, refer to the document about [TEAMFF](../topics/teamff-database.md).
 
 ## Get the Result
-If all required force field parameters are obtained, the atom types and parameters will be saved as input files for the designate simulation software. If some parameters are missing, consider to use transferred and automatic parameters. Alternatively, make a new force field to extend the coverage as explained in [Extend TEAMFF](./ExpandTEAMFF.md).
+If all required force field parameters are obtained, the atom types and parameters will be saved as input files for the designate simulation software. If some parameters are missing, consider to use transferred and automatic parameters. Alternatively, make a new force field to extend the coverage as explained in [Extend TEAMFF](./6_ExpandTEAMFF.md).

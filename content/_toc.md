@@ -1,27 +1,26 @@
-- [DFF Home](./index.md) 
+[DFF Document Home](./index.md) 
 
 [1. Introduction](./Introduction/introduction.md)
 - [Overview](./Introduction/introduction.md#overview) 
 - [Feature List](./Introduction/introduction.md#feature-list) 
 - [Common Use Cases](./Introduction/introduction.md#common-use-cases) 
 
-II. How To ...
-- [Download and Installation](./HowTo/1-Install.md)
-- [Get License](./HowTo/2-License.md)
-- [Navigate DFF](./HowTo/3-Navigate.md)
-- [Build/Import Models](./HowTo/4-BuildModel.md)
-- [Use TEAMFF](./HowTo/5-UseTEAMFF.md) 
-- [Expand TEAMFF](./HowTo/6-ExpandTEAMFF.md)
-- [Compute QMD](./HowTo/7-CompQMD.md)
-- [Make and Use MFDFF](./HowTo/8-MFDFF.md)
+[II. How To ...](./HowTo/HowTo.md)
+- [Download and Installation](./HowTo/1_Install.md)
+- [Get License](./HowTo/2_License.md)
+- [Navigate DFF](./HowTo/3_Navigate.md)
+- [Build/Import Models](./HowTo/4_BuildModel.md)
+- [Use TEAMFF](./HowTo/5_UseTEAMFF.md) 
+- [Expand TEAMFF](./HowTo/6_ExpandTEAMFF.md)
+- [Compute QMD](./HowTo/7_CompQMD.md)
+- [Make and Use MFDFF](./HowTo/8_MFDFF.md)
  
-III. Tutorials
-- [Overview](./Tutorials/Overview.md)  
+[III. Tutorials](./Tutorials/Overview.md)  
 - [Project and Models](./Tutorials/Project/project.md)
 - [Build Liquid Models](./Tutorials/Liquid/liquid.md)	
 - [Use TEAMFF on Macromolecules](./Tutorials/Macromol/useTEAMFF.md)
 - [Mix TEAMFF Force Fields](./Tutorials/Mixff/mixFF.md)	
-- [Fit Simple Molecule](./Tutorials/FitRigid/fitKeton.md)
+- [Fit Rigid Molecule](./Tutorials/FitRigid/fitKeton.md)
 - [Fit Flexible Molecule](./Tutorials/FitFlexMol/fitAmnol.md)	
 - [Fit Molecular Dimer](./Tutorials/FitDimer/ditDimer.md)	
 - [Fit Liquid Date](./Tutorials/FitLiquid/fitLiquid.md)	
@@ -29,7 +28,7 @@ III. Tutorials
 - [Extend TEAMFF](./Tutorials/ExtTEAM/extTEAMFF.md)	
 - [Use MFDFF](./Tutorials/UseMFDFF/useMFDFF.md)	
 
-IV. Concepts, Methods and Algorithms
+[IV. Concepts, Methods and Algorithms](./Topics/Topics.md) 
   - [Project and File System](./Topics/ProjectFiles/project-files.md) 
   - [Force Field](./Topics/ForceField/forcefield.md)
     - [Force Field Types](./Topics/ForceField/forcefield-types.md)
@@ -61,7 +60,7 @@ IV. Concepts, Methods and Algorithms
     - [Implementation](./Topics/MFDFF/issues.md)
   - [Simulations](./Topics/molecular-simulations.md)
   
-V. References of DFFWin Commands
+[V. References of DFFWin Commands](./WinCommands/WinCommands.md)
   - [Project Navigator](./WinCommands/Project/ProjectNav.md)
   - [Toolbar and Mouse](./WinCommands/Toolbar/Toolbar.md)
   - [File Menu](./WinCommands/File/File.md)
@@ -76,7 +75,7 @@ V. References of DFFWin Commands
   - [MFDFF Menu](./WinCommands/MFDFF/MFDFF.md)
   - [Help Menu](./WinCommands/Help/Help.md)
 
-VI. References of Executable Commands
+[VI. References of Executable Commands](./ExeCommands/ExeCommands.md)
   - [Overview](./ExeCommands/Overview.md)
   - [Model Commands](./ExeCommands/Model.md)
   - [ForceField Commands](./ExeCommands/ForceField.md)
@@ -87,16 +86,19 @@ VI. References of Executable Commands
   - [Quantum Mechanics Commands](./ExeCommands/QM.md)
   - [MFDFF commands](./ExeCommands/MFDFF.md)
 
-VII. WebDFF
-  - [Registration](./WebDFF/registration.md)
+[VII. WebDFF](./WebDFF/WedDFF.md)
+  - [Get Start](./WebDFF/start.md)
   - [Tutorial](./WebDFF/tutorial.md)
   - [Support](./WebDFF/support.md)
 
-VIII. Appendix
-  - [Force Field Functions](./appendix/functions.md)
+[VIII. Appendix](./Appendix/appendix.md)
+  - [Force Field Functions](./Appendix/functions.md)
+    - [Bonded Functions](./Appendix/functions.md#bonded-functions)
+    - [Nonbonded Functions](./Appendix/functions.md#nonbonded-functions)
+    - [Special Functions](./Appendix/functions.md#other-function)
+    - [Function and Parameters](./Appendix/functions.md#functions-and-parameters)
   - [File Formats](./appendix/file-formats.md)
-
-
-- [MarkDown](./ch00/markdown-cheat-sheet.md)
-- [EquRef](./ch00/EquRef.md)
-- [WishList](./ch00/WishList.md)
+    - [MSD File](./appendix/file-formats.md#1-molecular-structure-data-msd-file)
+    - [PPF File](./appendix/file-formats.md#2-potential-parameter-file-ppf)
+    - [QMD File](./appendix/file-formats.md#3-quantum-mechanics-data-qmd-file)
+    - [Typing File](./appendix/file-formats.md#4-atom-type-definition-def-ext-file)

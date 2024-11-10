@@ -1,6 +1,6 @@
 # Project and Models
 
-In this lesson, we will show some of the basic operations of DFF:
+In this lesson, we will show some of the basic functionalities of DFF:
 - Create and manage a project
 - Build a molecule from scratch
 - Mouse functions for editing and viewing 
@@ -9,21 +9,22 @@ In this lesson, we will show some of the basic operations of DFF:
 In DFF, a project is a folder that contains files and sub-folders. A project file named as ".dpf" is saved in the folder. A project can be created from scratch or by opening an existing folder. 
 
 ### Open a Project
-- To open a folder as project, start DFF and  **File/Open Project** command. A "Open" dialog lets you browse and select the folder to be opened. If a folder has not been set as project before, an information window will pop up. If you agree, the folder will be set as a project and a new file .dpf will be created and saved. 
+To open a folder as project, start DFF and  **File/Open Project** command. A "Open" dialog lets you browse and select the folder to be opened. Assume you have copied the tutorials folder from "\<dff-root>/Tutorials" to "\<TestDFF>/Tutorials", then browse to find the folder and open it as the tutorials project.
 
-- Point to the new project folder, right-click mouse button, a pulldown command list shows several commands can be applied to the project folder. Click **Refresh** to upload and register DFF project relevant files. 
+The first time a folder is opened as a project, an information window will pop up. If proceed, the folder will be set as a project and a project file .dpf will be created. 
+
+Point to the new project folder, right-click mouse button, a pulldown command list shows several commands can be applied to the project folder. Click **Refresh** to see the DFF files. 
 
 ### Adjust Font Sizes 
-- To adjust the font size of the Project Navigator, Point to the project file node in the Project Navigator and right-click the mouse, a pop-up options of “Larger Font” and “Smaller Font”, which can be used to change the font size.
+To adjust the font size of the Project Navigator, Point to the project file node in the Project Navigator and right-click the mouse, a pop-up options of “Larger Font” and “Smaller Font”, which can be used to change the font size.
 
 ### Create an Empty Project
-- Start DFF and click **File** / **New Project** command. A dialog named "Create Project" lets you browse a folder on your computer, select a folder and append a new folder name to create a new project folder.
+Start DFF and click **File** / **New Project** command. A dialog named "Create Project" lets you browse a folder on your computer, select a folder and append a new folder name to create a new project folder.
 
-- To make a subfolder, - Hover over the new project node and right-click, a pulldown menu will pop up. Select **New/Folder** command, enter a name for the subfolder, and execute the command. A subfolder will be added and listed in the Project Navigator. You can see the project folders and files by using the **Open in Explore** command in the pulldown menu.
+To make a subfolder, - Hover over the new project node and right-click, a pulldown menu will pop up. Select **New/Folder** command, enter a name for the subfolder, and execute the command. A subfolder will be added and listed in the Project Navigator. You can see the project folders and files by using the **Open in Explore** command in the pulldown menu.
 
 ### Save, Close and Open Project
 At any time, you can save the project by using File → Save Project command, you can also save the project into different name by using File → Save Project As command. To close the project, use File → Close Project command. DFF will prompt you to save before close. The saved project can be reloaded by using File → Open Project command.
-Note: The same model is provided in the Tutorial project. In the following section, we will use the Tutorial project, which has files saved for convenience. The same operations explained can be applied to the project you have just created.  
 
 
 ## Create a Model

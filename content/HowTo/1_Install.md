@@ -27,8 +27,10 @@ which will create the \<dff-root>. By default the installation directory is unde
 To uninstall DFF from Windows systems, run `uninstall.exe` which is in the \<dff-root\> directory. On Linux platform, delete the DFF installation directory.
 
 ### Start DFF
-On windows, after the installation, click the DFF icon which should be created during the installation or run \<dff-root>\DFF8.bat file to start. 
+On windows, after the installation, click the DFF icon which should be created by the installation or run \<dff-root>\DFF8.bat file to start. 
 
 On Linux, depending on system configuration, you may start DFF8.sh by clicking on it, or run DFF8.sh from command line.
 
-Unless the license file has been installed, an error message will appear when you first start DFF. Close the error message, the "License Manager" dialog will appear for configuring a license. Please see [License](./licensing.md) to continue. 
+Unless the license file has been installed, an information message will appear when you first start DFF. Close the error message, the "License Manager" dialog will appear for configuring a license. Please see [License](./licensing.md) to continue. 
+
+*If DFF is installed in a folder that needs administrator privilege, the first time to start DFF using **Run as Administrator** option so that you can configure the license.* 

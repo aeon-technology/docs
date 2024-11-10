@@ -1,24 +1,25 @@
-# TUTORIAL B1 - FITTING PARAMETERS FOR A SMALL MOLECULE
+# Fitting Parameters for a Rigid Molecule
 
-In this tutorial, we will learn how to use DFF to fit force field parameters for a small molecule. The molecule is dimethyl ketone in which the four heavy atoms (3 carbons and 1 oxygen) form a rigid plane with two methyl groups and are rotatable. To fit this kind of molecule is not difficult. We will learn how to make a force field that not only fits minimum energy structure, but also reproduces the conformational energy profile calculated using QM methods.
+In this tutorial, we will learn how to use DFF to fit force field parameters for a small molecule. The molecule is dimethyl ketone in which the four heavy atoms (3 carbons and 1 oxygen) form a rigid plane with two methyl groups which are rotatable. We will learn how to make a force field that not only fits minimum energy structure, but also reproduces the conformational energy profile calculated using QM methods.
 
 A general procedure is to obtain the QMD for an energy minimum structure as well as conformational isomers. The QMD includes energy, energy first and second order derivatives. We then fit QMD to derive valence and charge parameters.
 
 For convenience, files used in this tutorial have been pre-calculated and provided in the TutorialB1_fitKetone folder of the tutorials project. 
 
-## PREPARING THE QUANTUM MECHANICS DATA
-1.	Start DFF and open project "Tutorials" if it is not yet. Open “TutorialB1_fitKetone” folder. Double-click on the “ketone” model and click **QM Data / Compute** command. The name of the selected model is listed in the dialog. Set the Computation to "OPT FREQ" to optimize the structure and get the Hessians in one step. The computation options as follows:
+## Preparing the Quantum Mechanics Data
+
+1. Browse to “TutorialB1_fitKetone” folder, open the “ketone” model and click **QM Data / Compute** command. The name of the selected model is listed in the dialog. Set the Computation to "OPT FREQ" to optimize the structure and get the Hessians in one step. Set the computation options as follows:
 ```Method: B3LYP 
-Basic Set: 6-31G*
-Total Charge: 0
+Basic set: 6-31G*
+Total charge: 0
 Multiplicity: 1
 CPU time limit: 300 (default) 
-Memory Limit: 800 (default)
+Memory limit: 800 (default)
 ```
 
-2. If you have GAUSSIAN software installed locally, select "Run background job" to run the calculations from DFF. When the job is done, there will be a notice prompting the next step.  To run the job outside of DFF environment, select “Make input files only”. Click “OK” to continue.
+2. If GAUSSIAN software is installed locally, select "Run background job" to run the calculation. When the job is done, there will be a notice prompting the next step.  To run the job outside of DFF environment, select “Make input files only”. Click **OK** to continue.
 
-3.	When the Gaussian job is done, locate the output file (keton.gauout) in Project Navigator, right-click and select “Create QMD” to make a QMD (keton.qmd) file. A check mark of the QMD file icon ( ) indicates that this QMD data contains optimized structure with the first and second derivatives calculated. Open the QMD file will show the same information.
+3.	When the Gaussian job is done, locate the output file (.gauout, .log, .out, etc.) in the Project Navigator, right-click and select “Create QMD” to make a QMD (keton.qmd) file. A check mark of the QMD file icon indicates that this QMD data contains optimized structure with the first and second derivatives calculated. Open the QMD file will show the same information.
 
 3.	Point to the QMD file, right-click to select “Create MSD” command, the optimized structure is saved in a new MSD (keton.msd) file. This is the optimized structure, will be used to generate conformers. Select the MSD file from the Project Navigator, click **QM Data/Conformer**, which brings up the "Generate Conformations" dialog box.
  
@@ -28,9 +29,9 @@ Memory Limit: 800 (default)
     style="display: block; margin: 0 auto" />
 
 
-*Note: This dialog launches the automatic conformation generator (ACG). The software selects all dihedral angles defined by heavy atoms in the molecule, and then starts from the original structure, which should be the one of minimum energy, then scan each of the dihedral angles either systematically or randomly. *
+*Note: This dialog launches the automatic conformation generator (ACG). The software selects all dihedral angles defined by heavy atoms in the molecule, and then starts from the original structure, which should be the one of minimum energy, then scan each of the dihedral angles either systematically or randomly.*
 
-4.	Using the default options, click OK should generate 8 isomers in a sub-folder. Select all the conformers generated and click **QM Data / Compute**. The selected conformers should be listed in the "Models to Be Calculated" text field. Set the Computation options to "GRADIENT", keep other options unchanged, and click OK to run. 
+4.	Using the default options, click **OK** should generate 8 isomers in a sub-folder. Select all the conformers generated and click **QM Data / Compute**. The selected conformers should be listed in the "Models to Be Calculated" text field. Set the Computation options to "GRADIENT", keep other options unchanged, and click OK to run. 
 
 Since the isomers are not energy minimized, it is not helpful to calculate the second derivatives, but the energy and gradients are useful for fitting force field parameters.
 

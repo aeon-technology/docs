@@ -1,4 +1,4 @@
-# TUTORIAL B4 - FITTING LIQUID DATA 
+# Fitting Liquid Data
 
 In this lesson, we will learn how to optimize VDW parameters by fitting liquid properties using liquid benzene. We will check out the parameters from a force field of TEAMFF, fit the L-J parameters using simulation data of the liquid.
 
@@ -6,7 +6,7 @@ Because the NVT simulation is more stable than NPT simulation, we use NVT simula
 
 In this tutorial, we use the experimental data of one temperature (298 K), there are only two target data to fit, therefore we must reduce the adjustable parameters. After all valence and charge parameters are fixed, there are still have 4 adjustable parameters. Therefore, we choose to use two scaling factors for LJ well-depth and radium respectively, to optimize. 
 
-# PREPARING A LIQUID MODEL
+# Preparing a Liquid Model
 
 An equilibrated liquid simulation box has been prepared and is included in the tutorial directory. You can skip this section. 
 
@@ -20,7 +20,7 @@ An equilibrated liquid simulation box has been prepared and is included in the t
 
 5.	Equilibrate the liquid model by running MD simulations repeatedly. Consider using high temperatures (~3000 K) with NVT MD simulations, and then gradually cool the system down to 298K over several (2~3) steps. Each step requires a run time of ~10 ps. Finally, run a NVT MD simulation with a 9.5 Å cutoff for 50-100 ps to equilibrate the system. 
 
-## OPTIMIZING VDW PARAMETERS
+## Optimizing LJ Parameters
 
 To fit the L-J parameters, we use experimental data for the density and heat of vaporization for liquid benzene:
 ```

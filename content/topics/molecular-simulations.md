@@ -3,7 +3,7 @@
 A general procedure of using a force field made by DFF is as follows.
 
 ## Assigning a Force field
-Prepare or import a simulation model. DFF can be used to build 3-dimensional cubic liquid boxes and liquid interfaces, but this functionality is intended primarily for parameterizations and validations. For complex molecular systems, an external software package can be used to build the simulation models. DFF reads most popular file formats such as .pdb, .mol2, and .car files.
+Prepare or import a simulation model. DFF can be used to build 3-dimensional cubic liquid boxes and liquid interfaces, but this functionality is intended primarily for parameterization and validations. For complex molecular systems, an external software package can be used to build the simulation models. DFF reads most popular file formats such as .pdb, .mol2, and .car files.
 
 It is important to have a consistent assignment of topologies and formal charges in order to assign atom types. If the coordinates of atoms are given with reasonable precision, DFF can automatically assign topologies and formal charges. This method works well for common organic molecules.
 
@@ -16,6 +16,7 @@ If any parameters are missing, TEAMFF will report the missing terms, which then 
 ## Internal Simulation Engines
 
 DFF contains a built-in simulation engine that can be used to optimize and validate parameters. Simulation jobs can be run interactively so that structures and energies are dynamically updated on the screen. 
+
 
 ### Optimizers
 
@@ -61,14 +62,14 @@ DFF uses period boundary conditions in simulating of molecules in condensed phas
 
 ## External Simulation Engines
 
-DFF is designed to work with different simulation packages. The prepared simulation model and force field parameters can be exported to popular simulation engines including LAMMPS, TOWHEE, DISCOVER, AMBER and CHARMM. Because different conventions are used in different programs, DFF translates the atom types to those recognized by other software packages. It should be noted that this translation is simply a one-to-one mapping from the atom types used by DFF to a set of unique string symbols. 
-
-To facilitate the simulation setup, GROMACS and LAMMPS jobs can be launched directly from the DFF after the force field parameters are assigned. Energy minimization and NVT, NPT and NVE molecular dynamics can be carried out directly from the user interface.
+Two simulation program packages, LAMMPS and GROMACS, are included in DFF release packages. The programs are Multi-Thread Parallel (MTP) enabled  late versions (after 2021). To validate force fields, GROMACS and LAMMPS simulation jobs can be launched directly from the DFF. Typical tasks include energy minimization, NVT, NPT and NVE molecular dynamics. 
 
 ### Conversions 
 
-Because potential functions implemented differently from published force field types, some parameters must be converted to the closest functional form for exporting parameters. 
+Because different conventions of atom types are used in different programs, DFF translates the atom types to those recognized by other software packages. It should be noted that this translation is simply a one-to-one mapping from the atom types used by DFF to a set of unique string symbols. 
 
+
+Because potential functions implemented differently from published force field types, some parameters must be converted to the closest functional form for exporting parameters. 
 
 #### Dihedral in DREIDING
 
