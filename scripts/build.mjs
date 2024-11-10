@@ -130,7 +130,8 @@ const getTocBuilder = (pageDir) =>
       if (path.extname(url.pathname) === ".md") {
         const absoluteLink = path.join(DIR.dist, url.pathname);
         const relativeLink = path.relative(pageDir, absoluteLink);
-        return replaceRelativePathFileExtension(relativeLink, ".md", ".html");
+        const updatedPath = replaceRelativePathFileExtension(relativeLink, ".md", ".html");
+        return url.hash ? `${updatedPath}${url.hash}` : updatedPath;
       }
     })
     .use(rehypeStringify);
