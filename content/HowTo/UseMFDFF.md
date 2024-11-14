@@ -1,16 +1,18 @@
 # Use and Extend MFDFF
 
-MFDFF is a system that makes force fields on-the-fly using a library of fragments, which can be automatically extended. The made force fields are for molecular types, which are found in large molecular systems such as liquids and macromolecules. A database called MFDFF.db is used to store the fragment library (FragQMD) and made molecular type force fields (MolPPF). To use and expand MFDFF, follow the following steps: 
+MFDFF is a system that makes force fields on-the-fly using a database of molecular type force fields and QMD data of molecular fragments. The database has three tables: MolPPF, FragQMD and FragMSD for molecule type force fields, fragment QMD data set, and fragments to be calculated, respectively. The contents of these tables are updated with new developments. To use MFDFF, follow the three steps below.   
 
 ## 1. Enquire Force Field
 
-MFDFF can be applied to models of single molecules or collections of molecules. To use MFDFF, select the models and then use **MFDFF/Enquiry PPF** command to start. DFF will identify molecule types in the model, search the database for molecular type force fields (MTFFs). If all required MTFFs are found, an integrated force field is made and assigned to the model.  
+The first step is search database to see if sufficient molecule type force fields are available in MolPPF table for the molecular model of interest. If yes, a force will be constructed using the molecule type force field for the model field, the task is done. If any molecule type force fields are missing, the molecule types and their constituent molecular fragments will saved for new force field developments. All of the above is done by using **MFDFF/Enquiry PPF** command.  
 
-If a MTFF is missing, the corresponding fragments will be saved for parameterization. 
+## 2. Update FragQMD
 
-## 2. Collect and Update FragQMD
+This step aims to make the QMD complete for parametrization. We first search the database for QMD files of the identified fragments. If any missing QMD files, the corresponding fragments will be collected and saved in FragMSD table. It is optional to submit the computation internally in DFF or collect the tasks and submit the computations externally. The computations are done by using Gaussian program (separate license is required). The new QMD files will be uploaded to the FragQMD table when the jobs are done, and the corresponding fragments will be cleared with the update. This step can be done by using **MFDFF/Collect Frag QMD** command. 
 
-For the identified fragments, use **MFDFF/Enquire QMD** command to search QMD files in the database. If any required QMD is missing, the corresponding fragments will be collected for computation. The computation can be run on the same computer or send to a remote computer as batch jobs.   
+If the QMD jobs are done externally, upload the new QMD files by using **MFDFF/Update Frag QMD** command.
 
-## 3. Make and Update MolPPF
-When the required QMD are complete, use DFF to fit force fields for the molecule type. Examine the validation report for each molecule. If everything looks good, upload the molecular force fields to the database, and then repeat the first step. If any of the validation fails, analyze the problems and adjust parameterization options or contact for technical support.
+
+## 3. Update MolPPF
+When the required QMD are complete, use DFF to fit new force fields for the identified molecule types. The force fields will be validated against the baseline QM data and tested for stability using a short-time molecular dynamics simulation. If everything looks good, the molecule type force fields will be uploaded to the MolPPF table. Then repeat the first step to get the force field for the target model.
+

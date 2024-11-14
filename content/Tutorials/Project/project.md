@@ -33,8 +33,12 @@ In DFF, a model is a molecular system for simulation, which can be a single mole
 
 <img src="./aspirin.png" 
     alt="final structure" 
-    width="250" height="280"
+    width="250" height="250"
     style="display: block; margin: 0 auto" />
+
+<img src="./aspirin.png" 
+    alt="final structure" 
+    width="250" height="250"/>
 
 The editing commands are provided in the Toolbar in DFF main window for easy access. We will use these commands together with mouse actions to build a model.
 
