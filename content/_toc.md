@@ -26,6 +26,7 @@
 - [Make a Force Field](./Tutorials/MakeFF/makeFF.md)	
 - [Extend TEAMFF](./Tutorials/ExtTEAM/extTEAMFF.md)	
 - [Use MFDFF](./Tutorials/UseMFDFF/useMFDFF.md)	
+- [Extend MFDFF](./Tutorials/UseMFDFF/extendMFDFF.md)	
 
 [IV. Concepts, Methods and Algorithms](./Topics/Topics.md) 
   - [Project and File System](./Topics/ProjectFiles/project-files.md) 

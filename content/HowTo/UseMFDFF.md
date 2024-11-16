@@ -16,3 +16,4 @@ If the QMD jobs are done externally, upload the new QMD files by using **MFDFF/U
 ## 3. Update MolPPF
 When the required QMD are complete, use DFF to fit new force fields for the identified molecule types. The force fields will be validated against the baseline QM data and tested for stability using a short-time molecular dynamics simulation. If everything looks good, the molecule type force fields will be uploaded to the MolPPF table. Then repeat the first step to get the force field for the target model.
 
+
