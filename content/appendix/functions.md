@@ -7,10 +7,7 @@ Bonded terms are defined by atoms that are directly bonded - bond lengths, bond 
 ### Bond Functions
 Bond is defined by two atoms:
 
-<img src="image-2.png" 
-    alt="bond" 
-    width="150" height="60"
-    style="display: block; margin: 0 auto"/>
+![bond](./image-2.png) 
 
 |ID    |Function   | Parameters 
 |------|-----------|------------
@@ -21,10 +18,7 @@ Bond is defined by two atoms:
 ### Bond Angle Functions
 Bond angle is defined as by three atoms i-j-k:
 
-<img src="image-1.png" 
-    alt="angle" 
-    width="120" height="100"
-    style="display: block; margin: 0 auto"/>
+![angle](./image-1.png) 
 
 |ID    |Function   | Parameters 
 |------|-----------|------------
@@ -39,10 +33,7 @@ Bond angle is defined as by three atoms i-j-k:
 
 dihedral angle is defined by atom i-j-k-l, where j-k is the center bond.
 
-<img src="image-3.png" 
-    alt="dihedral" 
-    width="180" height="90"
-    style="display: block; margin: 0 auto"/>
+![dihedral angle](./image-3.png) 
 
 |ID    |Function   | Parameters 
 |------|-----------|------------
@@ -58,10 +49,7 @@ The improper dihedral angle is measured as the dihedral
 angle of two surfaces made by bond pairs of j-i/i-k and 
 n-i/i-k respectively.
 
-<img src="image-4.png" 
-    alt="improper dihedral" 
-    width="120" height="70"
-    style="display: block; margin: 0 auto"/>
+![improper dihedral](./image-4.png) 
 
 |ID    |Function   | Parameters 
 |------|-----------|------------
@@ -71,10 +59,7 @@ n-i/i-k respectively.
 
 ### Out-of-Plane Angle 
 
-<img src="image-5.png" 
-    alt="out of plane" 
-    width="120" height="70"
-    style="display: block; margin: 0 auto"/>
+![out of plane angle](./image-5.png) 
 
 |ID    |Function   | Parameters 
 |------|-----------|------------
