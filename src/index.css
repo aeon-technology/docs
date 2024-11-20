@@ -108,7 +108,7 @@ table :where(th, td) {
   background-color: #eee;
   border-bottom: 1px solid var(--divider-color);
 
-  > * {
+  >* {
     margin: 0;
   }
 
