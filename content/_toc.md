@@ -18,7 +18,7 @@
 - [Project and Models](./Tutorials/Project/project.md)
 - [Build Liquid Models](./Tutorials/Liquid/liquid.md)	
 - [Use TEAMFF Force Field](./Tutorials/MacroMol/useTEAMFF.md)
-- [Mix TEAMFF Force Fields](./Tutorials/Mixff/mixff.md)	
+- [Mix TEAMFF Force Fields](./Tutorials/MixFF/mixff.md)	
 - [Fit Rigid Molecule](./Tutorials/FitRigid/fitKeton.md)
 - [Fit Flexible Molecule](./Tutorials/FitFlexMol/fitAmnol.md)	
 - [Fit Molecular Dimer](./Tutorials/FitDimer/ditDimer.md)	
