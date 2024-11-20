@@ -22,12 +22,8 @@ Memory limit: 800 (default)
 3.	When the Gaussian job is done, locate the output file (.gauout, .log, .out, etc.) in the Project Navigator, right-click and select “Create QMD” to make a QMD (keton.qmd) file. A check mark of the QMD file icon indicates that this QMD data contains optimized structure with the first and second derivatives calculated. Open the QMD file will show the same information.
 
 3.	Point to the QMD file, right-click to select “Create MSD” command, the optimized structure is saved in a new MSD (keton.msd) file. This is the optimized structure, will be used to generate conformers. Select the MSD file from the Project Navigator, click **QM Data/Conformer**, which brings up the "Generate Conformations" dialog box.
- 
-<img src="./image.png" 
-    alt="alt text" 
-    width="400" height="430"
-    style="display: block; margin: 0 auto" />
 
+![conformation dialog](./image.png) 
 
 *Note: This dialog launches the automatic conformation generator (ACG). The software selects all dihedral angles defined by heavy atoms in the molecule, and then starts from the original structure, which should be the one of minimum energy, then scan each of the dihedral angles either systematically or randomly.*
 
@@ -37,11 +33,7 @@ Since the isomers are not energy minimized, it is not helpful to calculate the s
 
 5.	When the jobs are done, double click on the QMD file obtained above (keton.qmd) to open the QMD spreadsheet. Click the **Add** button to locate and load the newly obtained Gaussian output files. The spreadsheet will show entries loaded. Select all entries, and click **Energy** button to calculate the relative energies, some entries may have the same relative energy. You may select and delete the redundant isomer that has no second derivate. The final QMD list should look like the following figure. 
 
-<img src="./image-1.png" 
-    alt="alt text" 
-    width="400" height="200"
-    style="display: block; margin: 0 auto" />
-
+![qmd dialog](./image-1.png) 
  
 6. Refresh the “tutorialB1_ketone” folder and select the prepared QMD file. Create a new force field using **Force field/New force field** command. Enter "keton" as the new force field name and select “AMBER” as the force field type. Select "Default" typing rules. Make sure "Generate EQT table" is checked. Click **OK**. Examine keton.ppf tables. Note that atom types are added into the parameter table and a default equivalence table is created. 
 
@@ -50,14 +42,9 @@ model.
 
 9. Select **Parameter/Fit Energy Data** to fit valence parameters. The QMD model should be listed in the "Data to fit" box. Leave everything as default and click OK. When the job is finished, several files will be loaded into the Project Navigator. These files are the input (.dfi), output (.dfo), result force field (.ppf) and fit result table (.dft) files. The result file shows fit merits and validation results, which are structural and vibrational frequency data calculated by the force field using comparisons to QM data.  
  
-<img src="./image-2.png" 
-    alt="alt text" 
-    width="420" height="280"
-    style="display: block; margin: 0 auto" />
+![fit result](./image-2.png) 
 
 The parameters can be viewed by double-clicking on the PPF file. This dialog shows two panels, “force field Parameters” and Equivalence Table. At the upper left corner, the force field type is indicated to be AMBER. At the lower left corner, the typing rule for this force field is shown as “Default”. This information is also displayed in the toolbar of the DFF interface.
- 
-<img src="./image-3.png" 
-    alt="alt text" 
-    width="450" height="300"
-    style="display: block; margin: 0 auto" />
+
+![result force field](./image-3.png) 
+

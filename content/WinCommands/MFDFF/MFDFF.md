@@ -36,10 +36,7 @@ In the background, DFF analyzes each of the models, identify molecule types in t
 
 Select the fragments to be used for parametrization, click this command. DFF will search and download corresponding QMD files from the FragQMD table. Depending on the results of searching, several selection dialogs will appears. Respond to the questions to proceed. You can recompute all QMD, or skip existing ones. If new computations are requested, the corresponding MSD files will be collected, saved in the FragMSD table, and prompt in a QMD computation window.
 
-<img src="image-2.png" 
-    alt="alt text" 
-    width="350" height="350"
-    style="display: block; margin: 0 auto"/>
+![qmd compute dialog](./image-2.png) 
 
 This interface is used to set up QMD computation options. The jobs can be run within DFF on the local host computer, or saved for later or submitted to remote computers. The computation is done by using Gaussian program package, driven by DFFQMD.exe program. The **Task** section provides selection of what to be computed.
 
@@ -91,10 +88,7 @@ This is an automated workflow for making force fields automatically. For a set o
 
 This command opens a dialog to set parameters for the workflow:
 
-<img src="image-3.png" 
-    alt="alt text" 
-    width="250" height="400"
-    style="display: block; margin: 0 auto"/>
+![workflow dialog](./image-3.png) 
 
 The selected models are listed on the top section. 
 

@@ -31,17 +31,11 @@ Hv = 8.1 kcal/mol
 ```
 1.	Load the equilibrated liquid model. Make sure that the force field is associated with the liquid model. The L-J parameters must be relaxed. 
  
-<img src="./image.png" 
-    alt="alt text" 
-    width="400" height="250"
-    style="display: block; margin: 0 auto" />
+![set parameters](./image.png) 
 
 2.	Open **Parameter/Fit Liquid Properties**. Select Run NVT. Enter 298.0 as the temperature T (K), 0.1 as the Pressure (MPa), and 20.1 as the heat of vaporization Hv (kcal/mol). Click Opt to set simulation conditions. By default, the following values are given: 1 fs for Time step, 10,000 steps for equilibration and 20,000 steps for evaluation. The simulation trajectory must be saved and the default interval is every 20 steps. Make sure nonbond options are set as before. In this case, a group-based method with a cutoff value of 9.5 A and tail correction is adequate. Leave other options as illustrated in the following figure and click **OK** to launch a job.
 
-<img src="./image-1.png" 
-    alt="alt text" 
-    width="300" height="300"
-    style="display: block; margin: 0 auto" />
+![fit dialog](./image-1.png) 
 
 If you did not select Screen View in the NVT simulation control panel (activated by clicking Opt in the Fit Liquid Data window), the job will run in background. You can now close the Direct force field interface. However, if you are running DFF on Windows platforms, a command prompt window will remain on the screen. 
 

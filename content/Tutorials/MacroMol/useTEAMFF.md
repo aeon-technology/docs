@@ -8,10 +8,7 @@ If you just start DFF, use **File/Recent Project** to open the tutorials project
 
 1. In the subfolder tutorialA3_useTEAMFF, there is a polymer mode that has been prebuilt and converted to the MSD format. Double-click on this model to load the structure:
 
-<img src="./image-1.png" 
-    alt="polymer box" 
-    width="500" height="300"
-    style="display: block; margin: 0 auto" />
+![polymer model](./image-1.png) 
 
 *Note that this model has a low density (0.4587), which can be displayed by clicking “Property” in the toolbar. We will compress this model to a density closer to the experimental value.*
 
@@ -30,25 +27,19 @@ $$
 
 For this system, the target edge size should be 35.82 for a density of 1.5. Select the model, open **Build/Adjust PBC**, enter the cell edge size, and click OK. 
 
-<img src="./image-3.png" 
-    alt="adjust PBC" 
-    width="200" height="160"
-    style="display: block; margin: 0 auto" />
+![adjust PBC](./image-3.png) 
 
 6. Repeat a NVT simulation in DFF to relax the simulation box and verify that the density is indeed correct.
 
 7. Let's submit the simulation to LAMMPS. Selecting the prepared MSD and PPF files from Project Navigator, and clicking **Simulation/LAMMPS**, which starts the External Simulation window. 
 
-![alt text](image-4.png)
+![Simulation dialog](image-4.png)
 
 The model and force field files are loaded. Note that the option of “Apply T-factor to LJ terms” is selected, a new force field in which the LJ parameters are scaled according to the applied temperature will be made and used for this job. Select “NVT”, set “Steps” to “1,000” in order to see the results quickly, and note that the “Trajectory file name” is “polymer.dta”. Click OK.
 
 8. When the job is finished, a subfolder named as “polymer_LAMMPS” will be created in the Project Navigator. This folder contains the input and output files of this LAMMPS job. Examine the input and output files. Select “polymer.dta” and “polymer.msd” files from the Project Navigator, then click **Simulation/Trajectory** Viewer to bring up the following dialog box:
 
-<img src="./image-5.png" 
-    alt="Trajectory view" 
-    width="400" height="130"
-    style="display: block; margin: 0 auto" />
+![trajectory view](./image-5.png) 
 
 Click *OK* to start a new window that replays the trajectory. The trajectory is played in a new window, you can use the same viewing options of DFF to translate, rotate, and zoom the models on the trajectory window.
 
@@ -75,10 +66,7 @@ To define small charge group is essential. The groups do not have to be charge n
 
 Click on “Nonbond Energy”, which opens the following dialog:
 
-<img src="image-7.png" 
-    alt="alt text" 
-    width="140" height="160"
-    style="display: block; margin: 0 auto" />
+![optimization dialog](./image-7.png) 
 
 Select “Group Cutoff” and leave other options unchanged. Click OK to close this dialog. Click OK again in the “Optimization” dialog and watch as the energy value drops. When the job is done, the optimized model will be saved to a subfolder named “protein1_OPT”.
 

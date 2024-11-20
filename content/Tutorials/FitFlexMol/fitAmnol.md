@@ -12,17 +12,11 @@ In this lesson we will learn how to fit a force field of 2-methylamino-ethanol (
 
 4.	When the job is done, the fit quality is not very good. However, if we focus on the low energy range from 0 to 10 kcal/mol, the agreement between QM and FF is not bad.
 
-<img src="./image.png" 
-    alt="alt text" 
-    width="400" height="280"
-    style="display: block; margin: 0 auto" />
+![fit summery](./image.png) 
 
 5.	To see the deviations in detail, click “Data” to export to a csv file and graph the data below 15 kcal/mol using software such as Microsoft Excel:
 
-<img src="./image-1.png" 
-    alt="alt text" 
-    width="400" height="250"
-    style="display: block; margin: 0 auto" /> 
+![comparison of energy](./image-1.png) 
 
 As seen in this chart, the agreement at low energy region is not perfect, but acceptable. As the example above demonstrates, the rigid sampling is fast, but does not yield very accurate torsional energy curves.
 
@@ -42,17 +36,12 @@ Alternatively, DFF provides a functionality that samples internal rotation energ
 
 5.	Fit the “relaxed.qmd” using the previously demonstrated procedure. Because energies are not too high in this case, there is no need to use Boltzmann Factor. When the fit is over, the energy dialog should look like this:
  
-<img src="./image-3.png" 
-    alt="flexible fit" 
-    width="400" height="260"
-    style="display: block; margin: 0 auto" />
+![fit summery](./image-3.png) 
 
 6.	To examine quality of fit, export the data to a .csv file and graph the input vs. fit energies. Note the excellent agreement between force field and QM curves.
 
-<img src="./image-4.png" 
-    alt="comparison of flexible fit" 
-    width="400" height="260"
-    style="display: block; margin: 0 auto" />
+![energy comparison](./image-4.png) 
+
 
 The relaxed sampling is more time-consuming than the rigid sampling, but the prediction is much better.
 

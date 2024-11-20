@@ -45,31 +45,19 @@ The editing commands are provided in the Toolbar in DFF main window for easy acc
 
 4. Continue drawing until the entire skeleton (carbon atoms and connectivity) is sketched out. At this stage, don't worry about the hydrogen atoms, elements and bond orders.  You should have a structure that looks like this:
 
-<img src="./image.png" 
-    alt="all carbon skeleton" 
-    width="250" height="280"
-    style="display: block; margin: 0 auto" />
+![skelton structure](./image.png)
 
 5. Select "O" in the pull-down element menu of the toolbar. Click the replace-atom button (![replace atom](image-7.png)) in the Toolbar. Replace carbon with oxygen as needed by clicking on the atom to be replaced.  You should end up with the following structure:
 
-<img src="./image-1.png" 
-    alt="all atom skeleton" 
-    width="250" height="280"
-    style="display: block; margin: 0 auto" />
+![all atom skelton](./image-1.png") 
 
 6. Select the double-bond button (![double bond](image-8.png)). Click on a bond to change the bond order as needed.  When you are done with this step, the model should look like this:
 
-<img src="./image-2.png" 
-    alt="with bon order" 
-    width="250" height="280"
-    style="display: block; margin: 0 auto" />
+![with bond orders](./image-2.png") 
 
 7. Click the add hydrogen button (![add hydrogen](image-9.png) ) to add hydrogen atoms automatically.  Hydrogen atoms are added to match the available and existing valence numbers for each atom. Make sure the bond orders are correctly set before clicking the add hydrogen button.
 
-<img src="./image-3.png" 
-    alt="final structure" 
-    width="250" height="280"
-    style="display: block; margin: 0 auto" />
+![final](./image-3.png") 
 
 
 8. Clean the structure by clicking the refine structure button ![clean structure](image-4.png).

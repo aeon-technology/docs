@@ -31,6 +31,6 @@ On windows, after the installation, click the DFF icon which should be created b
 
 On Linux, depending on system configuration, you may start DFF8.sh by clicking on it, or run DFF8.sh from command line.
 
-Unless the license file has been installed, an information message will appear when you first start DFF. Close the error message, the "License Manager" dialog will appear for configuring a license. Please see [License](./licensing.md) to continue. 
+Unless the license file has been installed, an information message will appear when you first start DFF. Close the error message, the "License Manager" dialog will appear for configuring a license. Follow  [License](./License.md) to continue. 
 
 *If DFF is installed in a folder that needs administrator privilege, the first time to start DFF using **Run as Administrator** option so that you can configure the license.* 

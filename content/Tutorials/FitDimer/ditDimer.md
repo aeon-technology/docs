@@ -10,10 +10,7 @@ The initial parameter PPF file and QMD files for methane monomers and dimer can 
 
 2.	Select both models in Project Navigator and use **TEAMFF/Checkout** command to get a PPF file for methane from “AMBER-General” force field table. The result PPF file will be loaded to the main screen. All parameters are fix indicated by the asterisk (*) sign. Select the “N12_6” parameters and click Relax button in the force field spreadsheet, the VDW parameters are relaxed. Click **Save** to save the changes, and then **OK** to close the window.
  
-<img src="./image.png" 
-    alt="alt text" 
-    width="400" height="200"
-    style="display: block; margin: 0 auto" />
+![force field ](./image.png) 
 
 ## Preparing QMD
 
@@ -21,11 +18,7 @@ The initial parameter PPF file and QMD files for methane monomers and dimer can 
 
 4.	Double-click “CH4CH4.msd” in the Project Navigator to open it. Then select **QM Data/Dimer Configurations** to open the following dialog:
  
-<img src="./image-1.png" 
-    alt="alt text" 
-    width="300" height="200"
-    style="display: block; margin: 0 auto" />
-
+![sampling](./image-1.png) 
 
 Leave all options as given, click **OK** to generate models in a sub-folder.
 
@@ -41,17 +34,11 @@ Leave all options as given, click **OK** to generate models in a sub-folder.
 
 8.	Use **Parameter/Fit VDW Dimer** to open "Fit Cluster Configuration" dialog. Both models are listed in the “Data to fit” list. We need to identify which one is cluster, which ones are monomers. Select “CH4CH4.QMD” and click Cluster, select “CH4.QMD” and click Monomer, twice. In the end, the dialog looks like:
 
-<img src="./image-2.png" 
-    alt="alt text" 
-    width="300" height="200"
-    style="display: block; margin: 0 auto" />
+![fit dialog](./image-2.png) 
 
 Keep other parameters unchanged and click Execute to start fitting. When the job is done, a validation panel will appear:
 
-<img src="./image-3.png" 
-    alt="alt text" 
-    width="300" height="200"
-    style="display: block; margin: 0 auto" />
+![comparison of energy](./image-3.png) 
 
 
 It should be noted that the fit of isolated molecular dimer is only useful for describing intermolecular interaction in gas phase. For molecules in condensed phases, the VDW parameters should be optimized using the simulation data as shown in next tutorial.

@@ -14,17 +14,11 @@ We will first use the order method, and then the subset method
 
 2. Click **TEAMFF/Admin**, load “TEAMFF.TEAMFF”, select TEAM as the force field type, and select two force fields, “TEAM-General” and “TEAM-Zeolite”, which is indicated by the check mark in the first column. Since we will use the order to get parameters, make sure the more specific force field, TEAM-Zeolite, is on top of TEAM-General. To adjust the order, select a row and use the buttons **Up** and **Down** to adjust its position.
 
-<img src="image-8.png" 
-    alt="alt text" 
-    width="400" height="150"
-    style="display: block; margin: 0 auto" />
+![database manager](./image-8.png) 
 
 3. With the force fields are selected, click **TEAMFF/Assign**. Make sure the “Use the order of selected tables” is selected, leave other options as given, and then click OK to launch the job. A new force field will be generated and assigned to the model. 
  
-<img src="image-9.png" 
-    alt="alt text" 
-    width="300" height="200"
-    style="display: block; margin: 0 auto" />
+![assign dialog](./image-9.png) 
 
 4. To verify the force field is set properly. Use **Simulation/LAMMPS** command to launch a short MD simulation. When the job is done, using **Simulation/Trajectory** to see the simulation trajectory or examining LAMMPS output file to verify the simulation is carried out successfully.
 
@@ -36,24 +30,15 @@ There are several ways to define subsets. The default, to define subsets by mole
 
 1. Click **Build/Subsets**. In the pop-up dialog, select the “Automatic – to set subsets using connectivity” option and click **Execute**. This will create two subsets based on the connectivity – one for the zeolite and another for the xylene molecules. 
  
-<img src="image-10.png" 
-    alt="alt text" 
-    width="300" height="200"
-    style="display: block; margin: 0 auto" />
+![subset dialog](./image-10.png) 
 
 2. Click **Rename** to rename the subsets to "zeolite" and "molecule" respectively. Close both dialogs.
- 
-<img src="image-11.png" 
-    alt="alt text" 
-    width="200" height="130"
-    style="display: block; margin: 0 auto" />
+
+![rename subsets](./image-11.png) 
 
 3. Click **TEAMFF/Assign**. In the “Assign force field parameters” dialog, select “Select table for subset” and click **Mapping** to open another dialog to choose force field tables for the subsets as shown below:
 
-<img src="image-12.png" 
-    alt="alt text" 
-    width="250" height="180"
-    style="display: block; margin: 0 auto" />
+![mapping subsets](./image-12.png) 
 
 Click OK to close the dialogs. Leave other options in “Assign force field parameters” dialog unchanged, and then click **Ok** to begin the assignment process. When the job is completed, a force field will be loaded showing parameters taken from two tables.
 

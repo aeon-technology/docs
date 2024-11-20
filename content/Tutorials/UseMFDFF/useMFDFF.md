@@ -10,10 +10,7 @@ Examine the database, there are three tables, MolPPF, FragQMD and FragMSD.Click 
 
 2. Open the Tutorial project, select MSD models in "tutorialC3_useMFDFF" folder, and then run **MFDFF/Enquiry**, set the "force field type", and then click **OK** to proceed. DFF will partition the models to molecule types and search MolPPF table to see if the molecular types are covered. In this case, we will have one PFMO.msd covered, four molecule types are not, as shown in the DFF Job window.
 
-<img src="./image-1.png" 
-    alt="enquiry result" 
-    width="400" height="300"
-    style="display: block; margin: 0 auto" />
+![job dialog](./image-1.png) 
 
 *PFMO has force field found and assigned, the job is done for this polymer. The four molecule types correspond to other four polymers, in this case, each molecule contains one molecule type, so the molecular types share the same names and their source models. The four molecular types are saved in /MolType folder, and the six fragments are saved in /Fragment folder. Our goal is to use these models to develop force fields for the four polymers.*
 
