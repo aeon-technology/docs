@@ -31,14 +31,7 @@ At any time, you can save the project by using File → Save Project command, yo
 
 In DFF, a model is a molecular system for simulation, which can be a single molecule or a collection of molecules, with or without periodic condition. Single molecules are used for parameterization as they may be a fragment of larger molecules. In this tutorial, we will use aspirin molecule as example to show how to build a molecule from scratch. 
 
-<img src="./aspirin.png" 
-    alt="final structure" 
-    width="250" height="250"
-    style="display: block; margin: 0 auto" />
-
-<img src="./aspirin.png" 
-    alt="final structure" 
-    width="250" height="250"/>
+![final structure](./aspirin.png)
 
 The editing commands are provided in the Toolbar in DFF main window for easy access. We will use these commands together with mouse actions to build a model.
 
