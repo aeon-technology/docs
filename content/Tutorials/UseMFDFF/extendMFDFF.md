@@ -1,6 +1,4 @@
-# Extend MFDFF using Workflow
-
-*The workflow is written in python3, make sure python3 has been installed and configured before proceed.*
+# Extend MFDFF using DFF Workflow
 
 The MFDFF workflow is designed to build molecule type force fields automatically. In this lessen we use a few models to see how this work, which are included in subfolder "tutorialC4_workflow". We will use "demo.db" database which is also included in the folder. Since we will change the content of database, make a backup copy if you want ot repeat the lessen.
 
@@ -13,13 +11,7 @@ Select all *.msd nodes, and click **MFDFF/Workflow** to open a dialog:
 
 2. The dialog is explained in [MFDFF Menu](../../WinCommands/MFDFF/MFDFF.md). Keep the default values as shown in the figure but may need to make adjustments according to your computer, such as the path to "Gaussian Program", and the "No. Process".
 
-3. Click **OK** to run the computation in DFF environment. This should be done in one or two minutes. 
+3. Click **OK** to open a job dialog that can be used to launch the jobs. For jobs that requires long time to accomplish, you can close the job dialog to put the jobs running is the background. You can also also save the workflow input file, and send the jobs to more powerful computer that is licensed for using DFF.
 
-*For more demanding jobs, for example, add new molecules to the list, consider to select of "Make input only", whihc will save a shell script input file "Workflow.dfi", then run the workflow from command line, such as 
-```
-python3 E:\DFFX\trunk\python\WorkFlow.py WorkFlowTEAM.dfi
-```
-
-then use 
 
 
