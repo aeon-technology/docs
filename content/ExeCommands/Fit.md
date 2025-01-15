@@ -35,7 +35,7 @@ $PARAMETERS         ! parameter options
    ADD = 
 $END 
 $COMPUTE            ! method
-   FIT = NONL
+   FIT = NONL        ! "LINEAR", "AUTO"
    SETCharge = YES
 $END 
 $FITOPTIONS         ! fit options

@@ -44,17 +44,30 @@ or `uninstall_x` which is in the \<dff-root\> directory.
 ## Start DFF
 
 On windows, a shortcut link will be created by the installer. 
-Click the link to get DFF user interface started. If the link does not start DFF, browse to the installation directory 
-`<dff-root>\bin64w` and run `dffwin.exe` to start the program. 
+Click the link to get DFF user interface started. If the link 
+does not start DFF, browse to the installation directory 
+`<dff-root>\bin64w` and run `dff8.exe` to start the program. 
 You can manually create a shortcut link to this program.
 
 On Linux, the installer will add a PATH to your `.bashrc` 
 configuration file. You may need to source the configuration 
-file or restart a terminal, and then type `dffwin.exe` from 
+file or restart a terminal, and then type `dff8.exe` from 
 command line to start the program.
 
+Note that the DFF user interface is written in Java. The program
+`dff8.exe` is an executable wrapper that runs the Java 
+program. In `<dff-root>` directory, two shell scripts:
+`dff8.bat` for Windows and `dff8.sh` for Linux can be used to start 
+the program as well.
+
 Unless the license file has been installed, an information 
-message will appear when you first start DFF. Close the message, the "License Manager" dialog will appear for configuring a license. Follow the instruction to set up a license. For more details, read [License](./License.md) to continue. 
+message will appear when you first start DFF. Close the message, 
+the "License Manager" dialog will appear for configuring a license. 
+Follow the instruction to set up a license. For more details, 
+read [License](./License.md) to continue. 
 
 *If DFF is installed in a folder that needs administrator 
-privilege, to configure license needs administrator's privilege. To start DFF using `run as administrator` on windows or using `sudo` prefix on Linux. Alternatively, you can manually copy the authorized license file to \<dff-root\>\License.* 
+privilege, to configure license needs administrator's privilege. 
+To start DFF using `run as administrator` on windows or 
+using `sudo` prefix on Linux. Alternatively, you can manually 
+copy the authorized license file to \<dff-root\>\License.* 

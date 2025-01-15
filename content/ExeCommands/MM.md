@@ -1,31 +1,32 @@
 # MM Commands
 
-### Optimization 
-This example shows a optimization using estimated force field.
+## Optimization 
+The following example shows an optimization using estimated force field.
+
 ```
 $MODEL
    E:\DFF_DEV\QMDFF_Methods\SnMcCl2\SnNcCl2\DFF.msd
 $END
 $FORCEFIELD
-   TYPE = AMBER
-   INPUT = none
+   TYPE = AMBER ! options = TEAM, CFF, CHARMM, DREIDING 
+   INPUT = none ! or any existing force field
    USE_CUTOFF = YES
    NBMETHOD = ATOM_BASED
-   CUTOFF = 6.0
+   CUTOFF = 8.0
    BUFFER = 0.5
    TAIL_CORRECTION = NO
 $END
 $MMOPTIONS
    CONVERGENCE = 1.0E-10
    MAXSTEPS = 100
-   METHOD = BFGS
+   METHOD = BFGS  ! or FRPR
 $END
 $PRINT
-   CONSOLEXYZ = NO
+   CONSOLEXYZ = NO  ! YES is option
 $END
 ```
 
-### MD Simulation 
+## MD Simulation 
 This example show a MD simulation using estimated force field and growth VDW radii.
 
 ```
@@ -58,7 +59,7 @@ $PRINT
 $END
 ```
 
-### Restrained Optimization
+## Restrained Optimization
 This example shows restrained minimization in two dimensions. 
 
 ```
@@ -84,5 +85,6 @@ $PRINT
    CONSOLEXYZ = NO
 $END
 ```
+
 
 

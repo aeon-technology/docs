@@ -7,7 +7,7 @@
 
 [II. How To ...](./HowTo/HowTo.md)
 - [Download and Installation](./HowTo/Install.md)
-- [Get License](./HowTo/License.md)
+- [Get License](./HowTo/Licensing.md)
 - [Navigate DFF](./HowTo/Navigate.md)
 - [Build Models](./HowTo/BuildModel.md)
 - [Make Force Filed](./HowTo/MakeFF.md)
@@ -76,14 +76,17 @@
   - [Help Menu](./WinCommands/Help/Help.md)
 
 [VI. References of Executable Program Commands](./ExeCommands/ExeCommands.md)
-  - [Overview](./ExeCommands/Overview.md)
+
+- [dffqmd Commands](./ExeCommands/QM.md)
+- [dfffit Commands](./ExeCommands/Fit.md)
+- [dffmm and dffmd Commands](./ExeCommands/MM.md)
+- [dffwfc Commands](./ExeCommands/Workflow.md)
+- [dfflsv Commands](./ExeCommands/license.md)
+- [dffjob, dffdb and dff.exe Commands](./ExeCommands/dffjob.md)
   - [Model Commands](./ExeCommands/Model.md)
   - [ForceField Commands](./ExeCommands/ForceField.md)
+  - [Database Commands](./ExeCommands/TEAMFF.md)
   - [Export Commands](./ExeCommands/Export.md)
-  - [TEAMFF Database Commands](./ExeCommands/TEAMFF.md)
-  - [Fit Commands](./ExeCommands/Fit.md)
-  - [Molecular Mechanics Commands](./ExeCommands/MM.md)
-  - [Quantum Mechanics Commands](./ExeCommands/QM.md)
   - [MFDFF commands](./ExeCommands/MFDFF.md)
 
 [VII. WebDFF](./WebDFF/WedDFF.md)
