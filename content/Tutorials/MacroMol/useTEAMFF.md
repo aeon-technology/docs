@@ -1,8 +1,12 @@
 # Use TEAMFF on Macromolecules
 
-TEAMFF can be used to prepare simulations of different kinds of molecular systems. In this section, we use macromolecules to see how it works.
+TEAMFF can be used to prepare simulations of molecular systems. In this section, we use macromolecules to see how it works.
 
 If you just start DFF, use **File/Recent Project** to open the tutorials project. Navigate to the project root folder, right-click, and select Refresh. This will reload all files in this project.
+
+We are using the TEAMFF database in this and following lessons. For exercises, we are using the database come with the tutorials. This is done by use the **TEAMFF/Admin** command to set up the database. In the dialog, use **Browser** to find the database provided with the Tutorials at `Tutorials/database/TEAMFF.dffdb`. The dialog shows force field tables of selected force field type. Select "TEAM" force field type and "TEAM-General" force field to use. Click "OK" to close this dialog.
+
+![TEAMFF dialog](image-8.png)
 
 ## Working on Polymer and LAMMPS
 
@@ -12,8 +16,7 @@ If you just start DFF, use **File/Recent Project** to open the tutorials project
 
 *Note that this model has a low density (0.4587), which can be displayed by clicking “Property” in the toolbar. We will compress this model to a density closer to the experimental value.*
 
-
-2. Open **TEAMFF/Assign** command. This dialog lists the database and force field selected (TEAM-General). The "Output" field lists the file name to be used for the output force field. Unselect Click OK to assign force field parameters. When the job is done, a force field table appears. Review and close the force field table.
+2. Click **TEAMFF/Assign** command. This dialog lists the database and force field selected (TEAM-General). The "Output" field lists the file name to be used for the output force field. Unselect Click OK to assign force field parameters. When the job is done, a force field table appears. Review and close the force field table.
 
 3. Select this model, open **Edit/Charge Group** to assign charge groups, and click Go to assign the charge groups automatically. Leave the "Cross bond charge" to be zero, click **Compute** command. When the job is completed, the dialog shows 505 charge groups (scroll the display area to view). The largest group contains 7 atoms, the smallest group contains 3 atoms, and all groups have a total charge of zero charge. Click **OK** to close ths dialog.
 

@@ -2,11 +2,13 @@
 
 A tutorial project folder "\<dff-root\>\Tutorials" is included in DFF package. To use the tutorials, copy the folder to another place where you have write permission.
 
-The first part, section A, covers basic functions of DFF: create or import molecular models, use TEAMFF force fields to assign force field, and launch simulations.
+The first part, section A, covers basic functions of DFF: create or import molecular models, use TEAMFF force fields to assign force field, and launch simulation jobs.
 
-Section B is about parameterization. The topics are quantum mechanics data (QMD) generation, fit QMD to get charge and valence parameters, and fit liquid data to optimize LJ parameters.
+Section B is about using parameterization tools. The topics are quantum mechanics data (QMD) generation, fit QMD to get charge and valence parameters, and fit liquid data to optimize LJ parameters.
 
-Section C is about force field development using TEAMFF method and MFDFF method: development of force field, expand the coverage of TEAMFF, and make customized MFDFF force field library using fragments.  
+Section C is about force field development for real-life simulation models. This can be achieved by adding new force fields to TEAMFF database or making MFDFF database. The former is suitable for developing a few force fields to work with existing TEAMFF database, the latter is designed to make customized force field library in large scale.
+
+In the Tutorial directory, there is a `/database` directory, which contains both `TEAMFF.dffdb` and `demo.db` for teh exercises. 
 
 - [A1. Project and Models](./Project/project.md)
 - [A2. Build Liquid Models](./Liquid/liquid.md)	
@@ -16,6 +18,6 @@ Section C is about force field development using TEAMFF method and MFDFF method:
 - [B2. Fit Flexible Molecule](./FitFlexMol/fitAmnol.md)	
 - [B3. Fit Molecular Dimer](./FitDimer/ditDimer.md)	
 - [B4. Fit Liquid Date](./FitLiquid/fitLiquid.md)	
-- [C1. Make a Force Field](./MakeFF/makeFF.md)	
+- [C1. Make Force Field](./MakeFF/makeFF.md)	
 - [C2. Extend TEAMFF](./ExtTEAM/extTEAMFF.md)	
 - [C3. Use MFDFF](./UseMFDFF/useMFDFF.md)	

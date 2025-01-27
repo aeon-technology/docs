@@ -17,12 +17,14 @@ can be verified by using
 from command line.
 
 ## Installation
-On both Windows and Linux, run the installer program 
-such as <br/>`dff8006w.exe` or `dff8006x.exe` <br/> to 
-start the installation process and follow the instructions. 
+On Windows run the installer program such as `dff8006Win.exe` to
+start the installation process and follow the instructions. On Linux,
+a similar installer is provided for Ubuntu, which may not be useable 
+on other platforms. Instead, a package such as `dff8006Linux.tar.gz`
+can be used to install the software.
+
 You can choose where to place the software, make sure 
 you have written permission to the installation directory.
-
 By default, DFF is installed on system directories such as 
 `Program Files` on Windows or `/usr/local` on Linux. 
 You need to be Administrator on Windows or use `sudo` prefix 
