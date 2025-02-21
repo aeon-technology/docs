@@ -35,7 +35,7 @@ The port number is defaulted to 3583, which can be set differently when you set 
 
 If DFF is fully installed on the server computer, the computer can be used as both client and server. If the licensed computer is used as a license server only, only two files are required:
 
-1)	The executable: \<dff-root>\bin64x\dfflsv.exe
+1)	The executable: \<dff-root>/bin64x/dfflsv.exe
 2)	The license file: \<dff-root>/License/License.txt
 
 Note that the license file must be authorized to the server computer.
