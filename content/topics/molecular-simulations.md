@@ -13,13 +13,11 @@ When all parameters are found, the atom types and parameters, which may be taken
 
 If any parameters are missing, TEAMFF will report the missing terms, which then need to be parameterized.
 
-## Internal Simulation Engines
+## Native Functions
 
 DFF contains a built-in simulation engine that can be used to optimize and validate parameters. Simulation jobs can be run interactively so that structures and energies are dynamically updated on the screen. 
 
-
 ### Optimizers
-
 Two different algorithms, the conjugate gradient and variable metric methods, are implemented in DFF for energy minimization. The conjugate gradient method is based on the Polak-Ribiere method, which is similar to the Fletcher-Reeve method. The variable metric method is also called the quasi-Newton method. Both methods involve calculating the derivatives of the potential energy. Both methods are iterative and make use of the previous history of minimization steps as well as the current gradient to determine the next step. For a quadratic functional form in N dimensions, these methods lead to the exact minimum in N steps. The two algorithms have computer memory different requirements. The conjugate gradient needs to store intermediate data on the order of N, while the variable metric method requires storage on the order of N x N.
 
 Restrained energy minimization can be performed to explore energy profiles. This is done by adding energy terms to the total energy function on selected internal coordinates. The restraint function is a harmonic function in which reference values and force constants can be specified. The restraint energy value is subtracted from the total energy in reported results.
@@ -60,7 +58,15 @@ DFF uses period boundary conditions in simulating of molecules in condensed phas
 |				|	14.5	| -1214.8±23.9 |0.782±0.013	| 0.524 
 |				|	Ewald	| -1207.7±24.3 |0.780±0.013	| 4.379 
 
-## External Simulation Engines
+
+### Structure Relaxation
+
+For models with high internal tension caused by distorted structures, the structures need to relaxed before simulations or processing. A typical example is tangled polymer chains, the structures are poorly constructed so that the internal energy is too high to be processed. To relax such system, a method uses molecular dynamics simulation is implemented.
+
+In this method, a series short-time molecular dynamics simulations are conducted sequentially, in each of the simulations, the atom VDW radius and atom charges are scaled by a factor that ranging from 0 to 1. At beginning, the nonbonded interaction are completely removed, so the chain dynamics is controlled by valance interactions only, which restores the chain structures, as the strength of nonbond interactions increases gradually, the inter-molecular and intra-molecular packings are adjusted gradually.
+
+
+## External Functions
 
 Two simulation program packages, LAMMPS and GROMACS, are included in DFF release packages. The programs are Multi-Thread Parallel (MTP) enabled  late versions (after 2021). To validate force fields, GROMACS and LAMMPS simulation jobs can be launched directly from the DFF. Typical tasks include energy minimization, NVT, NPT and NVE molecular dynamics. 
 
