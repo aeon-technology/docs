@@ -26,7 +26,7 @@ A command saves models in MSD format. The order of files is the same as loaded. 
 ```
 $MODEL=$SAVEALL
 ```
-This command saves all models to MSD files. The filenames are the same as loaded. Note that if the loaded file is in MSD format, it will be overwritten.
+This command saves all models to MSD files. The filenames are the same as loaded. Note that if the loaded files are in MSD format, they will be overwritten.
 
 ### CLOSE (S)
 ```
@@ -46,10 +46,14 @@ This command assigns atom types to opened models using a specified typing rule. 
 ```
 $MODEL=$SETFC
 	REMOVE = FALSE | TRUE
-	RESET = TRUE | FALSE
+	OVERWRITE = TRUE | FALSE
 $END   
 ```
-sets the formal charges, two parameters are accepted. REMOVE will remove all formal charge values and then stop. The default is FALSE. RESET treats existing values. If TRUE, all existing values will be erased and then recalculated. If FALSE, the existing values will not be changed, only atoms without formal charges will be calculated. The default is TRUE. 	
+Sets the formal charges, two parameters are accepted: REMOVE and OVERWRITE.
+
+- **REMOVE** will set all atoms to zero formal charges. This command will supersede other options. 
+
+- **OVERWRITE** is used to treat existing values. If TRUE, all existing values will be erased and then recalculated. If FALSE, the existing values will not be changed, only atoms without formal charges will be calculated. The default is TRUE. 	
 
 ### GUESSBOND (S)
 ```
