@@ -10,7 +10,7 @@ $MODEL=$OPEN
   ...
 $End
 ```
-This is an array command loads multiple models. Each line for a model file in formats of msd, pdb, mol2. 
+This is an array command loads multiple models. Each line is a model file in format of msd, pdb or mol2. 
 
 ### SAVE (A) 
 ```
@@ -20,7 +20,7 @@ $MODEL=$SAVE
   ...
 $END
 ```
-A command saves models in MSD format. The order of files is the same as loaded. The filenames can be different from the input. 
+A command saves models in MSD format. The order of files must be the same as loaded. The filenames can be different from the input. 
 
 ### SAVEALL (S)
 ```
@@ -37,7 +37,7 @@ Command closes all opened models, any changes made to the models will be lost un
 ### SETTYPE (D)
 ```
 $MODEL=$SETTYPE
-RULER=<typing rule>
+  RULER=<typing rule>
 $END
 ```
 This command assigns atom types to opened models using a specified typing rule. The typing rule can be any typing script (such as TEAM.ext) save in the /typingScripts folder or "DEFAULT". 
@@ -45,15 +45,11 @@ This command assigns atom types to opened models using a specified typing rule. 
 ### SETFC (D)
 ```
 $MODEL=$SETFC
-	REMOVE = FALSE | TRUE
-	OVERWRITE = TRUE | FALSE
+	REMOVE = FALSE|TRUE
+	OVERWRITE = TRUE|FALSE
 $END   
 ```
-Sets the formal charges, two parameters are accepted: REMOVE and OVERWRITE.
-
-- **REMOVE** will set all atoms to zero formal charges. This command will supersede other options. 
-
-- **OVERWRITE** is used to treat existing values. If TRUE, all existing values will be erased and then recalculated. If FALSE, the existing values will not be changed, only atoms without formal charges will be calculated. The default is TRUE. 	
+Sets the formal charges, two parameters are accepted: REMOVE and OVERWRITE. REMOVE will set all atoms to zero formal charges. This command will supersede other options. OVERWRITE is used to treat existing values. If TRUE, all existing values will be erased and then recalculated. If FALSE, the existing values will not be changed, only atoms without formal charges will be calculated. The default is TRUE. 	
 
 ### GUESSBOND (S)
 ```

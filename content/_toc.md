@@ -36,7 +36,7 @@
     - [Atom Types](./Topics/ForceField/atom-types.md)
     - [Parameters](./Topics/ForceField/parameters.md) 
   - [Molecular Topology and Atomic Attributes](./Topics/Attributes/molecular-atomic-attributes.md) 
-  - [Definition of Atom Types](./Topics/AtomTypedefinitions.md)
+  - [Definition of Atom Types](./Topics/AtomType/definitions.md)
     - [Typing Rules](./Topics/AtomType/typingRules.md)
     - [Extending Definitions](./Topics/AtomType/extendDefinitions.md)
     - [Hyper-valence Atom Types](./Topics/AtomType/hypervalence.md)
@@ -62,7 +62,8 @@
   - [Simulations](./Topics/molecular-simulations.md)
     - [Assign force field](./Topics/molecular-simulations.md#assigning-a-force-field)
     - [Native Functions](./Topics/molecular-simulations.md#native-functions)
-    - [External Functions](./Topics/molecular-simulations.md#external-functions)  
+    - [External Functions](./Topics/molecular-simulations.md#external-functions)
+
 [V. References of DFFWin Commands](./WinCommands/WinCommands.md)
   - [Project Navigator](./WinCommands/Project/ProjectNav.md)
   - [Toolbar and Mouse](./WinCommands/Toolbar/Toolbar.md)

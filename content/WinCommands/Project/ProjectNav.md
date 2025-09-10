@@ -1,11 +1,5 @@
-# PROJECT
+# PROJECT NAVIGATOR
 
-DFF organizes user files by project. A project is a folder (directory) that contains files and sub-folders and displayed in  the **Project Navigator**, on the left side of DFF user interface.
-The project corresponds to disk files but only DFF relevant files are shown. The project has a name which is the same as the folder name, a project file named as ".dpf" saved in the project has information of the project.
-
-The project is potable, which means you can copy or share a project.   
-
-## PROJECT NAVIGATOR
 The Project Navigator is an interface between your computer files and DFF. Operations performed on files or folders in the Project Navigator are applied to real files. For example, deleting a file or a folder from the Project Navigator also immediately deletes it from your computer. New files or new folders can be added to the Project Navigator from DFF. Since any sub-folders under the project folder are considered as a part of the project, if a folder or file is added to the project folder or its sub-folders in the operating system, it will be treated as a part of the project. 
 
 ## FILE TYPES

@@ -1,8 +1,8 @@
 # Automatic Parameters
 
-DFF has the functionality to make automatic parameters for two purposes: to provide initial parameters for fitting and/or to provide default parameters used to approximate force field. Similar to the methods used in UFF force field [^1], automatic parameters are calculated based on a set of base parameters specified for default atom types. The force field parameters for bond stretches, bond angle and torsion angle distortions, out-of-plane angle distortions, and VDW parameters are calculated based on a set of rules.
+DFF has the functionality to make automatic parameters for two purposes: a) to provide initial parameters for fitting, and b) to provide approximate force field. The automatic parameters are calculated using a set of rules similar to that used in UFF force field[^1] [^2], and atom type properties prepared for each atom type. The atom type properties are saved in a text file, `<dff root>\data\AtomType.dat`. If a new atom type is identified, DFF will make a best guess of the parameters by transferring data from similar atom types and update the file. You can then modify the parameters.
 
-The base parameters are stored in the file AtomType.dat, which is located in the Data directory. You can modify parameters through the user interface or by directly editing the data files.
+The automatic parameters of bond stretches, bond angle and torsion angle distortions, out-of-plane angle distortions, and VDW parameters are calculated as follows.
 
 ### Bond Stretch
 
@@ -11,10 +11,10 @@ Two variables - reference bond length and force constant are calculated:
 $$ r_{ij}^o=r_i^*+r_j^*                         $$
 $$ f_b=700\frac{Z_i^*Z_j^*}{(r_{ij}^o)^3}         $$
 
-
 where $r_i^*$ is the bond radii of atom i and $Z_i^*$is the effective charge of atom i, both are basic atomic parameters.
 
 ### Bond Angle Distortion (i-j-k)
+
 Three variables are calculated: reference equilibrium angle, force constant and multiplicity of energy minima. The force constant is: 
 
 $$ f_a=700\frac{Z_i^*Z_k^*}{(r_{ik}^o)^3}         $$
@@ -66,5 +66,5 @@ Two parameters: the VDW well depth $\varepsilon_i$ and diameter $d_i^*$ in term 
 The atomic charges are estimated using the QEQ method.[^2]. The basic parameters used to calculate charge distribution are the ionization potentials (IP) and electron affinities (EA) of relevant atoms, which are collected from literature and saved in the Elements.dat file.
 
 
-[^1]	Rappe, A. K.; Casewit, C. J.; Colwell, K. S.; Goddard, W. A.; Skiff, W. M. UFF, a full periodic table forcefield for molecular mechanics and molecular dynamics simulations. Journal of the American Chemical Society 1992, 114, 10024-10035.
+[^1] Rappe, A. K.; Casewit, C. J.; Colwell, K. S.; Goddard, W. A.; Skiff, W. M. UFF, a full periodic table forcefield for molecular mechanics and molecular dynamics simulations. Journal of the American Chemical Society 1992, 114, 10024-10035.
 [^2] Rappe, A. K.; Goddard III, W. A. Charge equilibration for molecular dynamics simulations. The Journal of Physical Chemistry 1991, 95, 3358-3363.
