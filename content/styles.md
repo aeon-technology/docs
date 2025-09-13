@@ -1,26 +1,31 @@
 # Style Guide
 
-- Folder, Filename, File path should use be surrounded by backtick
-  - e.g. `dfflsv.exe`, `<dff root>/license`
-
 - Command line input should be surrounded by backtick and prefixed by `$ ` (note the space after $)
   - e.g. `$ java -version`
 
-- Components upper level of UI such as title, command, etc. should be Bold and thf first letter of each world is capitalized (list a title), should match the spelling as seen
-  - e.g. **Tool bar**, **Command menu**, **Parameter**
+- Folder, Filename, File path should use be surrounded by backtick
+  - e.g. `dfflsv.exe`, `<dff root>/license`
 
-- Components in lower level of UI (Dialog), surrounded by single quotation marks, and only the first word is capitalized (like a sentence). 
-  - e.g. ' Force field name', 'Temperature', 'Pressure', 'Iteration.
+- UI components at upper level such as title, menu command, etc. should be Bold and the first letter of each world is capitalized (like a title), should match the spelling as seen
+  - e.g. **Tool bar**, **Command menu**, **Parameter**, **New Force Field**
 
-- Parameters and values provided by user or by DFF should be surrounded by backtick
+- UI components at lower level (e.g. Dialog), surrounded by single quotation marks, and only the first word is capitalized (like a sentence). 
+  - e.g. 'Force field name', 'Temperature', 'Pressure', 'Time step'.
+
+- User input or DFF default parameters and values are surrounded by backtick
   - e.g. port `3850`
 
-- OS, DFF and major components of DFF: Linux, Windows, DFF, Project Navigator, Main Screen, etc. Do not stylize, but do capitalize the first letter
+- OS, DFF and DFF and major components of DFF, do not stylize, but capitalize the first letter.
+  - e.g. Linux, Windows, DFF, Project Navigator, Main Screen 
 
 - External software names should be linked to their project page
   - e.g. [GROMACS](https://www.gromacs.org/)
 
-- Equations using Latex - e.g.
+- Equations using Latex 
+  - e.g. 
+    $$
+    E_{bb}=\sum_{b1,b2} k_{b1b2} (\gamma_{b1} - \gamma_{b1}^o) (\gamma_{b2} - \gamma_{b2}^o)
+    $$
 
 - Pictures, insert to the text and rename the pic file if necessary.
 
