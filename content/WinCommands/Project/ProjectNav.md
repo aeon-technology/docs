@@ -30,8 +30,10 @@ On folders
 On files, various commands can be applied depending on the type of files. The most common ones are:
 
 For MSD node:
-- **Associate PPF** to assign a force field (PPF file) to the model
-- **Dissociate PPF** to remove the assigned force field.
+
+- **Associate PPF** to make links of a force field (PPF file) to the models selected. Select the model or models, then use click this command and use the sub-menu to select a force field. If any parameters are missing, the missing terms will be shown. If all parameters are found, the atomic partial charges will be assigned.
+
+- **Dissociate PPF** to remove the links of associated force field and set the partial charges to zero.
 
 For QMD file
 - **Create MSD** - to extract the structure of lowest energy and save into a MSD file.

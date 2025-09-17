@@ -29,12 +29,9 @@ An atom type definition must specify properties of the center atom and its neigh
 After a definition is specified, Add is used to add a new type to the definition tree. Delete removes a type from the definition tree. Update applies any changes to a selected node’s attributes. Save writes the revised definitions to the .def file. Close quits the dialog without saving.
 Define force field type opens a dialog to define a new force type type. In this dialog, Type Name can be any string representing the type to be defined. Functional terms can be specified using Select button, which open a Select Function Term dialog listing all available terms. There are two panels, Basic Term and Cross Term. By default, none of the checkboxes are selected. A function term can be set by clicking its checkbox and selecting a functional form from the pull-down list. After selecting terms, close the dialog to save the new type definition. You may use it by creating a new USERDEFINE-type force field. 
 
-**Associate Force Field** assumes atom types have been assigned to the selected models and associates a force field with the models. It brings up a list of force fields available for selection in a given project, checks if parameters are complete in the selected force field, and assigns atom charges accordingly. This command is also accessible from the Project Navigator by selecting models and right-clicking. 
 
-**Dissociate Force Field** remove the link with force field for the model selected. 
+**Assign Atom Charges** assigns partial charges using the charge parameters of a associated or selected force field. It is active only when charge parameters are available in the selected force field. 
 
-**Assign Atom Charges** assigns or recalculates atom charges using charge parameters in a selected force field. It is active only when charge parameters are available in the selected force field.
-ADVANCED TOPICS ON force field
-Importing an external force field to DFF involves two steps: 1) reading in parameters and writing them to a PPF file, and 2) creating typing rules for the external force field. After parameters and typing rules are prepared, the force field can be made into a new table in TEAM-FF. 
+**Define Force Field Type** opens a dialog to create a customer force field type by selecting supported force field functions. The force field type will be saved in a file "myForceFieldType.dat" and saved in your working directory.  
 
-**Modify Force Field type** opens a dialog to modify user defined force field types. Modify changes the definition. Delete deletes the definition.
+**Modify Force Field Type** opens a dialog to modify user defined force field type. 
