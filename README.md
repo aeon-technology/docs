@@ -49,7 +49,20 @@
 2. Open `/dist/index.html` file with a browser.
 3. Make changes to pages inside `content/`. The dev script will automatically rebuild the entire project. If there are no errors, refresh the page in the browser to see the changes.
 
-## Next steps
+## Editions
+1. The default `content` is for DFF8, contents will written for DFF8 only. Contents that only used by DFF7 will be removed. This will be published as for DFF 8. 
+2. A copy of `content - dff7` that contains DFF7 contents and some added DFF8 contents was created on 12/7/2025. This version need to be revised to remove all DFF8 relevant contents and polished for DFF7. 
+3, Need to revise `/script/build` to make different editions. 
+
+
+## Development Strategy
+1. This document is only for users, technical notes for developers are saved separately 
+2. Revise Chapter IV, V, VI and VII along with implementation to keep the contents updated.
+3. Revise Tutorial when work on the Tutorial.
+4. Finish all the rest before release.
+
+
+## Reference 
 
 1. [Learn basic markdown syntax](https://www.markdownguide.org/basic-syntax/)
 2. [DFF-specific syntax reference](./docs/dff-markdown-reference.md)

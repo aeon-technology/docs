@@ -35,3 +35,6 @@ Define force field type opens a dialog to define a new force type type. In this 
 **Define Force Field Type** opens a dialog to create a customer force field type by selecting supported force field functions. The force field type will be saved in a file "myForceFieldType.dat" and saved in your working directory.  
 
 **Modify Force Field Type** opens a dialog to modify user defined force field type. 
+
+
+**Atom Type Properties** opens the AtomTypes.dat file and show the Atom Type Properties, which are used to make automatic parameters. You can modify these properties by using chemical intuition or reliable data as reference. Select an atom will show relevant properties for the atom, you can also input the atom type. 'Cancel' quits this command, 'Load' updates the table, 'Save' save the properties. Note you must have written permission to `\<dff root\>\data\`.

@@ -1,0 +1,9 @@
+# Parametrization
+
+A common method of parameterization is to empirically fit a set of observable properties in a trial-and-error manner. Because the number of adjustable parameters is usually small, a common problem in the empirical method is under fit, the parameters work well for the targeted properties, but fail to predict properties outside of the scope. The solution is try to fit as many properties as possible so that the parameters are likely to be transferrable. This method has been used for developing general force fields for common small molecules,41-44 and it is still very useful for deriving nonbond parameters9,10,16,23. However, for general parameterization purposes, it is practically infeasible.  
+
+To fit hundreds or even thousands parameters is possible by using QM calculations to generate large number of data.17-23,43,45 In one sense, the “observable” properties such as bond lengths, angles and vibrational frequencies, can be obtained by QM calculations. A fundamental approach is to fit the potential energy surfaces in terms of energies, the first and second derivatives of energies of different configurations or conformations. By adjusting the parameters to fit the potential energy surfaces, the resulting force field can be used to predict the “observable” properties and the parameters are naturally transferrable. 
+
+However, to fit the potential energy surfaces is a difficult task. One cause is the empirical functions used in force field, are often inadequate to accurately describe the complex energy surfaces; another problem is incomplete sampling of the potential energy surfaces, which results in a very small region; the third reason is that the number of parameters may be too many due to use of redundant internal coordinates, therefore, over-fit could be a problem. 
+
+
