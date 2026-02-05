@@ -40,33 +40,34 @@ If DFF is fully installed on the server computer, the computer can be used as bo
 
 Note that the license file must be authorized to the server computer.
 
-The simplest way to start the server is run the server program from command line, on Linux it may be:
+The simplest way to start the server is to run the server program from command line, on Linux it may be:
 
 ```sh
 $dfflsv.exe start &
 ```
 
-which puts the program running in the background. The server can run automatically on Windows or Linux platforms. Refer to the system guidance for instructions on how to set up a server.
+which puts the program running in the background. The server can be started  automatically on Windows or Linux platforms. Refer to the system guidance for instructions on how to set up a server running.
 
-Once the server is running, the license can be obtained from client computers. To do it, first find out the IP address and port number used by `dfflsv.exe`. Assume the IP address of the server is `192.168.86.74`, and the default port `3583` is used for the server, on each client computer, find the `License.ini` file, and edit it so that it reads: 
+Once the server is running, the license can be obtained from client computers. This is done by the following steps. First, install DFF on the client computer. Second, find and open `<dff.root>/License/License.ini` with any editor, set the IP address and port number of the license server. Assume the server's IP address is `192.168.86.75` with the default port `3583`, the `License.ini` file should be: 
    ```sh
-   $HOST=192.168.86.74
+   $HOST=192.168.86.75
    $PORT=3583
    ```
+Then test the connection, use the following command from command line:
+```sh
+$dfflsv.exe test 192.168.86.74 3583
+``` 
+If the test fails, find out the cause and fix the problem. If the test succeeds, start DFF, which will connect the server to get a license.  
 
-The number of licensed client is limited by the number of license. If the client is more than the number of license, an error message such as "Exceeded license number" will be prompt.
+Each client is registered on the server. The number of DFF clients allowed is limited by the number of license. If the client is more than the number of license, an error message such as "Exceeded license number" will be prompt.
 
 To check how many clients are registered with the server, using 
-```sh
-$dfflsv.exe status
-``` 
-on the server computer, or something like 
 ```sh
 $dfflsv.exe status 192.168.86.74 3583
 ``` 
 on client computers.
 
-To allow more clients, contact DFF distributors. If the client computers are changed, the client registration can be reset by using 
+To add more clients, contact DFF distributors. To replace the registered clients, reset the registration using 
 ```sh
 $dfflsv.exe reset
 ``` 
