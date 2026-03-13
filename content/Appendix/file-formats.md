@@ -25,7 +25,7 @@ index, atomic number, atom type, atomic charge, coordinate x, coordinate y, coor
 
 For example, 
 ```
-$NUMATOM = 21
+$ATOMS = 21
 1 6  C_3   0.3165 -4.1082 -0.9024 -0.1570  1    UNK   0
 2 6  C_3A  0.0770 -2.6080 -1.1963 -0.1397  1    UNK   0
 3 6  C_3A  0.1824 -1.4993 -0.1274 -0.1188  1    UNK   0
@@ -34,23 +34,24 @@ $NUMATOM = 21
 ### Section 3 - Connectivity
 This section starts with keyword $NumBond = < the number of bonds > and followed by data of each bond: atom 1 index, atom 2 index, and bond order. Valid bond orders are 1, 2, 3 and -2 for single, double, triple and partial double bonds.
 ```
-$NUMBOND = 3
+$BONDS = 3
 1    2    1
 1    3   -2
 2    3   -2
 ```
 
 ### Section 4 (optional) 
-$FORMAL_CHARGE starts this section, with d representing the total 
+#### $FORMAL_CHARGE 
+lists non-aero formal charges by atom index (same as in Atom section) 
 ```
-$FORMAL_CHARGE = 0
-3
+$FORMAL_CHARGES = 3
 15   -1/2    
 16    1    
 17   -1/2  
 ```
 
-$SUBSET = NS starts this section, where NS is the number of subsets.  The following NS definition sections each contains the name of the subset and the number of subset members, followed by lines each listing atom indexes in each subset member.
+### $SUBSET = NS (disabled)
+starts this section, where NS is the number of subsets. The following NS definition sections each contains the name of the subset and the number of subset members, followed by lines each listing atom indexes in each subset member.
 ```
 $SUBSET = 2
 SurfactantBox_subset_1 3
@@ -61,6 +62,8 @@ SurfactantBox_subset_0 2
 $1: 8, 20
 $2: 21, 25
 ```
+Note: This section is no longer needed, as the subsets are not used by TEAM force fields in DFF8. 
+
 
 ## 2. Potential Parameter File (PPF)  
 
